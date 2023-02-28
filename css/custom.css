@@ -144,3 +144,10 @@
 [data-theme="dark"] #page-header::before {
   background: transparent !important;
 }
+
+/*双侧显示栏修复*/
+/* 翻页按钮居中 */
+#pagination {
+  width: 100%;
+  margin: auto;
+}
