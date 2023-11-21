@@ -8,13 +8,30 @@
     <author>
       <name>AquaOH</name>
     </author>
-    <updated>2023-11-17T21:08:32.860Z</updated>
+    <updated>2023-11-20T20:34:18.010Z</updated>
     <category term="Betrayer" />
+    <entry>
+        <id>https://aquaoh.cc/hello-world%20-%20%E5%89%AF%E6%9C%AC%20(2)/</id>
+        <title>Hello World</title>
+        <link rel="alternate" href="https://aquaoh.cc/hello-world%20-%20%E5%89%AF%E6%9C%AC%20(2)/"/>
+        <content type="html">&lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;!&lt;/p&gt;
+</content>
+        <updated>2023-11-20T20:34:18.010Z</updated>
+    </entry>
+    <entry>
+        <id>https://aquaoh.cc/hello-world%20-%20%E5%89%AF%E6%9C%AC/</id>
+        <title>Hello World</title>
+        <link rel="alternate" href="https://aquaoh.cc/hello-world%20-%20%E5%89%AF%E6%9C%AC/"/>
+        <content type="html">&lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;!&lt;/p&gt;
+</content>
+        <updated>2023-11-20T20:34:16.542Z</updated>
+    </entry>
     <entry>
         <id>https://aquaoh.cc/hello-world/</id>
         <title>Hello World</title>
         <link rel="alternate" href="https://aquaoh.cc/hello-world/"/>
         <content type="html">&lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;see&lt;/span&gt;&lt;/p&gt;
 </content>
         <updated>2023-11-17T21:08:32.860Z</updated>
     </entry>

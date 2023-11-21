@@ -10,15 +10,32 @@
         </author>
         <description>Touhou Fans</description>
         <language>zh-CN</language>
-        <pubDate>Sat, 18 Nov 2023 05:08:32 +0800</pubDate>
-        <lastBuildDate>Sat, 18 Nov 2023 05:08:32 +0800</lastBuildDate>
+        <pubDate>Tue, 21 Nov 2023 04:34:18 +0800</pubDate>
+        <lastBuildDate>Tue, 21 Nov 2023 04:34:18 +0800</lastBuildDate>
         <category term="Betrayer" />
+        <item>
+            <guid isPermalink="true">https://aquaoh.cc/hello-world%20-%20%E5%89%AF%E6%9C%AC%20(2)/</guid>
+            <title>Hello World</title>
+            <link>https://aquaoh.cc/hello-world%20-%20%E5%89%AF%E6%9C%AC%20(2)/</link>
+            <pubDate>Tue, 21 Nov 2023 04:34:18 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;!&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://aquaoh.cc/hello-world%20-%20%E5%89%AF%E6%9C%AC/</guid>
+            <title>Hello World</title>
+            <link>https://aquaoh.cc/hello-world%20-%20%E5%89%AF%E6%9C%AC/</link>
+            <pubDate>Tue, 21 Nov 2023 04:34:16 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;!&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://aquaoh.cc/hello-world/</guid>
             <title>Hello World</title>
             <link>https://aquaoh.cc/hello-world/</link>
             <pubDate>Sat, 18 Nov 2023 05:08:32 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;see&lt;/span&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
