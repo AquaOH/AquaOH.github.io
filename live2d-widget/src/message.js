@@ -1,3 +1,0 @@
-// build time: Wed Nov 22 2023 18:55:46 GMT+0800 (中国标准时间) 
-import t from"./utils.js";let e;function s(s,i,a){if(!s||sessionStorage.getItem("waifu-text")&&sessionStorage.getItem("waifu-text")>a)return;e&&(clearTimeout(e),e=null),s=t(s),sessionStorage.setItem("waifu-text",a);const o=document.getElementById("waifu-tips");o.innerHTML=s,o.classList.add("waifu-tips-active"),e=setTimeout((()=>{sessionStorage.removeItem("waifu-text"),o.classList.remove("waifu-tips-active")}),i)}export default s;
-//rebuild by hexo-renderer-multi-next-markdown-it 

@@ -1,3 +1,0 @@
-// build time: Wed Nov 22 2023 18:55:46 GMT+0800 (中国标准时间) 
-import{nodeResolve as e}from"@rollup/plugin-node-resolve";import{createFilter as i}from"@rollup/pluginutils";function n(e={}){if(!e.include)throw Error("include option should be specified");const n=i(e.include,e.exclude);return{name:"string",transform(e,i){if(n(i))return{code:`export default ${JSON.stringify(e)};`,map:{mappings:""}}},renderChunk:(e,i,n={})=>"/*!\n * Live2D Widget\n * https://github.com/stevenjoezhang/live2d-widget\n */\n"+e}}export default{input:"src/waifu-tips.js",plugins:[e(),n({include:"**/*.svg"})]};
-//rebuild by hexo-renderer-multi-next-markdown-it 
