@@ -8,8 +8,378 @@
     <author>
       <name>AquaOH</name>
     </author>
-    <updated>2024-03-15T02:02:00.000Z</updated>
+    <updated>2024-07-01T12:33:22.000Z</updated>
     <category term="Betrayer" />
+    <entry>
+        <id>https://aquaoh.cc/computer-science/web-programming/front-end/html/HTML%E5%9F%BA%E7%A1%80/</id>
+        <title>HTML基础</title>
+        <link rel="alternate" href="https://aquaoh.cc/computer-science/web-programming/front-end/html/HTML%E5%9F%BA%E7%A1%80/"/>
+        <content type="html">&lt;h1 id=&#34;html基础&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#html基础&#34;&gt;#&lt;/a&gt; HTML 基础&lt;/h1&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;更新中...&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;前提概念元素&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前提概念元素&#34;&gt;#&lt;/a&gt; 前提概念：元素&lt;/h2&gt;
+&lt;h3 id=&#34;元素&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#元素&#34;&gt;#&lt;/a&gt; 元素&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://aquaoh.oss-cn-shanghai.aliyuncs.com/post/grumpy-cat-small.png&#34; alt=&#34;HTML 元素&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;元素&lt;/strong&gt;（Element）：开始标签、结束标签与内容相结合，便是一个完整的元素&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;开始标签&lt;/strong&gt;（Opening tag）：包含元素的名称（本例为 p），被大于号、小于号所包围。表示元素从这里开始或者开始起作用 —— 在本例中即段落由此开始
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;元素名称&lt;/strong&gt;：开始标签的第一个词。所有元素名称可以参考&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvSFRNTC9FbGVtZW50&#34;&gt; HTML 元素参考 - HTML（超文本标记语言） | MDN (mozilla.org)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结束标签&lt;/strong&gt;（Closing tag）：与开始标签相似，只是其在元素名之前包含了一个斜杠。这表示着元素的结尾 —— 在本例中即段落在此结束。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内容&lt;/strong&gt;（Content）：元素的内容，本例中就是所输入的文本本身。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;PS&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开始标签、结束标签结合，合称标签&lt;/li&gt;
+&lt;li&gt;有时候可以省略结束标签，但建议写上，符合规范&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;元素属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#元素属性&#34;&gt;#&lt;/a&gt; 元素属性&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://aquaoh.oss-cn-shanghai.aliyuncs.com/post/grumpy-cat-attribute-small.png&#34; alt=&#34;HTML 属性&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;元素属性&lt;/strong&gt;（Attribute）：与元素相关的特性叫做属性，可以为属性赋值 (每个属性对应一个属性值，所以也称为 &amp;quot; 属性 / 值” 对)：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;位置&lt;/strong&gt;：&amp;quot;属性 / 值&amp;quot; 出现在元素开始标签的最后一个 “&amp;gt;” 之前，通过空格分割。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;规则&lt;/strong&gt;：可以有任意数量的 “属性 / 值” 对，并且它们可以任意顺序出现，并且属性名不区分大小写&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;格式&lt;/strong&gt;：&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;元素&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;属性&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#39;&lt;/span&gt;值&lt;span class=&#34;token punctuation&#34;&gt;&#39;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;内容&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;元素&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;或者 (引号可以是单引号，也可以是双引号)&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;元素&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;属性&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;值&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;内容&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;元素&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;PS&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;属性应该包含：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在属性与元素名称（或上一个属性，如果有超过一个属性的话）之间的空格符。&lt;/li&gt;
+&lt;li&gt;属性的名称，并接上一个等号。&lt;/li&gt;
+&lt;li&gt;由引号所包围的属性值。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;1. 属性定义规则&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不定义属性值：HTML 规定属性也可以没有值，如下&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;dl&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;compact&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;浏览器会使用 compact 属性的默认值&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;但有的属性没有默认值，因此这些属性不能省略属性值&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;属性中的空白：属性值可以包含空白，但是这种情况下必须使用引号，因为属性之间是允许使用空白分割的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如下是正确定义的方法&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;img&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;c:/Documents and Settings/test.jpg&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;256&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;34/&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;下面则是错误的：&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;lt;img src=c:/Documents and Settings/test.jpg width=256 height=34/&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;总结：定义属性值的时候一定是连续字符序列，如果不是连续序列则要加引号进行标注&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;属性中的引号：常见的引号有双引号（”）和单引号（’）。它们在属性值中的使用方式是相同的，只是选择哪种方式完全取决于个人偏好。（&lt;strong&gt;但是也有特例情况，下面将介绍&lt;/strong&gt;）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;引号嵌套&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;如果属性值中包含单引号（&#39;），则可以使用双引号（&amp;quot;）来包围整个属性值。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;例如： &lt;code&gt;&amp;lt;tag attribute=&amp;quot;value with &#39;single quotes&#39;&amp;quot;&amp;gt;&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果属性值中包含双引号（&amp;quot;），则可以使用字符实体引用（如 &lt;code&gt;&amp;amp;quot;&lt;/code&gt; ）来代替双引号。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;例如： &lt;code&gt;&amp;lt;tag attribute=&amp;quot;value with &amp;amp;quot;double quotes&amp;amp;quot;&amp;quot;&amp;gt;&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;补充：数字字符引用（如 &lt;code&gt;&amp;amp;#39;&lt;/code&gt; ）可以代替单引号&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;标准属性：通用于每个标签的属性（并且基本是可选的）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;语言属性：语言属性用于指定元素内容的自然语言和文本方向：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;lang&lt;/strong&gt;：指定元素内容所使用的语言，如  &lt;code&gt;en&lt;/code&gt;  表示英语， &lt;code&gt;zh&lt;/code&gt;  表示汉语。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;dir&lt;/strong&gt;：指定文本的阅读方向，如  &lt;code&gt;ltr&lt;/code&gt;  表示从左到右， &lt;code&gt;rtl&lt;/code&gt;  表示从右到左。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;键盘属性：键盘属性用于增强网页上使用键盘导航的灵活性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;accesskey&lt;/strong&gt;：为元素分配一个键盘快捷键，便于使用键盘导航。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tabIndex&lt;/strong&gt;：指定元素在制表顺序中的位置，方便键盘导航。（指定元素在使用制表键便利链接和表单控件时所形成的访问顺序中的位置）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;核心属性：核心属性适用于任何元素的开始标签内：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;class&lt;/strong&gt;：指定元素所属的一个或多个类，用于应用相同的 CSS 样式。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;id&lt;/strong&gt;：为元素指定唯一的标识符。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;style&lt;/strong&gt;：为元素指定内联 CSS 样式。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;title&lt;/strong&gt;：为元素提供一个文本标题，通常会在用户界面上显示。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;元素嵌套&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#元素嵌套&#34;&gt;#&lt;/a&gt; 元素嵌套&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;元素嵌套&lt;/strong&gt;：也可以将一个元素置于其他元素之中 —— 称作&lt;strong&gt;嵌套&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;My cat is &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;strong&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;very&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;strong&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt; grumpy.&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;li&gt;必须保证元素嵌套次序正确：本例首先使用  &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;  标签，然后是 &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;  标签，因此要先结束 &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;  标&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;空元素&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#空元素&#34;&gt;#&lt;/a&gt; 空元素&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;空元素&lt;/strong&gt;：不包含任何内容的元素称为空元素。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;比如  &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;  元素：&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;img&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;images/firefox-icon.png&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;alt&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;My test image&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;li&gt;本元素包含两个属性，但是并没有  &lt;code&gt;&amp;lt;/img&amp;gt;&lt;/code&gt;  结束标签，元素里也没有内容。这是因为图像元素不需要通过内容来产生效果，它的作用是向其所在的位置嵌入一个图像。&lt;/li&gt;
+&lt;li&gt;最后的斜杠  &lt;code&gt;/&lt;/code&gt; ，它在这里表示  &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;  元素的结束。在 HTML 中，一些元素可以使用自闭合的方式来写，例如  &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; 、 &lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt;  等，它们没有闭合标签，而是在标签末尾直接使用  &lt;code&gt;/&lt;/code&gt;  来结束。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#结构&#34;&gt;#&lt;/a&gt; 结构&lt;/h2&gt;
+&lt;p&gt;HTML 文档的基本结构如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文档类型声明&lt;/li&gt;
+&lt;li&gt;html 标签对&lt;/li&gt;
+&lt;li&gt;head 标签对&lt;/li&gt;
+&lt;li&gt;body 标签对&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;实例&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#实例&#34;&gt;#&lt;/a&gt; 实例&lt;/h3&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token doctype&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&#34;token doctype-tag&#34;&gt;doctype&lt;/span&gt; &lt;span class=&#34;token name&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;html&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;en-US&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;head&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;meta&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;charset&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;utf-8&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;meta&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;viewport&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;width=device-width&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;title&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;My test page&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;title&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;head&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;body&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;img&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;images/firefox-icon.png&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;alt&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;My test image&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;body&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;html&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;结构解析：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/code&gt; ：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9HbG9zc2FyeS9Eb2N0eXBl&#34;&gt;文档类型&lt;/span&gt;。这是必不可少的开头。用于保证文档正常读取。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;html&amp;gt;&amp;lt;/html&amp;gt;&lt;/code&gt; ：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/html&#34;&gt; &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; &lt;/a&gt; 元素。该元素包含整个页面的所有内容，有时候也称作根元素。里面也包含了 lang 属性，写明了页面的主要语种。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/code&gt; ：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/head&#34;&gt; &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; &lt;/a&gt; 元素。所有那些你加到页面中，且不向用户展示的页面内容，都以这个元素为容器。其中包含诸如提供给搜索引擎的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9HbG9zc2FyeS9LZXl3b3Jk&#34;&gt;关键字&lt;/span&gt;和页面描述、用于设置页面样式的 CSS、字符集声明等等。&lt;/li&gt;
+&lt;li&gt;可以包含一些辅助性标签，如 &lt;code&gt;&amp;lt;title&amp;gt;&amp;lt;base&amp;gt;&amp;lt;link&amp;gt;&amp;lt;meta&amp;gt;&amp;lt;style&amp;gt;&amp;lt;script&amp;gt;&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;&lt;/code&gt; ：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/body&#34;&gt; &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; &lt;/a&gt; 元素。该元素包含期望让用户在访问页面时看到的全部内容，包括文本、图像、视频、游戏、可播放的音轨或其他内容。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;  内容解析:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;&lt;/code&gt;  —— 该元素指明你的文档使用 UTF-8 字符编码，UTF-8 包括世界绝大多数书写语言的字符。它基本上可以处理任何文本内容。以它为编码还可以避免以后出现某些问题，没有理由再选用其他编码。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width&amp;quot;&amp;gt;&lt;/code&gt;  —— &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTL1ZpZXdwb3J0X2NvbmNlcHRzIyVFNyVBNyVCQiVFNSU4QSVBOCVFOCVBRSVCRSVFNSVBNCU4NyVFNyU5QSU4NCVFOCVBNyU4NiVFNSU4RiVBMw==&#34;&gt;视口元素&lt;/span&gt; 可以确保页面以视口宽度进行渲染，避免移动端浏览器上因页面过宽导致缩放。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;&lt;/code&gt;  —— &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/title&#34;&gt; &lt;code&gt;&amp;lt;title&amp;gt;&lt;/code&gt; &lt;/a&gt; 元素。该元素设置页面的标题，显示在浏览器标签页上，也作为收藏网页的描述文字。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;常见元素&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见元素&#34;&gt;#&lt;/a&gt; 常见元素&lt;/h2&gt;
+&lt;h3 id=&#34;图像&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#图像&#34;&gt;#&lt;/a&gt; 图像&lt;/h3&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;img&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;images/firefox-icon.png&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;alt&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;My test image&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;属性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;src&lt;/code&gt;  属性是&lt;strong&gt;必须的&lt;/strong&gt;，包含了你想嵌入的图片的路径（URL）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;alt&lt;/code&gt;  属性包含一条对图像的文本描述，这不是强制性的。
+&lt;ul&gt;
+&lt;li&gt;如果由于某种原因无法加载图像，普通浏览器也会在页面上显示  &lt;code&gt;alt&lt;/code&gt;  属性中的备用文本&lt;/li&gt;
+&lt;li&gt;也用于无障碍阅读&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;标记文本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#标记文本&#34;&gt;#&lt;/a&gt; 标记文本&lt;/h3&gt;
+&lt;h4 id=&#34;标题heading&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#标题heading&#34;&gt;#&lt;/a&gt; 标题 (Heading)&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;标题元素&lt;/strong&gt;：可用于指定内容的标题和子标题&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;HTML 文档也是一样。HTML 包括六个级别的标题， &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; – &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; ，一般最多用到 3-4 级标题。&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;主标题&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;h2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;顶层标题&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;h2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;h3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;子标题&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;h3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;h4&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;次子标题&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;h4&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;段落paragraph&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#段落paragraph&#34;&gt;#&lt;/a&gt; 段落 (Paragraph)&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;段落元素&lt;/strong&gt;： &lt;code&gt;&amp;lt;p&amp;gt; &lt;/code&gt; 元素是用来定义 HTML 页面中的段落的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;通常用于包裹和指定常规的文本内容。&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;这是一个段落&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;列表list&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#列表list&#34;&gt;#&lt;/a&gt; 列表 (List)&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;列表元素&lt;/strong&gt;：Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标记列表通常包括至少两个元素。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;最常用 的列表类型为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;无序列表（Unordered List）中项目的顺序并不重要，就像购物列表。使用  &lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt;  元素包裹列表项。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有序列表（Ordered List）中项目的顺序很重要，就像烹调指南。使用  &lt;code&gt;&amp;lt;ol&amp;gt;&lt;/code&gt;  元素包裹列表项。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;列表的每个项目用一个列表项目（List Item）元素  &lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt;  包裹。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实例&lt;/p&gt;
+&lt;p&gt;比如，要将下面的段落片段改成一个列表：&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  At Mozilla, we&#39;re a global community of technologists, thinkers, and builders&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  working together…&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;可以这样更改标记：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先用 &lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt;  或者 &lt;code&gt;&amp;lt;ol&amp;gt;&lt;/code&gt;  包裹&lt;/li&gt;
+&lt;li&gt;再在被包裹的域内使用 &lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt;  陈列项目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;At Mozilla, we&#39;re a global community of&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;technologists&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;thinkers&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;builders&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;working together…&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;以下提供&lt;strong&gt;二级列表&lt;/strong&gt;的例子&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在原来 &lt;code&gt;&amp;lt;li&amp;gt; &amp;lt;/li&amp;gt;&lt;/code&gt;  标签内再次使用 &lt;code&gt;&amp;lt;ul&amp;gt;&amp;lt;/ul&amp;gt;或者&amp;lt;ol&amp;gt;&amp;lt;/ol&amp;gt;&lt;/code&gt;  标签对&lt;/li&gt;
+&lt;li&gt;再次在被包裹的域内使用 &lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt;  陈列项目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Milk&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    Cheese&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Blue cheese&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Feta&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#链接&#34;&gt;#&lt;/a&gt; 链接&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;锚元素&lt;/strong&gt;：链接非常重要 — 它们赋予 Web 网络属性。要植入一个链接，我们需要使用一个简单的元素   &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;  — a 是 &amp;quot;anchor&amp;quot; （锚）的缩写。要将一些文本添加到链接中，只需按以下步骤操作：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;选择一些文本。比如 “Mozilla Manifesto”。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将文本包含在 &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;  元素内，就像这样：&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Mozilla Manifesto&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;为此 &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;  元素添加一个 &lt;code&gt;href&lt;/code&gt;  属性，就像这样：&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Mozilla Manifesto&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把属性的值设置为所需网址：&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;https://www.mozilla.org/zh-CN/about/manifesto/&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Mozilla Manifesto&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;PS&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;如果网址开始部分省略了  &lt;code&gt;https://&lt;/code&gt;  或者  &lt;code&gt;http://&lt;/code&gt; ，可能会得到错误的结果。在完成一个链接后，可以试着点击它来确保指向正确。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;&lt;code&gt;href&lt;/code&gt;  这个名字可能开始看起来有点令人费解，代表超文本引用（ &lt;strong&gt;h&lt;/strong&gt;ypertext &lt;strong&gt;ref&lt;/strong&gt;erence）&lt;/p&gt;
+&lt;/div&gt;
+</content>
+        <category term="计算机科学" scheme="https://aquaoh.cc/categories/computer-science/" />
+        <category term="Web编程" scheme="https://aquaoh.cc/categories/computer-science/Web%E7%BC%96%E7%A8%8B/" />
+        <category term="前端" scheme="https://aquaoh.cc/categories/computer-science/Web%E7%BC%96%E7%A8%8B/%E5%89%8D%E7%AB%AF/" />
+        <category term="HTML" scheme="https://aquaoh.cc/categories/computer-science/Web%E7%BC%96%E7%A8%8B/%E5%89%8D%E7%AB%AF/HTML/" />
+        <category term="前端三件套" scheme="https://aquaoh.cc/tags/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/" />
+        <updated>2024-07-01T12:33:22.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://aquaoh.cc/computer-science/extral-tools/spider/Xpath/</id>
+        <title></title>
+        <link rel="alternate" href="https://aquaoh.cc/computer-science/extral-tools/spider/Xpath/"/>
+        <content type="html">&lt;h1 id=&#34;xpath&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#xpath&#34;&gt;#&lt;/a&gt; Xpath&lt;/h1&gt;
+&lt;h2 id=&#34;节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#节点&#34;&gt;#&lt;/a&gt; 节点&lt;/h2&gt;
+&lt;h3 id=&#34;节点类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#节点类型&#34;&gt;#&lt;/a&gt; 节点类型&lt;/h3&gt;
+&lt;p&gt;节点 (node)，为&lt;strong&gt; XML&lt;/strong&gt; 文件的最小构成单位，分为七种:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;element（元素节点）&lt;/strong&gt;：通常包含一个开始标签、一个结束标签，以及位于这两个标签之间的内容，这些内容可以是文本、其他元素或属性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;attribute（属性节点）&lt;/strong&gt;：属性节点是与元素节点相关联的节点，它定义了元素的附加信息。属性节点包含了一个键（名称）和一个值&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;text（文本节点）&lt;/strong&gt;：文本节点是包含实际文本内容的节点。它是元素节点的子节点&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;namespace（命名空间节点）&lt;/strong&gt;：命名空间节点不是一个独立的节点类型，而是一种使用命名空间来避免元素和属性名称冲突的机制&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;processing-instruction（处理指令节点）&lt;/strong&gt;：提供了关于如何处理文档的信息给应用程序。处理指令通常包含两部分：一个目标（通常是处理该指令的程序或处理器的名称）和一些将被处理的指令数据。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;comment（注释节点）&lt;/strong&gt;：用于在文档中添加注释，注释节点在 XML 文档中以 &lt;code&gt;&amp;lt;!--&lt;/code&gt;  开头，以 &lt;code&gt;--&amp;gt;&lt;/code&gt;  结尾。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;root（根节点）（又称文档节点）&lt;/strong&gt;：最顶层的元素节点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一段示例 XML 文本&lt;/p&gt;
+&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token prolog&#34;&gt;&amp;lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 这是一个注释 --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;bookstore&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;xmlns:&lt;/span&gt;bk&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;http://www.example.com/books&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;book&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;b1&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;title&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;en&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Harry Potter&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;title&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;author&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;J.K. Rowling&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;author&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;price&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;29.99&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;price&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token namespace&#34;&gt;bk:&lt;/span&gt;publishDate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;2000-07-08&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;token namespace&#34;&gt;bk:&lt;/span&gt;publishDate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;book&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token prolog&#34;&gt;&amp;lt;?display book=&#34;b1&#34;?&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;bookstore&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;!-- 这是一个注释 --&amp;gt;&lt;/code&gt;  是注释节点&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;bookstore&amp;gt;&lt;/code&gt;  是文档（根）节点&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;book id=&amp;quot;b1&amp;quot;&amp;gt;&lt;/code&gt;  是元素节点，其中 &lt;code&gt;id&lt;/code&gt;  是属性节点&lt;/li&gt;
+&lt;li&gt;&lt;code&gt; &amp;lt;title lang=&amp;quot;en&amp;quot;&amp;gt;Harry Potter&amp;lt;/title&amp;gt;&lt;/code&gt;  中， &lt;code&gt;Harry Potter&lt;/code&gt;  是文本节点， &lt;code&gt;lang=&amp;quot;en&amp;quot;&lt;/code&gt;  是属性节点，其中 &lt;code&gt;lang&lt;/code&gt;  为属性名， &lt;code&gt;&amp;quot;en&amp;quot;&lt;/code&gt;  为属性值&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;author&amp;gt;J.K. Rowling&amp;lt;/author&amp;gt;&lt;/code&gt;  是元素节点， &lt;code&gt;J.K. Rowling&lt;/code&gt;  是文本节点&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;xmlns:bk=&amp;quot;http://www.example.com/books&amp;quot;&lt;/code&gt;  是命名空间节点，定义了一个命名空间&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;?display book=&amp;quot;b1&amp;quot;?&amp;gt;&lt;/code&gt;  是处理指令节点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3 id=&#34;基本值项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本值项目&#34;&gt;#&lt;/a&gt; 基本值 &amp;amp; 项目&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;基本值&lt;/strong&gt;：元素标签之间的数据，不包含任何子元素或属性，无父或无子的节点，如 &lt;code&gt;J.K. Rowling&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;项目&lt;/strong&gt;：基本值或者节点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3 id=&#34;节点关系&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#节点关系&#34;&gt;#&lt;/a&gt; 节点关系&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;参考文本&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token prolog&#34;&gt;&amp;lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;bookstore&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;book&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;title&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;en&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Harry Potter&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;title&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;author&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;J K. Rowling&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;author&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;year&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;2005&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;year&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;price&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;29.99&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;price&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;book&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;bookstore&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;父parent&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#父parent&#34;&gt;#&lt;/a&gt; 父（Parent）&lt;/h4&gt;
+&lt;p&gt;除根节点外，每个元素都有父&lt;/p&gt;
+&lt;p&gt;在参考文本中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;book&lt;/code&gt;  元素是 &lt;code&gt;title、author、year、price&lt;/code&gt;  元素的父&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bookstore&lt;/code&gt;  元素是 &lt;code&gt;book&lt;/code&gt;  元素的父&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;子children&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#子children&#34;&gt;#&lt;/a&gt; 子（Children)&lt;/h4&gt;
+&lt;p&gt;元素节点可有零个、一个或多个子&lt;/p&gt;
+&lt;p&gt;在参考文本中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;title、author、year、price&lt;/code&gt;  元素是 &lt;code&gt;book&lt;/code&gt;  元素的子&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;book&lt;/code&gt;  元素是 &lt;code&gt;bookstore&lt;/code&gt;  元素的子&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;同胞sibling&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#同胞sibling&#34;&gt;#&lt;/a&gt; 同胞（Sibling)&lt;/h4&gt;
+&lt;p&gt;拥有相同的父的节点&lt;/p&gt;
+&lt;p&gt;在参考文本中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;title、author、year、price&lt;/code&gt;  元素彼此是同胞&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;先辈ancestor&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#先辈ancestor&#34;&gt;#&lt;/a&gt; 先辈（Ancestor）&lt;/h4&gt;
+&lt;p&gt;某节点的父、父的父，等等&lt;/p&gt;
+&lt;p&gt;在参考文本中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;title&lt;/code&gt;  元素的先辈是 &lt;code&gt; book&lt;/code&gt;  元素和  &lt;code&gt;bookstore &lt;/code&gt; 元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;后代descendant&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#后代descendant&#34;&gt;#&lt;/a&gt; 后代（Descendant）&lt;/h4&gt;
+&lt;p&gt;某个节点的子，子的子，等等&lt;/p&gt;
+&lt;p&gt;在参考文本中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bookstore 的后代是  &lt;code&gt;book&lt;/code&gt; 、 &lt;code&gt;title、author、year、price&lt;/code&gt;  元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&#34;语法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#语法&#34;&gt;#&lt;/a&gt; 语法&lt;/h2&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;需部分了解 html&lt;/p&gt;
+&lt;/div&gt;
+</content>
+        <updated>2024-03-24T16:11:14.158Z</updated>
+    </entry>
     <entry>
         <id>https://aquaoh.cc/computer-science/systemed-structures/internet/Week%203/</id>
         <title>Week 3</title>
@@ -2295,82 +2665,6 @@ n \geq \frac{-ln(\delta/2)}{2\epsilon^2p^2} = \frac{ln(2/\delta)}{2\epsilon^2p^2
         <updated>2024-02-29T23:36:22.000Z</updated>
     </entry>
     <entry>
-        <id>https://aquaoh.cc/computer-science/extral-tools/spider/Xpath/</id>
-        <title></title>
-        <link rel="alternate" href="https://aquaoh.cc/computer-science/extral-tools/spider/Xpath/"/>
-        <content type="html">&lt;h1 id=&#34;xpath&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#xpath&#34;&gt;#&lt;/a&gt; Xpath&lt;/h1&gt;
-&lt;h2 id=&#34;节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#节点&#34;&gt;#&lt;/a&gt; 节点&lt;/h2&gt;
-&lt;h3 id=&#34;节点类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#节点类型&#34;&gt;#&lt;/a&gt; 节点类型&lt;/h3&gt;
-&lt;p&gt;节点 (node)，为&lt;strong&gt; XML&lt;/strong&gt; 文件的最小构成单位，分为七种:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;element（元素节点）&lt;/strong&gt;：通常包含一个开始标签、一个结束标签，以及位于这两个标签之间的内容，这些内容可以是文本、其他元素或属性&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;attribute（属性节点）&lt;/strong&gt;：属性节点是与元素节点相关联的节点，它定义了元素的附加信息。属性节点包含了一个键（名称）和一个值&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;text（文本节点）&lt;/strong&gt;：文本节点是包含实际文本内容的节点。它是元素节点的子节点&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;namespace（命名空间节点）&lt;/strong&gt;：命名空间节点不是一个独立的节点类型，而是一种使用命名空间来避免元素和属性名称冲突的机制&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;processing-instruction（处理指令节点）&lt;/strong&gt;：提供了关于如何处理文档的信息给应用程序。处理指令通常包含两部分：一个目标（通常是处理该指令的程序或处理器的名称）和一些将被处理的指令数据。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;comment（注释节点）&lt;/strong&gt;：用于在文档中添加注释，注释节点在 XML 文档中以 &lt;code&gt;&amp;lt;!--&lt;/code&gt;  开头，以 &lt;code&gt;--&amp;gt;&lt;/code&gt;  结尾。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;root（根节点）（又称文档节点）&lt;/strong&gt;：最顶层的元素节点&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;一段示例 XML 文本&lt;/p&gt;
-&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token prolog&#34;&gt;&amp;lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 这是一个注释 --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;bookstore&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;xmlns:&lt;/span&gt;bk&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;http://www.example.com/books&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;book&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;b1&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;title&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;en&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Harry Potter&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;title&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;author&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;J.K. Rowling&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;author&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;price&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;29.99&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;price&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token namespace&#34;&gt;bk:&lt;/span&gt;publishDate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;2000-07-08&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;token namespace&#34;&gt;bk:&lt;/span&gt;publishDate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;book&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token prolog&#34;&gt;&amp;lt;?display book=&#34;b1&#34;?&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;bookstore&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;!-- 这是一个注释 --&amp;gt;&lt;/code&gt;  是注释节点&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;bookstore&amp;gt;&lt;/code&gt;  是文档（根）节点&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;book id=&amp;quot;b1&amp;quot;&amp;gt;&lt;/code&gt;  是元素节点，其中 &lt;code&gt;id&lt;/code&gt;  是属性节点&lt;/li&gt;
-&lt;li&gt;&lt;code&gt; &amp;lt;title lang=&amp;quot;en&amp;quot;&amp;gt;Harry Potter&amp;lt;/title&amp;gt;&lt;/code&gt;  中， &lt;code&gt;Harry Potter&lt;/code&gt;  是文本节点， &lt;code&gt;lang=&amp;quot;en&amp;quot;&lt;/code&gt;  是属性节点，其中 &lt;code&gt;lang&lt;/code&gt;  为属性名， &lt;code&gt;&amp;quot;en&amp;quot;&lt;/code&gt;  为属性值&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;author&amp;gt;J.K. Rowling&amp;lt;/author&amp;gt;&lt;/code&gt;  是元素节点， &lt;code&gt;J.K. Rowling&lt;/code&gt;  是文本节点&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;xmlns:bk=&amp;quot;http://www.example.com/books&amp;quot;&lt;/code&gt;  是命名空间节点，定义了一个命名空间&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;?display book=&amp;quot;b1&amp;quot;?&amp;gt;&lt;/code&gt;  是处理指令节点&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3 id=&#34;基本值项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本值项目&#34;&gt;#&lt;/a&gt; 基本值 &amp;amp; 项目&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;基本值&lt;/strong&gt;：元素标签之间的数据，不包含任何子元素或属性，无父或无子的节点，如 &lt;code&gt;J.K. Rowling&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;项目&lt;/strong&gt;：基本值或者节点&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3 id=&#34;节点关系&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#节点关系&#34;&gt;#&lt;/a&gt; 节点关系&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;参考文本&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token prolog&#34;&gt;&amp;lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;bookstore&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;book&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;title&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;en&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Harry Potter&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;title&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;author&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;J K. Rowling&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;author&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;year&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;2005&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;year&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;price&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;29.99&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;price&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;book&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;bookstore&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;父parent&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#父parent&#34;&gt;#&lt;/a&gt; 父（Parent）&lt;/h4&gt;
-&lt;p&gt;除根节点外，每个元素都有父&lt;/p&gt;
-&lt;p&gt;在参考文本中：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;book&lt;/code&gt;  元素是 &lt;code&gt;title、author、year、price&lt;/code&gt;  元素的父&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;bookstore&lt;/code&gt;  元素是 &lt;code&gt;book&lt;/code&gt;  元素的父&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;子children&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#子children&#34;&gt;#&lt;/a&gt; 子（Children)&lt;/h4&gt;
-&lt;p&gt;元素节点可有零个、一个或多个子&lt;/p&gt;
-&lt;p&gt;在参考文本中：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;title、author、year、price&lt;/code&gt;  元素是 &lt;code&gt;book&lt;/code&gt;  元素的子&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;book&lt;/code&gt;  元素是 &lt;code&gt;bookstore&lt;/code&gt;  元素的子&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;同胞sibling&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#同胞sibling&#34;&gt;#&lt;/a&gt; 同胞（Sibling)&lt;/h4&gt;
-&lt;p&gt;拥有相同的父的节点&lt;/p&gt;
-&lt;p&gt;在参考文本中：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;title、author、year、price&lt;/code&gt;  元素彼此是同胞&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;先辈ancestor&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#先辈ancestor&#34;&gt;#&lt;/a&gt; 先辈（Ancestor）&lt;/h4&gt;
-&lt;p&gt;某节点的父、父的父，等等&lt;/p&gt;
-&lt;p&gt;在参考文本中：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;title&lt;/code&gt;  元素的先辈是 &lt;code&gt; book&lt;/code&gt;  元素和  &lt;code&gt;bookstore &lt;/code&gt; 元素&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;后代descendant&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#后代descendant&#34;&gt;#&lt;/a&gt; 后代（Descendant）&lt;/h4&gt;
-&lt;p&gt;某个节点的子，子的子，等等&lt;/p&gt;
-&lt;p&gt;在参考文本中：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;bookstore 的后代是  &lt;code&gt;book&lt;/code&gt; 、 &lt;code&gt;title、author、year、price&lt;/code&gt;  元素&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h2 id=&#34;语法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#语法&#34;&gt;#&lt;/a&gt; 语法&lt;/h2&gt;
-&lt;div class=&#34;note warning&#34;&gt;
-&lt;p&gt;需部分了解 html&lt;/p&gt;
-&lt;/div&gt;
-</content>
-        <updated>2023-12-07T09:10:19.453Z</updated>
-    </entry>
-    <entry>
         <id>https://aquaoh.cc/computer-science/basic-tools/latex/Typora%20with%20LaTeX/</id>
         <title>Typora With LaTeX</title>
         <link rel="alternate" href="https://aquaoh.cc/computer-science/basic-tools/latex/Typora%20with%20LaTeX/"/>
@@ -3788,6 +4082,39 @@ $&lt;/li&gt;
         <updated>2023-11-23T06:57:28.000Z</updated>
     </entry>
     <entry>
+        <id>https://aquaoh.cc/math/basic-math/mit18-06/MIT18-06/</id>
+        <title>MIT 18.06</title>
+        <link rel="alternate" href="https://aquaoh.cc/math/basic-math/mit18-06/MIT18-06/"/>
+        <content type="html">&lt;h1 id=&#34;mit-1806&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mit-1806&#34;&gt;#&lt;/a&gt; MIT 18.06&lt;/h1&gt;
+&lt;div class=&#34;note primary&#34;&gt;
+&lt;p&gt;课程地址: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9vY3cubWl0LmVkdS9jb3Vyc2VzLzE4LTA2c2MtbGluZWFyLWFsZ2VicmEtZmFsbC0yMDExL3BhZ2VzL3N5bGxhYnVzLw==&#34;&gt;Syllabus | Linear Algebra | Mathematics | MIT OpenCourseWare&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note primary&#34;&gt;
+&lt;p&gt;课程教材: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYm9vazEyMy5pbmZvL2RldGFpbC85NzgwOTgwMjMyNzc2&#34;&gt;Introduction to Linear Algebra&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;本页为 MIT 18.06 课程笔记的大纲&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;生词本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#生词本&#34;&gt;#&lt;/a&gt; 生词本&lt;/h2&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;Adding...&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;unit-i-ax-b-and-the-four-subspaces&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#unit-i-ax-b-and-the-four-subspaces&#34;&gt;#&lt;/a&gt; Unit I: Ax = b and the Four Subspaces&lt;/h2&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;Adding...&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;The Geometry of Linear Equations&lt;/li&gt;
+&lt;li&gt;An Overview of Key Ideas&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="数学" scheme="https://aquaoh.cc/categories/math/" />
+        <category term="基础数学" scheme="https://aquaoh.cc/categories/math/basic-math/" />
+        <category term="MIT18-06" scheme="https://aquaoh.cc/categories/math/basic-math/mit18-06/" />
+        <category term="MIT18-06" scheme="https://aquaoh.cc/tags/mit18-06/" />
+        <updated>2023-11-22T23:36:22.000Z</updated>
+    </entry>
+    <entry>
         <id>https://aquaoh.cc/language/english/words-note/MIT%2018.06/</id>
         <title>MIT 18.06</title>
         <link rel="alternate" href="https://aquaoh.cc/language/english/words-note/MIT%2018.06/"/>
@@ -3848,39 +4175,6 @@ $&lt;/li&gt;
         <category term="外语" scheme="https://aquaoh.cc/categories/language/" />
         <category term="英语" scheme="https://aquaoh.cc/categories/language/english/" />
         <category term="词汇笔记" scheme="https://aquaoh.cc/categories/language/english/words-note/" />
-        <category term="MIT18-06" scheme="https://aquaoh.cc/tags/mit18-06/" />
-        <updated>2023-11-22T23:36:22.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://aquaoh.cc/math/basic-math/mit18-06/MIT18-06/</id>
-        <title>MIT 18.06</title>
-        <link rel="alternate" href="https://aquaoh.cc/math/basic-math/mit18-06/MIT18-06/"/>
-        <content type="html">&lt;h1 id=&#34;mit-1806&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mit-1806&#34;&gt;#&lt;/a&gt; MIT 18.06&lt;/h1&gt;
-&lt;div class=&#34;note primary&#34;&gt;
-&lt;p&gt;课程地址: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9vY3cubWl0LmVkdS9jb3Vyc2VzLzE4LTA2c2MtbGluZWFyLWFsZ2VicmEtZmFsbC0yMDExL3BhZ2VzL3N5bGxhYnVzLw==&#34;&gt;Syllabus | Linear Algebra | Mathematics | MIT OpenCourseWare&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;note primary&#34;&gt;
-&lt;p&gt;课程教材: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYm9vazEyMy5pbmZvL2RldGFpbC85NzgwOTgwMjMyNzc2&#34;&gt;Introduction to Linear Algebra&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;本页为 MIT 18.06 课程笔记的大纲&lt;/p&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;生词本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#生词本&#34;&gt;#&lt;/a&gt; 生词本&lt;/h2&gt;
-&lt;div class=&#34;note warning&#34;&gt;
-&lt;p&gt;Adding...&lt;/p&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;unit-i-ax-b-and-the-four-subspaces&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#unit-i-ax-b-and-the-four-subspaces&#34;&gt;#&lt;/a&gt; Unit I: Ax = b and the Four Subspaces&lt;/h2&gt;
-&lt;div class=&#34;note warning&#34;&gt;
-&lt;p&gt;Adding...&lt;/p&gt;
-&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;The Geometry of Linear Equations&lt;/li&gt;
-&lt;li&gt;An Overview of Key Ideas&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-        <category term="数学" scheme="https://aquaoh.cc/categories/math/" />
-        <category term="基础数学" scheme="https://aquaoh.cc/categories/math/basic-math/" />
-        <category term="MIT18-06" scheme="https://aquaoh.cc/categories/math/basic-math/mit18-06/" />
         <category term="MIT18-06" scheme="https://aquaoh.cc/tags/mit18-06/" />
         <updated>2023-11-22T23:36:22.000Z</updated>
     </entry>
