@@ -236,15 +236,15 @@
             ]
         },
         {
-            "id": "https://aquaoh.cc/language/english/words-note/MIT%2018.06/",
-            "url": "https://aquaoh.cc/language/english/words-note/MIT%2018.06/",
+            "id": "https://aquaoh.cc/math/basic-math/mit18-06/MIT18-06/",
+            "url": "https://aquaoh.cc/math/basic-math/mit18-06/MIT18-06/",
             "title": "MIT 18.06",
             "date_published": "2023-11-22T23:36:22.000Z",
-            "content_html": "<h1 id=\"mit-1806\"><a class=\"anchor\" href=\"#mit-1806\">#</a> MIT 18.06</h1>\n<h2 id=\"syllabus\"><a class=\"anchor\" href=\"#syllabus\">#</a> Syllabus</h2>\n<p>rectangular <em>adj.</em> 矩形的</p>\n<p>matrice <em>n.</em> 矩阵</p>\n<p>prerequisite <em>n.</em> 先决条件</p>\n<p>multiply <em>v.</em> 乘法</p>\n<p>vector <em>n.</em> 向量</p>\n<p>row <em>n.</em> 行</p>\n<p>column <em>n.</em> 列</p>\n<p>recitation <em>n.</em> 习题课 朗诵 背诵</p>\n<p>explanation <em>n.</em> 解释说明 理由 阐述</p>\n<p>reinforce <em>vt.</em> 加固 强化</p>\n<h2 id=\"instructor-insights\"><a class=\"anchor\" href=\"#instructor-insights\">#</a> Instructor Insights</h2>\n<p>proof <em>n.</em> 证明</p>\n<p>zip through 快速通过 迅速浏览</p>\n<p>rhetorical <em>adj.</em> 修辞的 夸张的 反问的</p>\n<p>feign <em>vt.</em> 假装 伪装 捏造</p>\n<p>vulnerable <em>adj.</em> 易受批评的 易受攻击的 易受伤的</p>\n<p>demonstrate <em>v.</em> 证明 说明 示威游行 演示</p>\n<p>conscious <em>adj.</em> 意识到的 神智清醒的 慎重的 关注的</p>\n<p>inverse <em>adj.</em> 相反的 倒转的</p>\n<h2 id=\"unit-i-ax-b-and-the-four-subspaces\"><a class=\"anchor\" href=\"#unit-i-ax-b-and-the-four-subspaces\">#</a> Unit I: Ax = b and the Four Subspaces</h2>\n<p>several <em>adj.</em> 各自的 分别的 det. 几个 一些</p>\n<p>properties <em>n.</em> 特性 财产 所有权 房地产</p>\n<h3 id=\"the-geometry-of-linear-equations\"><a class=\"anchor\" href=\"#the-geometry-of-linear-equations\">#</a> The Geometry of Linear Equations</h3>\n<p>application <em>n.</em> 申请 请求 运用</p>\n<p>compact <em>v.</em> 把... 压实 adj. 坚实的 小型的 矮壮的 n. 化妆粉盒 协定</p>\n<p>semester <em>n.</em> 学期 半学年</p>\n<p>coefficient <em>n.</em>  系数 变化率 程度 协同因素</p>\n<p>involve <em>v.</em> 包含 涉及  加入 表明</p>\n<p>resist <em>v.</em> 忍住 反对 抵制 经得起</p>\n<p>plane <em>n.</em> 平面 飞机 adj. 平的</p>\n<p>plot <em>v.</em> 绘制 图谋 n. 阴谋 情节 一块土地</p>\n<p>horizontal <em>n.</em> 水平线 水平面 adj. 水平的</p>\n<p>axis <em>n.</em> 轴线 坐标轴 轴心</p>\n<p>coordinate <em>n.</em> 坐标</p>\n<p>all-important <em>adj.</em> 非常重要的 首要的 你</p>\n<p>geometry <em>n.</em> 几何学</p>\n<p>rembrandt <em>n.</em> 伦布兰特；[电影] 伦勃朗</p>\n<p>frankly  <em>adv.</em> 直率地（说），坦诚地；坦白地；平心而论</p>\n<p>parallel <em>adj.</em> 平行的 *n.* 平行线 *vt.* 使平行；</p>\n<p>cinch <em>n.</em> 容易做的事情；必然发生的事</p>\n<p>elimination <em>n.</em> 排除，清除；淘汰；消灭</p>\n<p>systematic <em>adj.</em> 有系统的，有规则的；有条不紊的；</p>\n<p>squeeze <em>v.</em> 挤压；压榨；*n.* 挤压；榨出的液体；</p>\n<p>squeeze in 挤进；塞；揌；插身</p>\n<p>non-singular matrix <em>n.</em> 可逆矩阵；非奇异矩阵</p>\n<p>invertible <em>adj.</em> （可）倒转的，（可）颠倒的</p>\n<p>singular matrix <em>n.</em> 奇异矩阵</p>\n<p>visualize <em>vt.</em> 形成思维图像；设想；使可见</p>\n<p>hesitate <em>v.</em> 犹豫；顾虑</p>\n<p>notation <em>n.</em> 记号，标记法</p>\n<p>times  乘以；（用于比较）倍；时代</p>\n",
+            "content_html": "<h1 id=\"mit-1806\"><a class=\"anchor\" href=\"#mit-1806\">#</a> MIT 18.06</h1>\n<div class=\"note primary\">\n<p>课程地址: <span class=\"exturl\" data-url=\"aHR0cHM6Ly9vY3cubWl0LmVkdS9jb3Vyc2VzLzE4LTA2c2MtbGluZWFyLWFsZ2VicmEtZmFsbC0yMDExL3BhZ2VzL3N5bGxhYnVzLw==\">Syllabus | Linear Algebra | Mathematics | MIT OpenCourseWare</span></p>\n</div>\n<div class=\"note primary\">\n<p>课程教材: <span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cuYm9vazEyMy5pbmZvL2RldGFpbC85NzgwOTgwMjMyNzc2\">Introduction to Linear Algebra</span></p>\n</div>\n<div class=\"note info\">\n<p>本页为 MIT 18.06 课程笔记的大纲</p>\n</div>\n<h2 id=\"生词本\"><a class=\"anchor\" href=\"#生词本\">#</a> 生词本</h2>\n<div class=\"note warning\">\n<p>Adding...</p>\n</div>\n<h2 id=\"unit-i-ax-b-and-the-four-subspaces\"><a class=\"anchor\" href=\"#unit-i-ax-b-and-the-four-subspaces\">#</a> Unit I: Ax = b and the Four Subspaces</h2>\n<div class=\"note warning\">\n<p>Adding...</p>\n</div>\n<ul>\n<li>The Geometry of Linear Equations</li>\n<li>An Overview of Key Ideas</li>\n</ul>\n",
             "tags": [
-                "外语",
-                "英语",
-                "词汇笔记",
+                "数学",
+                "基础数学",
+                "MIT18-06",
                 "MIT18-06"
             ]
         }

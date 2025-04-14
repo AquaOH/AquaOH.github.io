@@ -9053,67 +9053,36 @@ $&lt;/li&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://aquaoh.cc/language/english/words-note/MIT%2018.06/</guid>
+            <guid isPermalink="true">https://aquaoh.cc/math/basic-math/mit18-06/MIT18-06/</guid>
             <title>MIT 18.06</title>
-            <link>https://aquaoh.cc/language/english/words-note/MIT%2018.06/</link>
-            <category term="外语" scheme="https://aquaoh.cc/categories/language/" />
-            <category term="英语" scheme="https://aquaoh.cc/categories/language/english/" />
-            <category term="词汇笔记" scheme="https://aquaoh.cc/categories/language/english/words-note/" />
+            <link>https://aquaoh.cc/math/basic-math/mit18-06/MIT18-06/</link>
+            <category term="数学" scheme="https://aquaoh.cc/categories/math/" />
+            <category term="基础数学" scheme="https://aquaoh.cc/categories/math/basic-math/" />
+            <category term="MIT18-06" scheme="https://aquaoh.cc/categories/math/basic-math/mit18-06/" />
             <category term="MIT18-06" scheme="https://aquaoh.cc/tags/mit18-06/" />
             <pubDate>Thu, 23 Nov 2023 07:36:22 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;mit-1806&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mit-1806&#34;&gt;#&lt;/a&gt; MIT 18.06&lt;/h1&gt;
-&lt;h2 id=&#34;syllabus&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#syllabus&#34;&gt;#&lt;/a&gt; Syllabus&lt;/h2&gt;
-&lt;p&gt;rectangular &lt;em&gt;adj.&lt;/em&gt; 矩形的&lt;/p&gt;
-&lt;p&gt;matrice &lt;em&gt;n.&lt;/em&gt; 矩阵&lt;/p&gt;
-&lt;p&gt;prerequisite &lt;em&gt;n.&lt;/em&gt; 先决条件&lt;/p&gt;
-&lt;p&gt;multiply &lt;em&gt;v.&lt;/em&gt; 乘法&lt;/p&gt;
-&lt;p&gt;vector &lt;em&gt;n.&lt;/em&gt; 向量&lt;/p&gt;
-&lt;p&gt;row &lt;em&gt;n.&lt;/em&gt; 行&lt;/p&gt;
-&lt;p&gt;column &lt;em&gt;n.&lt;/em&gt; 列&lt;/p&gt;
-&lt;p&gt;recitation &lt;em&gt;n.&lt;/em&gt; 习题课 朗诵 背诵&lt;/p&gt;
-&lt;p&gt;explanation &lt;em&gt;n.&lt;/em&gt; 解释说明 理由 阐述&lt;/p&gt;
-&lt;p&gt;reinforce &lt;em&gt;vt.&lt;/em&gt; 加固 强化&lt;/p&gt;
-&lt;h2 id=&#34;instructor-insights&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#instructor-insights&#34;&gt;#&lt;/a&gt; Instructor Insights&lt;/h2&gt;
-&lt;p&gt;proof &lt;em&gt;n.&lt;/em&gt; 证明&lt;/p&gt;
-&lt;p&gt;zip through 快速通过 迅速浏览&lt;/p&gt;
-&lt;p&gt;rhetorical &lt;em&gt;adj.&lt;/em&gt; 修辞的 夸张的 反问的&lt;/p&gt;
-&lt;p&gt;feign &lt;em&gt;vt.&lt;/em&gt; 假装 伪装 捏造&lt;/p&gt;
-&lt;p&gt;vulnerable &lt;em&gt;adj.&lt;/em&gt; 易受批评的 易受攻击的 易受伤的&lt;/p&gt;
-&lt;p&gt;demonstrate &lt;em&gt;v.&lt;/em&gt; 证明 说明 示威游行 演示&lt;/p&gt;
-&lt;p&gt;conscious &lt;em&gt;adj.&lt;/em&gt; 意识到的 神智清醒的 慎重的 关注的&lt;/p&gt;
-&lt;p&gt;inverse &lt;em&gt;adj.&lt;/em&gt; 相反的 倒转的&lt;/p&gt;
+&lt;div class=&#34;note primary&#34;&gt;
+&lt;p&gt;课程地址: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9vY3cubWl0LmVkdS9jb3Vyc2VzLzE4LTA2c2MtbGluZWFyLWFsZ2VicmEtZmFsbC0yMDExL3BhZ2VzL3N5bGxhYnVzLw==&#34;&gt;Syllabus | Linear Algebra | Mathematics | MIT OpenCourseWare&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note primary&#34;&gt;
+&lt;p&gt;课程教材: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYm9vazEyMy5pbmZvL2RldGFpbC85NzgwOTgwMjMyNzc2&#34;&gt;Introduction to Linear Algebra&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;本页为 MIT 18.06 课程笔记的大纲&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;生词本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#生词本&#34;&gt;#&lt;/a&gt; 生词本&lt;/h2&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;Adding...&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;unit-i-ax-b-and-the-four-subspaces&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#unit-i-ax-b-and-the-four-subspaces&#34;&gt;#&lt;/a&gt; Unit I: Ax = b and the Four Subspaces&lt;/h2&gt;
-&lt;p&gt;several &lt;em&gt;adj.&lt;/em&gt; 各自的 分别的 det. 几个 一些&lt;/p&gt;
-&lt;p&gt;properties &lt;em&gt;n.&lt;/em&gt; 特性 财产 所有权 房地产&lt;/p&gt;
-&lt;h3 id=&#34;the-geometry-of-linear-equations&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#the-geometry-of-linear-equations&#34;&gt;#&lt;/a&gt; The Geometry of Linear Equations&lt;/h3&gt;
-&lt;p&gt;application &lt;em&gt;n.&lt;/em&gt; 申请 请求 运用&lt;/p&gt;
-&lt;p&gt;compact &lt;em&gt;v.&lt;/em&gt; 把... 压实 adj. 坚实的 小型的 矮壮的 n. 化妆粉盒 协定&lt;/p&gt;
-&lt;p&gt;semester &lt;em&gt;n.&lt;/em&gt; 学期 半学年&lt;/p&gt;
-&lt;p&gt;coefficient &lt;em&gt;n.&lt;/em&gt;  系数 变化率 程度 协同因素&lt;/p&gt;
-&lt;p&gt;involve &lt;em&gt;v.&lt;/em&gt; 包含 涉及  加入 表明&lt;/p&gt;
-&lt;p&gt;resist &lt;em&gt;v.&lt;/em&gt; 忍住 反对 抵制 经得起&lt;/p&gt;
-&lt;p&gt;plane &lt;em&gt;n.&lt;/em&gt; 平面 飞机 adj. 平的&lt;/p&gt;
-&lt;p&gt;plot &lt;em&gt;v.&lt;/em&gt; 绘制 图谋 n. 阴谋 情节 一块土地&lt;/p&gt;
-&lt;p&gt;horizontal &lt;em&gt;n.&lt;/em&gt; 水平线 水平面 adj. 水平的&lt;/p&gt;
-&lt;p&gt;axis &lt;em&gt;n.&lt;/em&gt; 轴线 坐标轴 轴心&lt;/p&gt;
-&lt;p&gt;coordinate &lt;em&gt;n.&lt;/em&gt; 坐标&lt;/p&gt;
-&lt;p&gt;all-important &lt;em&gt;adj.&lt;/em&gt; 非常重要的 首要的 你&lt;/p&gt;
-&lt;p&gt;geometry &lt;em&gt;n.&lt;/em&gt; 几何学&lt;/p&gt;
-&lt;p&gt;rembrandt &lt;em&gt;n.&lt;/em&gt; 伦布兰特；[电影] 伦勃朗&lt;/p&gt;
-&lt;p&gt;frankly  &lt;em&gt;adv.&lt;/em&gt; 直率地（说），坦诚地；坦白地；平心而论&lt;/p&gt;
-&lt;p&gt;parallel &lt;em&gt;adj.&lt;/em&gt; 平行的 *n.* 平行线 *vt.* 使平行；&lt;/p&gt;
-&lt;p&gt;cinch &lt;em&gt;n.&lt;/em&gt; 容易做的事情；必然发生的事&lt;/p&gt;
-&lt;p&gt;elimination &lt;em&gt;n.&lt;/em&gt; 排除，清除；淘汰；消灭&lt;/p&gt;
-&lt;p&gt;systematic &lt;em&gt;adj.&lt;/em&gt; 有系统的，有规则的；有条不紊的；&lt;/p&gt;
-&lt;p&gt;squeeze &lt;em&gt;v.&lt;/em&gt; 挤压；压榨；*n.* 挤压；榨出的液体；&lt;/p&gt;
-&lt;p&gt;squeeze in 挤进；塞；揌；插身&lt;/p&gt;
-&lt;p&gt;non-singular matrix &lt;em&gt;n.&lt;/em&gt; 可逆矩阵；非奇异矩阵&lt;/p&gt;
-&lt;p&gt;invertible &lt;em&gt;adj.&lt;/em&gt; （可）倒转的，（可）颠倒的&lt;/p&gt;
-&lt;p&gt;singular matrix &lt;em&gt;n.&lt;/em&gt; 奇异矩阵&lt;/p&gt;
-&lt;p&gt;visualize &lt;em&gt;vt.&lt;/em&gt; 形成思维图像；设想；使可见&lt;/p&gt;
-&lt;p&gt;hesitate &lt;em&gt;v.&lt;/em&gt; 犹豫；顾虑&lt;/p&gt;
-&lt;p&gt;notation &lt;em&gt;n.&lt;/em&gt; 记号，标记法&lt;/p&gt;
-&lt;p&gt;times  乘以；（用于比较）倍；时代&lt;/p&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;Adding...&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;The Geometry of Linear Equations&lt;/li&gt;
+&lt;li&gt;An Overview of Key Ideas&lt;/li&gt;
+&lt;/ul&gt;
  ]]></description>
         </item>
     </channel>
