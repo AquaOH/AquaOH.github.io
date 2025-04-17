@@ -31,7 +31,7 @@
 &lt;p&gt;更新至第 7 章 2025/4/18&lt;/p&gt;
 &lt;h2 id=&#34;一-建立基本知识&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-建立基本知识&#34;&gt;#&lt;/a&gt; 一、建立基本知识&lt;/h2&gt;
 &lt;h3 id=&#34;第1章-投机历程中可以看到的模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第1章-投机历程中可以看到的模型&#34;&gt;#&lt;/a&gt; 第 1 章 投机历程中可以看到的模型&lt;/h3&gt;
-&lt;h4 id=&#34;1-对冲期权&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-对冲期权&#34;&gt;#&lt;/a&gt; 1. 对冲期权&lt;/h4&gt;
+&lt;h4 id=&#34;对冲期权&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#对冲期权&#34;&gt;#&lt;/a&gt; 对冲期权&lt;/h4&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;原文&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://aquaoh.oss-cn-shanghai.aliyuncs.com/post/20250413164641099.png&#34; alt=&#34;image-20250413164633962&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://aquaoh.oss-cn-shanghai.aliyuncs.com/post/20250413164645204.png&#34; alt=&#34;image-20250413164645175&#34; /&gt;&lt;/p&gt;
@@ -83,10 +83,12 @@
 &lt;p&gt;计划的盈亏比为 3:1&lt;/p&gt;
 &lt;p&gt;这份计划其实还没考虑虚值期权也可以平仓收回部分成本&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;在交易时，我永远要求风险 / 回报的比率至少为 1：3。在我所采用的各种策略中，当判断正确时，我可以获得巨额的利润；若判断错误，损失却相当有限一一这便是资金管理的要点所在。&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;hr /&gt;
 &lt;h3 id=&#34;第2章-鳄鱼原则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第2章-鳄鱼原则&#34;&gt;#&lt;/a&gt; 第 2 章 鳄鱼原则&lt;/h3&gt;
 &lt;p&gt;立即止损！&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;当你知道自己犯错时，立即了结出场！不可再找借口、期待、祷告或采取其他任何动作，赶紧离场… 不可试图调整头寸、避险或&lt;br /&gt;
 其他无谓的措施，赶紧认赔出场！&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;hr /&gt;
 &lt;h3 id=&#34;第3章-一致性成功的事业经营哲学&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第3章-一致性成功的事业经营哲学&#34;&gt;#&lt;/a&gt; 第 3 章  一致性成功的事业经营哲学&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;控制仓位&lt;/strong&gt;：&lt;em&gt;人们在市场中发生亏损，虽然有很多原因，但有一个最严重、也最容易触犯的错误，那便是把过多的风险资本投入单一的头寸 — 孤注一掷。这个错误之所以产生，是因为人们在交易之前，并没有为自己设定一种经营事业的哲学 (business phi-losophy)。&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;细水长流&lt;/strong&gt;： &lt;em&gt;作为交易者，我的目标始终是：在经济独立的情况下保有自由，换句话说，我的目标是：经年累月地稳定赚钱。&lt;/em&gt;&lt;/p&gt;
@@ -99,7 +101,8 @@
 &lt;blockquote&gt;
 &lt;p&gt;这三者是我的基本原则，因为它们是所有市场决策的最高指导原则。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;1-保障资本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-保障资本&#34;&gt;#&lt;/a&gt; 1. 保障资本&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;h4 id=&#34;保障资本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#保障资本&#34;&gt;#&lt;/a&gt; 保障资本&lt;/h4&gt;
 &lt;p&gt;1️⃣&lt;strong&gt;保障资本是最核心的原则&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;换言之，在任何潜在的市场活动中，风险是我考虑的最重要因素。在我问 “可以实现的潜在利润如何” 之前，我会先考虑 “我所可能遭受的潜在亏损如何”。就风险 / 回报的角度思考，最大的可接受比率为 1：3（该比率将在本章与第 11 章分别说明）。&lt;/p&gt;
@@ -116,7 +119,8 @@
 &lt;p&gt;另一方面，介人兼并股票最理想的时机是在空头市场的底部或在多头市场的初期，这是股票具有真实价值的时候。犹如罗伯特・雷亚所说，空头市场的最后阶段 “是来自于健全股票的失望性卖压，不论价值如何，许多人急于对所持的一部分股票求现”。如果市场玩家可以避免在多头市场的顶部附近投资（恐慌性的崩跌可能会造成严重的伤害) 并在空头市场中卖空，则此时便可以掌握这股失望性的卖压。在多头市场的顶部，你或许会错失最后 10%，甚至 20% 的获利（不过仍可以获取国库券的获利率)，但当股票具有可观的上档潜能，且下档风险却非常有限时，你绝对有资金投资。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;4️⃣&lt;strong&gt;根据我的看法，这种累积财富的方式便是：保障资本，掌握一致性的获利能力，并耐心地等待正确的机会以攫取非凡的利润。&lt;/strong&gt;&lt;/p&gt;
-&lt;h4 id=&#34;2-一致性的获利能力&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-一致性的获利能力&#34;&gt;#&lt;/a&gt; 2. 一致性的获利能力&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;h4 id=&#34;一致性的获利能力&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一致性的获利能力&#34;&gt;#&lt;/a&gt; 一致性的获利能力&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;当然，市场不会永远位于顶部或底部的附近。一般来说，在任何市场的多头行情顶部与空头行情底部之间，优秀的投机者或投资者应该可以掌握长期价格趋势 (不论向上或向下) 的 60%~80%。这段时期内，交易重点应该放在低风险的一致性获利。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -145,7 +149,8 @@
 法则的解释是，“任何既有的获利都不可再损失 50%”。就这个例子来说，一旦价格向下突破 346.85 点（②)，我就会将止损设定在 347.10 点，价格继续向下跌破⑥与⑦时，我会把止损再往下调整。这笔交易最可能的结果是在 342.15 点（⑦上方四档) 止损出场，获利为 17.7 点，相当于每份合约 8850 美元。因为所有征兆都显示大盘将出现拉回的修正走势，我认为这是一笔低风险的交易，但我当时非常自信，所以我并没有进行这笔交易，而采用杠杆倍数更高的期权。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://aquaoh.oss-cn-shanghai.aliyuncs.com/post/20250413203958600.png&#34; alt=&#34;image-20250413203958539&#34; /&gt;&lt;/p&gt;
-&lt;h4 id=&#34;3-追求卓越的回报&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-追求卓越的回报&#34;&gt;#&lt;/a&gt; 3. 追求卓越的回报&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;h4 id=&#34;追求卓越的回报&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#追求卓越的回报&#34;&gt;#&lt;/a&gt; 追求卓越的回报&lt;/h4&gt;
 &lt;p&gt;1️⃣&lt;strong&gt;当我已经获利时，仍然运用相同的推理程序，但会进一步追求卓越的回报。唯有当回报与风险之间存在合理的关系时，我才会以更大的风险追求更高的资本回报率。这并不意味着我改变了风险 / 回报准则，我仅是增加了头寸（仓位）的规模。&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;1974 年七八月间便发生了一个典型的例子，当时我在操作雷纳期权公司的账户。我们的会计年度是于 6 月底结束，每一个会计年度开始，我的起始交易资本都是 25 万美元。在 7 月份，我已经赚进约 10.4 万美元的利润，所以当季回报率已经超过 40%。当时，我非常强烈地看空行情，所以决定下个月将以半数的获利建立空头头寸。在那个年代，芝加哥期货交易所并没有看跌期权的交易，所以我的空头头寸是建立在所谓的合成看跌期权 (synthetic put) 之上的。我投入 5 万美元的风险资金，分别卖空 3500 股德州仪器、柯达、麦当劳与 BM, 并各买进 35 份的看涨期权。因此，我实际承担风险的资金是看涨期权的成本，每 100 股卖空的股票完全由看涨期权避险一这便是一个合成看跌期权。&lt;/p&gt;
@@ -166,10 +171,12 @@
 &lt;p&gt;但是对于个股，并没有对应期权&lt;/p&gt;
 &lt;p&gt;如果你想直接场内做空个股，请尝试融券&lt;/p&gt;
 &lt;/div&gt;&lt;/details&gt;
-&lt;h4 id=&#34;4-小结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-小结&#34;&gt;#&lt;/a&gt; 4. 小结&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;h4 id=&#34;小结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#小结&#34;&gt;#&lt;/a&gt; 小结&lt;/h4&gt;
 &lt;p&gt;保障资本、一致性的获利能力以及追求卓越的回报，虽然这是三个比较简单的原则，如果你确实了解其中的精髓，它们将会指导你在市场中获利。然而，如果要实际地运用这些理念，你还需要更多的知识。最佳的起点是了解市场价格走势的性质。一个人要希望真正了解市场的行为，他需要拥有一套不可或缺的知识：&lt;strong&gt;道氏理论&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr /&gt;
 &lt;h3 id=&#34;第4章-道氏理论&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第4章-道氏理论&#34;&gt;#&lt;/a&gt; 第 4 章 道氏理论&lt;/h3&gt;
-&lt;h4 id=&#34;1-道氏理论的假设&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-道氏理论的假设&#34;&gt;#&lt;/a&gt; 1. 道氏理论的假设&lt;/h4&gt;
+&lt;h4 id=&#34;道氏理论的假设&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#道氏理论的假设&#34;&gt;#&lt;/a&gt; 道氏理论的假设&lt;/h4&gt;
 &lt;details class=&#34;primary&#34;&gt;&lt;summary&gt;假设1&lt;/summary&gt;&lt;div&gt;
 &lt;p&gt;人为操纵 (manipulation) 是指指数每天的波动可能受到人为的操纵，次级折返走势 (secondary reaction) 也可能受到这方面有限的影响，但主要趋势 (primary trend) 绝对不会受到人为的操纵。&lt;/p&gt;
 &lt;/div&gt;&lt;/details&gt;
@@ -250,7 +257,8 @@
 &lt;li&gt;市场指数永远都会适当地预期未来事件的影响（即大盘指数，不过大 A 特色的上证指数可能并不能良好反映，需要沪深 300 和中证 2000 结合看待，沪深 300 代表大盘股的走势，中证 2000 代表小盘股的走势）&lt;/li&gt;
 &lt;li&gt;道氏理论并不是绝对正确的，请客观理性，不要让自己一厢情愿的想法主导你的行为&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;2-道氏理论的定理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-道氏理论的定理&#34;&gt;#&lt;/a&gt; 2. 道氏理论的定理&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;h4 id=&#34;道氏理论的定理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#道氏理论的定理&#34;&gt;#&lt;/a&gt; 道氏理论的定理&lt;/h4&gt;
 &lt;details class=&#34;info&#34;&gt;&lt;summary&gt;定理1&lt;/summary&gt;&lt;div&gt;
 &lt;p&gt;道的三种走势 (Dow&#39;s three movements): 市场指数有三种走势，三者可以同时出现。第一种走势最重要，它是主要趋势，整体向上或向下的走势被称为多头或空头市场，期间可能长达数年。第二种走势最难以捉摸，它是次级的折返走势，是主要多头市场中的重要下跌走势，或是主要空头市场中的反弹。修正走势通常会持续三个星期至数个月。第三种走势通常较不重要，它是每天波动的走势。&lt;/p&gt;
 &lt;/div&gt;&lt;/details&gt;
@@ -474,6 +482,7 @@
 &lt;p&gt;定理 3：多头市场的特征&lt;/p&gt;
 &lt;p&gt;定理 4：空头市场的特征&lt;/p&gt;
 &lt;p&gt;定理 5：次级折返和小型折法（回调）&lt;/p&gt;
+&lt;hr /&gt;
 &lt;h3 id=&#34;第5章-趋势的定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第5章-趋势的定义&#34;&gt;#&lt;/a&gt; 第 5 章 趋势的定义&lt;/h3&gt;
 &lt;p&gt;趋势：（道氏定理 1—— 整理版）&lt;/p&gt;
 &lt;ul&gt;
@@ -482,7 +491,7 @@
 &lt;li&gt;短期趋势：持续数天至数个星期；&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;在任何市场中，这三种趋势必然同时存在，彼此的方向可能相反。&lt;/p&gt;
-&lt;h4 id=&#34;1-上升趋势和下降趋势&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-上升趋势和下降趋势&#34;&gt;#&lt;/a&gt; 1. 上升趋势和下降趋势&lt;/h4&gt;
+&lt;h4 id=&#34;上升趋势和下降趋势&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#上升趋势和下降趋势&#34;&gt;#&lt;/a&gt; 上升趋势和下降趋势&lt;/h4&gt;
 &lt;details class=&#34;info&#34;&gt;&lt;summary&gt;上升趋势&lt;/summary&gt;&lt;div&gt;
 &lt;ul&gt;
 &lt;li&gt;由一系列连续的涨势构成，每一段涨势都持续向上穿越先前的高点，中间夹杂的下降走势（跌势）不会向下跌破前一波跌势的低点。&lt;/li&gt;
@@ -507,7 +516,8 @@
 &lt;p&gt;大 A 随便找一段便是下跌趋势&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://aquaoh.oss-cn-shanghai.aliyuncs.com/post/20250416194828822.png&#34; alt=&#34;image-20250416194824882&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;:::&lt;/p&gt;
-&lt;h4 id=&#34;2-验证的重要性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-验证的重要性&#34;&gt;#&lt;/a&gt; 2. 验证的重要性&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;h4 id=&#34;验证的重要性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#验证的重要性&#34;&gt;#&lt;/a&gt; 验证的重要性&lt;/h4&gt;
 &lt;details class=&#34;danger&#34;&gt;&lt;summary&gt;背离&lt;/summary&gt;&lt;div&gt;
 &lt;ul&gt;
 &lt;li&gt;在股票市场中，最严重的错误之一是仅根据单一指数的走势进行判断。&lt;/li&gt;
@@ -599,7 +609,8 @@
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;em&gt;图 5-5&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://aquaoh.oss-cn-shanghai.aliyuncs.com/post/20250416195910182.png&#34; alt=&#34;image-20250416195910085&#34; /&gt;&lt;/p&gt;
-&lt;h4 id=&#34;3-行情的四个阶段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-行情的四个阶段&#34;&gt;#&lt;/a&gt; 3. 行情的四个阶段&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;h4 id=&#34;行情的四个阶段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#行情的四个阶段&#34;&gt;#&lt;/a&gt; 行情的四个阶段&lt;/h4&gt;
 &lt;p&gt;信号 (signals) 的两个关键指标分别是&lt;strong&gt;窄幅盘整&lt;/strong&gt;与&lt;strong&gt;成交量关系&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;任何市场都处于以下四种技术阶段之一：&lt;/p&gt;
 &lt;details class=&#34;info&#34;&gt;&lt;summary&gt;行情的四个阶段&lt;/summary&gt;&lt;div&gt;
@@ -610,7 +621,8 @@
 &lt;li&gt;&lt;strong&gt;整理（Consolidation）&lt;/strong&gt;：在确认的趋势中，因获利了结而出现的调整阶段。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;&lt;/details&gt;
-&lt;h4 id=&#34;4-窄幅盘整&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-窄幅盘整&#34;&gt;#&lt;/a&gt; 4. 窄幅盘整&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;h4 id=&#34;窄幅盘整&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#窄幅盘整&#34;&gt;#&lt;/a&gt; 窄幅盘整&lt;/h4&gt;
 &lt;details class=&#34;info&#34;&gt;&lt;summary&gt;窄幅盘整（Line）的定义&lt;/summary&gt;&lt;div&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;雷亚的定义&lt;/strong&gt;：窄幅盘整是指价格在两三周或更长时间内，波动幅度约 5% 的区间内。这种走势可能代表&lt;strong&gt;承接&lt;/strong&gt;或&lt;strong&gt;出货&lt;/strong&gt;。
@@ -666,7 +678,8 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;&lt;/details&gt;
-&lt;h4 id=&#34;5-重要的成交量关系&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-重要的成交量关系&#34;&gt;#&lt;/a&gt; 5. 重要的成交量关系&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;h4 id=&#34;重要的成交量关系&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#重要的成交量关系&#34;&gt;#&lt;/a&gt; 重要的成交量关系&lt;/h4&gt;
 &lt;p&gt;道氏理论中的量价关系&lt;/p&gt;
 &lt;details class=&#34;info&#34;&gt;&lt;summary&gt;量价关系——超买超卖&lt;/summary&gt;&lt;div&gt;
 &lt;ul&gt;
@@ -742,8 +755,9 @@
 &lt;p&gt;行情末期价格下跌时成交量放大（价跌量增）。&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://aquaoh.oss-cn-shanghai.aliyuncs.com/post/20250416203143753.png&#34; alt=&#34;image-20250416203143655&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;hr /&gt;
 &lt;h3 id=&#34;第6章-技术分析的优点和缺点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第6章-技术分析的优点和缺点&#34;&gt;#&lt;/a&gt; 第 6 章 技术分析的优点和缺点&lt;/h3&gt;
-&lt;h4 id=&#34;0-引言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0-引言&#34;&gt;#&lt;/a&gt; 0. 引言&lt;/h4&gt;
+&lt;h4 id=&#34;引言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引言&#34;&gt;#&lt;/a&gt; 引言&lt;/h4&gt;
 &lt;p&gt;&lt;mark&gt;不怎么重要的话&lt;/mark&gt;&lt;/p&gt;
 &lt;p&gt;1️⃣技术分析的定义与理论基础&lt;/p&gt;
 &lt;ul&gt;
@@ -816,7 +830,8 @@
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;引言想带出的：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;[在我们的讨论范围内，各位必须了解三种技术分析者的活动：波浪观察者（tide watcher）、人为操纵者与纯粹派信徒（purist）。&amp;quot;].ranbow&lt;/p&gt;
-&lt;h4 id=&#34;1-波浪观察者&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-波浪观察者&#34;&gt;#&lt;/a&gt; 1. 波浪观察者&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;h4 id=&#34;波浪观察者&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#波浪观察者&#34;&gt;#&lt;/a&gt; 波浪观察者&lt;/h4&gt;
 &lt;p&gt;在了解波浪观察者之前，你需要先知道什么是&lt;strong&gt;场内交易员&lt;/strong&gt;和&lt;strong&gt;做市商&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9pbnZlc3RvcnMud2lraS96aC9mbG9vcnRyYWRlcg==&#34;&gt;场内交易员 | Investor&#39;s wiki&lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1120,7 +1135,8 @@
 &lt;p&gt;&amp;quot; 最后一点对投机者来说可能最为重要。犹如地质学家通过监视火山活动可以预测地震一样，投机者可以通过监视盘中与每天的市场活动，来衡量未来行情的发展。具体来说，成交量、涨 - 跌家数比率、重大经济或市场新闻引起的短期反应以及价格变动率等因素，都可以评估市场参与者的主要心理驱动力量。&lt;/p&gt;
 &lt;p&gt;以 1989 年 10 月 13 日的情况来说，仅仅因为‘联合航空’并购案发生融通失败的消息，使市场陷入恐慌性的卖压中。这显示出市场当时的心理结构非常脆弱。市场显然极度怀疑多头走势的持续力道，只要有一些空头或次级修正的征兆，跌势便一发而不可收拾。&amp;quot;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;2-人为操纵者&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-人为操纵者&#34;&gt;#&lt;/a&gt; 2. 人为操纵者&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;h4 id=&#34;人为操纵者&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#人为操纵者&#34;&gt;#&lt;/a&gt; 人为操纵者&lt;/h4&gt;
 &lt;details class=&#34;info&#34;&gt;&lt;summary&gt;人为操纵的定义&lt;/summary&gt;&lt;div&gt;
 &lt;p&gt;人为操纵可以指 &amp;quot;高明的技巧处理&amp;quot; 或 &amp;quot;不公平狡猾的手段控制&amp;quot;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;在金融市场中，机构通过大规模买卖影响短期价格并获利。&lt;/strong&gt;（利用了波浪观察者的心理）&lt;/p&gt;
@@ -1181,7 +1197,8 @@
 &lt;p&gt;股票市场的跌势形成气候时，电脑程式交易会夸大整个情况的严重性，并造成史无前例的急跌走势……&lt;/p&gt;
 &lt;p&gt;这种夸大的跌势，通常被称为集体倒货，所以主要多头走势的顶部附近充满不确定性与风险。在这种情况下，如果持续以全部资金投入股市，显然就完全忽视了风险 / 回报的合理原则。当情势即将变化时，首先变化的人往往获利最丰硕。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;3-纯粹派信徒&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-纯粹派信徒&#34;&gt;#&lt;/a&gt; 3. 纯粹派信徒&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;h4 id=&#34;纯粹派信徒&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#纯粹派信徒&#34;&gt;#&lt;/a&gt; 纯粹派信徒&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;纯粹技术学派的局限&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1208,7 +1225,7 @@
 &lt;p&gt;我必须再度强调，此处所谈论的并不是指所有的技术分析方法与运用，我仅指其中某些学派，他们主张：未来一切都已经预先确定，并因此而能以严格的数学模型来预测未来。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;第7章-创造财富的契机&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第7章-创造财富的契机&#34;&gt;#&lt;/a&gt; 第 7 章 创造财富的契机&lt;/h3&gt;
-&lt;h4 id=&#34;0引言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0引言&#34;&gt;#&lt;/a&gt; 0. 引言&lt;/h4&gt;
+&lt;h4 id=&#34;引言-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引言-2&#34;&gt;#&lt;/a&gt; 引言&lt;/h4&gt;
 &lt;details class=&#34;danger&#34;&gt;&lt;summary&gt;辨识趋势的改变&lt;/summary&gt;&lt;div&gt;
 &lt;ul&gt;
 &lt;li&gt;金融市场中快速且安全的赚钱方法是尽早察觉趋势改变，建立头寸（多头或空头），顺势交易，并在趋势反转前或后了结头寸。&lt;/li&gt;
@@ -1270,7 +1287,8 @@
 &lt;p&gt;务必记住，运用走势图拟定决策，技术上的一致性在长期中最为理想，中期稍差，而短期的变化情况最严重。在走势图中之所以存在模式，是因为市场参与者对类似的情况会产生类似的反应。就心态而言，投资者与投机者并不相同，但他们之间有许多共通之处，这些共通性质将反映在走势图的模式中。然而，盘中的短线交易者是根据截然不同的法则交易的，因此他们产生的模式必须另外考虑。我们必须感谢盘中交易者的存在，因为他们为投机与投资行为提供了不可或缺的市场流动性；除了提供流动性以外，他们的行为对中期与长期趋势几乎没有什么影响。&lt;/p&gt;
 &lt;p&gt;走势图的判读方法，虽然属于 “技术性” 的观察，但这是最广义的角度而言的。换言之，它们在视觉上呈现人类行为的特质，而这些特质重复出现于市场价格走势的历史记录中。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;1-如何决定趋势绘制趋势线&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-如何决定趋势绘制趋势线&#34;&gt;#&lt;/a&gt; 1. 如何决定趋势 —— 绘制趋势线&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;h4 id=&#34;如何决定趋势绘制趋势线&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何决定趋势绘制趋势线&#34;&gt;#&lt;/a&gt; 如何决定趋势 —— 绘制趋势线&lt;/h4&gt;
 &lt;p&gt;&lt;mark&gt;首先我们需要了解趋势的定义&lt;/mark&gt;&lt;/p&gt;
 &lt;details class=&#34;primary&#34;&gt;&lt;summary&gt;趋势&lt;/summary&gt;&lt;div&gt;
 &lt;p&gt;&lt;strong&gt;趋势&lt;/strong&gt;：在某个特定期间内，价格走势的方向&lt;/p&gt;
@@ -1335,7 +1353,8 @@
 &lt;/ol&gt;
 &lt;p&gt;这种方法虽然简单，却非常精确而具有一致性。如果你根据相同期间内的资料做线性回归分析（linear regression analysis），最佳套入直线的斜率将相当近似于趋势线的斜率。这与其他方法不同，它使你可以避免依据个人的主观看法绘制趋势线 —— 避免将个人的欲望强加在趋势线上。当趋势发生变动时，这种方法也可以在图形上提供判断的基准。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;2-如何认定趋势的变动简单的1-2-3法则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-如何认定趋势的变动简单的1-2-3法则&#34;&gt;#&lt;/a&gt; 2. 如何认定趋势的变动：简单的 1-2-3 法则&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;h4 id=&#34;如何认定趋势的变动简单的1-2-3法则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何认定趋势的变动简单的1-2-3法则&#34;&gt;#&lt;/a&gt; 如何认定趋势的变动：简单的 1-2-3 法则&lt;/h4&gt;
 &lt;p&gt;上升或者下降趋势线绘制出后，如何利用它来为我们判断趋势变动？&lt;/p&gt;
 &lt;p&gt;作者提供了简单的 1-2-3 准则&lt;/p&gt;
 &lt;details class=&#34;info&#34;&gt;&lt;summary&gt;1-2-3准则&lt;/summary&gt;&lt;div&gt;
@@ -1445,7 +1464,8 @@
 &lt;p&gt;&lt;strong&gt;4. 1-2-3 准则的局限性与 2B 准则&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1-2-3 准则是一种简单而有效的交易方法，如果谨慎运用，成功的机会则远多于失败的机会。然而，它有一个缺点，当三种情况完全满足时，你通常已经错失一段相当大的行情。所以，此处将讨论一种可以协助你提早建立头寸的准则，它也是我个人偏爱的方法，我称它为 2B 准则。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;3-2b法则是否成立往往是输赢的分野&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-2b法则是否成立往往是输赢的分野&#34;&gt;#&lt;/a&gt; 3. 2B 法则 —— 是否成立往往是输赢的分野&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;h4 id=&#34;2b法则是否成立往往是输赢的分野&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2b法则是否成立往往是输赢的分野&#34;&gt;#&lt;/a&gt; 2B 法则 —— 是否成立往往是输赢的分野&lt;/h4&gt;
 &lt;p&gt;在前文讨论趋势变动的第二准则时，我们曾经提到一种情况：在试探先前的高点（或低点）时，价格往往可以实际突破先前的高点（或低点），&lt;mark&gt;但走势却未能持续&lt;/mark&gt;。虽然这仅是一种特殊形态的试探，但这种情况一旦出现，通常就是趋势变动的信号。换言之，单单这种现象的本身，便代表趋势非常可能发生变化；就概率来说，它的重要性远高于趋势变动三个准则中的任何一个。因为它具有特殊的重要性，所以可以被视为一种法则。&lt;/p&gt;
 &lt;details class=&#34;info&#34;&gt;&lt;summary&gt;2B准则&lt;/summary&gt;&lt;div&gt;
 &lt;ul&gt;
