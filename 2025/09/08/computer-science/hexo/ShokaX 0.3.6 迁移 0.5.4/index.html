@@ -1,0 +1,822 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"/><meta name="theme-color" content="#222"/><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"/><meta name="renderer" content="webkit"/><link rel="icon" type="image/ico" sizes="32x32" href="/assets/favicon.ico"/><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"/><meta name="msvalidate.01" content="AquaOH"/><meta name="google-site-verification" content="AquaOH"/><meta name="yandex-verification" content="AquaOH"/><meta name="baidu-site-verification" content="AquaOH"/><link rel="alternate" href="/rss.xml" title="HanaTsuki" type="application/rss+xml"><link rel="alternate" href="/atom.xml" title="HanaTsuki" type="application/atom+xml"><link rel="alternate" type="application/json" title="HanaTsuki" href="https://aquaoh.cc/feed.json"/><link rel="preconnect" href="https://s4.zstatic.net"/><link rel="preconnect" href="https://at.alicdn.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CFredericka%20the%20Great:400,400italic,700,700italic%7CNoto%20Serif%20JP:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CInconsolata:400,400italic,700,700italic&display=swap&subset=latin,latin-ext" media="none" onload="this.media&#x3D;&#39;all&#39;"><link rel="modulepreload" href="/js/siteInit.js"></link><link rel="modulepreload" href="/js/nyx-player-CZNLZHBQ.js"></link><link rel="modulepreload" href="/js/copy-tex-L7VFINHK.js"></link><link rel="modulepreload" href="/js/post-6YXOGHCC.js"></link><link rel="modulepreload" href="/js/chunk-BMH4CJ65.js"></link><link rel="modulepreload" href="/js/pagefind-3AFMYHU5.js"></link><link rel="modulepreload" href="/js/index.esm-3YKZZTLJ.js"></link><link rel="modulepreload" href="/js/chunk-HJSTZ4VX.js"></link><link rel="modulepreload" href="/js/chunk-IL5BPNQC.js"></link><link rel="stylesheet" href="/css/siteInit.css" media="none" onload="this.media&#x3D;&#39;all&#39;"></link><link rel="preload" href="https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/108152035_p0_master1200%20(realesrgan-x4plus-anime%20x4).webp" as="image" fetchpriority="high"><link rel="preload" href="https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/103136632_p0_master1200.webp" as="image" fetchpriority="high"><link rel="preload" href="https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/107270584_p0_master1200.webp" as="image" fetchpriority="high"><link rel="preload" href="https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/111326512_p0_master1200.webp" as="image" fetchpriority="high"><link rel="preload" href="https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/107450572_p0_master1200%20(realesrgan-x4plus-anime%20x4).webp" as="image" fetchpriority="high"><link rel="preload" href="https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/102875068_p0_master1200.webp" as="image" fetchpriority="high"><meta name="keywords" content="ShokaX"/><meta name="description" content="生年不满百
+常怀千岁忧"/><link rel="canonical" href="https://aquaoh.cc/2025/09/08/computer-science/hexo/ShokaX%200.3.6%20%E8%BF%81%E7%A7%BB%200.5.4/"><link rel="stylesheet" href="/css/post.css?v=0.5.4"><link rel="stylesheet" href="/css/mermaid.css?v=0.5.4"><!-- 临时处理--><link rel="stylesheet" media="none" onload="this.media='all'" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css"><title>ShokaX 0.3.6 迁移 0.5.4</title><meta name="generator" content="Hexo 7.3.0"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="loader"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div><div id="pagefind_mount"></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">ShokaX 0.3.6 迁移 0.5.4</h1><div class="meta"><span class="item" title="创建时间：2025-09-08 19:00:00"><span class="icon"><i class="ic i-calendar"></i></span><span class="text">发表于</span><time itemprop="dateCreated datePublished" datetime="2025-09-08T19:00:00+08:00">2025-09-08</time></span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i></span><span class="text">本文字数</span><span>15k</span><span class="text">字</span></span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i></span><span class="text">阅读时长</span><span>13 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span><span class="line"></span><span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">Aqua OH</a></li></ul><ul class="right" id="rightNav"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div class="pjax" id="imgs"><ul><li class="item" style="background-image: url(&quot;https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/108152035_p0_master1200%20(realesrgan-x4plus-anime%20x4).webp&quot;);"></li><li class="item" style="background-image: url(&quot;https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/103136632_p0_master1200.webp&quot;);"></li><li class="item" style="background-image: url(&quot;https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/107270584_p0_master1200.webp&quot;);"></li><li class="item" style="background-image: url(&quot;https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/111326512_p0_master1200.webp&quot;);"></li><li class="item" style="background-image: url(&quot;https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/107450572_p0_master1200%20(realesrgan-x4plus-anime%20x4).webp&quot;);"></li><li class="item" style="background-image: url(&quot;https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/102875068_p0_master1200.webp&quot;);"></li></ul></div><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div></header><main><div class="inner"><div class="pjax" id="main"><div class="article wrap"><div class="breadcrumb" itemListElement itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i><span><a href="/">首页</a></span><i class="ic i-angle-right"></i><span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/" itemprop="item" rel="index" title="分类于计算机科学"><span itemprop="name">计算机科学<meta itemprop="position" content="0"/></span></a></span><i class="ic i-angle-right"></i><span class="current" itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/hexo/" itemprop="item" rel="index" title="分类于Hexo"><span itemprop="name">Hexo<meta itemprop="position" content="1"/></span></a></span></div><article class="post block" itemscope="itemscope" itemtype="http://schema.org/Article" data-pagefind-body="data-pagefind-body" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://aquaoh.cc/2025/09/08/computer-science/hexo/ShokaX%200.3.6%20%E8%BF%81%E7%A7%BB%200.5.4/"/><span hidden="hidden" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><meta itemprop="image" content="/assets/avatar.jpg"/><meta itemprop="name" content="AquaOH"/><meta itemprop="description" content="🥕花鸟碱🥕, 生年不满百
+常怀千岁忧"/></span><span hidden="hidden" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content="HanaTsuki"/></span><div class="body md" itemprop="articleBody"><h1 id="shokax-036-迁移-054"><a class="anchor" href="#shokax-036-迁移-054">#</a> ShokaX 0.3.6 迁移 0.5.4</h1>
+<p>由于差异巨大，只得采取重新安装的方式</p>
+<h2 id="安装shokax"><a class="anchor" href="#安装shokax">#</a> 安装ShokaX</h2>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>pnpm add hexo-cli -g</span></span>
+<span class="line"><span>hexo init</span></span>
+<span class="line"><span>pnpm add hexo-theme-shokax</span></span>
+<span class="line"><span>node ./node_modules/hexo-theme-shokax/toolbox/hoistdep.mjs</span></span></code></pre>
+<p>同时为了方便管理，创建软链接</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>mklink /J .\themes\shokax .\node_modules\hexo-theme-shokax</span></span></code></pre>
+<h2 id="启用主题"><a class="anchor" href="#启用主题">#</a> 启用主题</h2>
+<p>删除根目录下的<code>_config.landscape.yml</code></p>
+<p>打开根目录下的<code>_config.yml</code>：</p>
+<ol>
+<li>
+<p>将<code>theme</code>更改为<code>shokax</code></p>
+</li>
+<li>
+<p>停用默认代码高亮<code>syntax_highlighter: false</code></p>
+</li>
+<li>
+<p>添加如下配置在最末尾</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>markdown:</span></span>
+<span class="line"><span>  render: # 渲染器设置</span></span>
+<span class="line"><span>    html: false # 过滤 HTML 标签</span></span>
+<span class="line"><span>    xhtmlOut: true # 使用 '/' 来闭合单标签 （比如 &#x3C;br />）。</span></span>
+<span class="line"><span>    breaks: true # 转换段落里的 '\n' 到 &#x3C;br>。</span></span>
+<span class="line"><span>    linkify: true # 将类似 URL 的文本自动转换为链接。</span></span>
+<span class="line"><span>    typographer:</span></span>
+<span class="line"><span>    quotes: "“”‘’"</span></span>
+<span class="line"><span>  plugins: # markdown-it 插件设置</span></span>
+<span class="line"><span>    - plugin:</span></span>
+<span class="line"><span>        name: markdown-it-toc-and-anchor</span></span>
+<span class="line"><span>        enable: true</span></span>
+<span class="line"><span>        options: # 文章目录以及锚点应用的 class 名称，shoka 系主题必须设置成这样</span></span>
+<span class="line"><span>          tocClassName: "toc"</span></span>
+<span class="line"><span>          anchorClassName: "anchor"</span></span>
+<span class="line"><span>    - plugin:</span></span>
+<span class="line"><span>        name: markdown-it-multimd-table</span></span>
+<span class="line"><span>        enable: true</span></span>
+<span class="line"><span>        options:</span></span>
+<span class="line"><span>          multiline: true</span></span>
+<span class="line"><span>          rowspan: true</span></span>
+<span class="line"><span>          headerless: true</span></span>
+<span class="line"><span>    - plugin:</span></span>
+<span class="line"><span>        name: ./markdown-it-furigana</span></span>
+<span class="line"><span>        enable: true</span></span>
+<span class="line"><span>        options:</span></span>
+<span class="line"><span>          fallbackParens: "()"</span></span>
+<span class="line"><span>    - plugin:</span></span>
+<span class="line"><span>        name: ./markdown-it-spoiler</span></span>
+<span class="line"><span>        enable: true</span></span>
+<span class="line"><span>        options:</span></span>
+<span class="line"><span>          title: "你知道得太多了"</span></span></code></pre>
+</li>
+<li>
+<p>启动文件压缩，添加在最末尾</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>minify:</span></span>
+<span class="line"><span>  js:</span></span>
+<span class="line"><span>    enable: false # ShokaX 自带 esbuild 优化，不建议开启，其他主题建议开启</span></span>
+<span class="line"><span>    exclude: # 排除文件，接受 string[]，需符合 micromatch 格式</span></span>
+<span class="line"><span>  css:</span></span>
+<span class="line"><span>    enable: true # 开启 CSS 优化</span></span>
+<span class="line"><span>    options:</span></span>
+<span class="line"><span>      targets: ">= 0.5%" # browserslist 格式的 target</span></span>
+<span class="line"><span>    exclude: # 排除文件，接受 string[]，需符合 micromatch 格式</span></span>
+<span class="line"><span>  html:</span></span>
+<span class="line"><span>    minifier: html-minifier</span></span>
+<span class="line"><span>    enable: true # 开启 HTML 优化</span></span>
+<span class="line"><span>    options:</span></span>
+<span class="line"><span>      comments: false # 是否保留注释内容</span></span>
+<span class="line"><span>    exclude: # 排除文件，接受 string[]，需符合 micromatch 格式</span></span>
+<span class="line"><span>  image:</span></span>
+<span class="line"><span>    enable: false # 开启图片预处理和自动 WebP 化</span></span>
+<span class="line"><span>    options:</span></span>
+<span class="line"><span>      avif: false</span></span>
+<span class="line"><span>      webp: true # 预留配置项，现版本无作用</span></span>
+<span class="line"><span>      quality: 80 # 质量，支持1-100的整数、lossless或nearLossless</span></span>
+<span class="line"><span>      effort: 2 # CPU 工作量，0-6之间的整数(越低越快)</span></span>
+<span class="line"><span>      replaceSrc: false # 自动替换生成html中的本地图片链接为webp链接</span></span>
+<span class="line"><span>      # 对于使用 CI 工作流部署的用户，请注意本配置可能导致图片 404，如果出现请关闭</span></span>
+<span class="line"><span>      # 我们更建议使用 Service Worker 来在用户侧实现 replaceSrc 的功能，这将能够以一种侵入式更小的方式实现链接替换</span></span>
+<span class="line"><span>    exclude:</span></span></code></pre>
+</li>
+<li>
+<p>开启feed生成，添加在最末尾</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>feed:</span></span>
+<span class="line"><span>  limit: 20</span></span>
+<span class="line"><span>  order_by: "-date"</span></span>
+<span class="line"><span>  tag_dir: false</span></span>
+<span class="line"><span>  category_dir: false</span></span>
+<span class="line"><span>  rss:</span></span>
+<span class="line"><span>    enable: true</span></span>
+<span class="line"><span>    template: "node_modules/hexo-theme-shokax/layout/_alternate/rss.ejs"</span></span>
+<span class="line"><span>    output: "rss.xml"</span></span>
+<span class="line"><span>  atom:</span></span>
+<span class="line"><span>    enable: true</span></span>
+<span class="line"><span>    template: "node_modules/hexo-theme-shokax/layout/_alternate/atom.ejs"</span></span>
+<span class="line"><span>    output: "atom.xml"</span></span>
+<span class="line"><span>  jsonFeed:</span></span>
+<span class="line"><span>    enable: true</span></span>
+<span class="line"><span>    template: "node_modules/hexo-theme-shokax/layout/_alternate/json.ejs"</span></span>
+<span class="line"><span>    output: "feed.json"</span></span></code></pre>
+</li>
+</ol>
+<p>同时，将<code>&lt;root&gt;/themes/shokax/source/assets</code>移动到<code>&lt;root&gt;/source/_data/assets/</code>，同时添加自己头像<code>avatar.jpg</code></p>
+<p>在<code>&lt;root&gt;/themes/shokax/_images.yml</code>中添加至少6张图片的链接</p>
+<p>随后主题即可正常使用</p>
+<h2 id="加载动画替换"><a class="anchor" href="#加载动画替换">#</a> 加载动画替换</h2>
+<p>更改<code>&lt;root&gt;/themes/shokax/layout/_partials/loading.pug</code></p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>div(id="loading")</span></span>
+<span class="line"><span>    div(class="loader")</span></span>
+<span class="line"><span>        div(class="dot")</span></span>
+<span class="line"><span>        div(class="dot")</span></span>
+<span class="line"><span>        div(class="dot")</span></span>
+<span class="line"><span>        div(class="dot")</span></span>
+<span class="line"><span>        div(class="dot")</span></span></code></pre>
+<p>更改<code>&lt;root&gt;/themes/shokax/layout/_partials/loading.pug</code></p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>#loading &#123;</span></span>
+<span class="line"><span>  @extend $fix-fullscreen;</span></span>
+<span class="line"><span>  background-color: var(--grey-1);</span></span>
+<span class="line"><span>  if(!hexo-config('loader.start')) &#123;</span></span>
+<span class="line"><span>    display: none;</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span>&#125;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>body</span></span>
+<span class="line"><span>  margin 0</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>.loader</span></span>
+<span class="line"><span>  position absolute</span></span>
+<span class="line"><span>  top 50%</span></span>
+<span class="line"><span>  left 40%</span></span>
+<span class="line"><span>  margin-left 10%</span></span>
+<span class="line"><span>  transform translate3d(-50%,-50%,0)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>.dot</span></span>
+<span class="line"><span>  width 24px</span></span>
+<span class="line"><span>  height 24px</span></span>
+<span class="line"><span>  background #3ac</span></span>
+<span class="line"><span>  border-radius 100%</span></span>
+<span class="line"><span>  display inline-block</span></span>
+<span class="line"><span>  animation slide 1s infinite</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>for n in (1..5)</span></span>
+<span class="line"><span>  .dot:nth-child(&#123;n&#125;)</span></span>
+<span class="line"><span>    animation-delay (.1s * n)</span></span>
+<span class="line"><span>    background red(#3ac, (50 * n))</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@keyframes slide</span></span>
+<span class="line"><span>  0%</span></span>
+<span class="line"><span>    transform scale(1)</span></span>
+<span class="line"><span>  50%</span></span>
+<span class="line"><span>    opacity .3</span></span>
+<span class="line"><span>    transform scale(2)</span></span>
+<span class="line"><span>  100%</span></span>
+<span class="line"><span>    transform scale(1)</span></span></code></pre>
+<h2 id="live2d"><a class="anchor" href="#live2d">#</a> Live2D</h2>
+<h3 id="本地编译"><a class="anchor" href="#本地编译">#</a> 本地编译</h3>
+<p>首先去官方仓库克隆项目<a target="_blank" rel="noopener" href="https://github.com/stevenjoezhang/live2d-widget">stevenjoezhang/live2d-widget: 把萌萌哒的看板娘抱回家 (ノ≧∇≦)ノ | Live2D widget for web platform</a></p>
+<p>随后去Live2D官网下载SDK for Web <a target="_blank" rel="noopener" href="https://www.live2d.com/zh-CHS/sdk/download/web/">下载Live2D Cubism SDK for Web | Live2D Cubism</a></p>
+<p>解压SDK后放入项目<code>src</code>文件夹中，路径参考<code>src/CubismSdkForWeb-5-r.4</code></p>
+<p>修改<code>tsconfig.json</code>，排除官方示例文件夹</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>&#123;</span></span>
+<span class="line"><span>  "compilerOptions": &#123;</span></span>
+<span class="line"><span>    "target": "es2017",</span></span>
+<span class="line"><span>    "module": "esnext",</span></span>
+<span class="line"><span>    "moduleResolution": "node",</span></span>
+<span class="line"><span>    "declaration": true,</span></span>
+<span class="line"><span>    "outDir": "build",</span></span>
+<span class="line"><span>    "esModuleInterop": true,</span></span>
+<span class="line"><span>    "forceConsistentCasingInFileNames": true,</span></span>
+<span class="line"><span>    "strict": false,</span></span>
+<span class="line"><span>    "skipLibCheck": true,</span></span>
+<span class="line"><span>    "removeComments": true,</span></span>
+<span class="line"><span>    "allowJs": true,</span></span>
+<span class="line"><span>    "paths": &#123;</span></span>
+<span class="line"><span>      "@framework/*": [</span></span>
+<span class="line"><span>        "./src/CubismSdkForWeb-5-r.4/Framework/src/*"</span></span>
+<span class="line"><span>      ],</span></span>
+<span class="line"><span>      "@demo/*": [</span></span>
+<span class="line"><span>        "./src/CubismSdkForWeb-5-r.4/Samples/TypeScript/Demo/src/*"</span></span>
+<span class="line"><span>      ]</span></span>
+<span class="line"><span>    &#125;</span></span>
+<span class="line"><span>  &#125;,</span></span>
+<span class="line"><span>  "include": ["src"],</span></span>
+<span class="line"><span>  "exclude": [</span></span>
+<span class="line"><span>    "node_modules", </span></span>
+<span class="line"><span>    "build", </span></span>
+<span class="line"><span>    "dist",</span></span>
+<span class="line"><span>    "src/CubismSdkForWeb-5-r.4/Samples/**/*.config.*"</span></span>
+<span class="line"><span>  ]</span></span>
+<span class="line"><span>&#125;</span></span></code></pre>
+<p>随后在终端输入<code>npm install</code>，安装完毕后输入<code>npm run build</code>开始构建</p>
+<h3 id="推送仓库"><a class="anchor" href="#推送仓库">#</a> 推送仓库</h3>
+<p>构建完毕后在项目根目录下创建<code>models</code>文件夹，并放入想使用的模型，我以莲的模型为例，路径为<code>/models/ren</code></p>
+<p>随后将项目推送到github，然后访问发布一个版本，这里我Release填为<code>0.1.0</code></p>
+<p>访问地址<code>https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</code>，如果不填版本号默认拉取最新版</p>
+<p>关于autoload.js，即为<code>https://fastly.jsdelivr.net/gh/AquaOH/live2d-widget/dist/autoload.js</code>，</p>
+<p>关于模型链接，即为<code>https://fastly.jsdelivr.net/gh/AquaOH/live2d-widget/models/ren/L.model3.json</code></p>
+<p>需要一段时间才能够同步，这个过程通常极其缓慢...</p>
+<h3 id="配置文件"><a class="anchor" href="#配置文件">#</a> 配置文件</h3>
+<p>为了能够正常使用，还需要修改<code>autoload.js</code></p>
+<p>将<code>const live2d_path = 'https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0-rc.6/dist/';</code>的值改为你的值，比如我的为<code>https://fastly.jsdelivr.net/gh/AquaOH/live2d-widget/dist/</code></p>
+<p>同时在<code>waifu-tips.json</code>中添加需要的模型，示例如下</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-json"><span class="line"><span style="color:#B5695977;--shiki-dark:#C98A7D77">  "</span><span style="color:#B56959;--shiki-dark:#C98A7D">models</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">: </span><span style="color:#2993a3;--shiki-dark:#5eaab5">[</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">    </span><span style="color:#1e754f;--shiki-dark:#4d9375">&#123;</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">      "</span><span style="color:#998418;--shiki-dark:#B8A965">name</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">Ren</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">      "</span><span style="color:#998418;--shiki-dark:#B8A965">paths</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#a65e2b;--shiki-dark:#d4976c">[</span></span>
+<span class="line"><span style="color:#B5695977;--shiki-dark:#C98A7D77">        "</span><span style="color:#B56959;--shiki-dark:#C98A7D">https://fastly.jsdelivr.net/gh/AquaOH/live2d-widget/models/ren/L.model3.json</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">      </span><span style="color:#a65e2b;--shiki-dark:#d4976c">]</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">      "</span><span style="color:#998418;--shiki-dark:#B8A965">message</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">枯れない世界と終わる花</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">    </span><span style="color:#1e754f;--shiki-dark:#4d9375">&#125;</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">    </span><span style="color:#1e754f;--shiki-dark:#4d9375">&#123;</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">      "</span><span style="color:#998418;--shiki-dark:#B8A965">name</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">Potion-Maker/Pio</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">      "</span><span style="color:#998418;--shiki-dark:#B8A965">paths</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#a65e2b;--shiki-dark:#d4976c">[</span></span>
+<span class="line"><span style="color:#B5695977;--shiki-dark:#C98A7D77">        "</span><span style="color:#B56959;--shiki-dark:#C98A7D">https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/model/Potion-Maker/Pio/index.json</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">      </span><span style="color:#a65e2b;--shiki-dark:#d4976c">]</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">      "</span><span style="color:#998418;--shiki-dark:#B8A965">message</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">来自 Potion Maker 的 Pio 酱 ~</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">    </span><span style="color:#1e754f;--shiki-dark:#4d9375">&#125;</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">    </span><span style="color:#1e754f;--shiki-dark:#4d9375">&#123;</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">      "</span><span style="color:#998418;--shiki-dark:#B8A965">name</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">Potion-Maker/Tia</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">      "</span><span style="color:#998418;--shiki-dark:#B8A965">paths</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#a65e2b;--shiki-dark:#d4976c">[</span></span>
+<span class="line"><span style="color:#B5695977;--shiki-dark:#C98A7D77">        "</span><span style="color:#B56959;--shiki-dark:#C98A7D">https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/model/Potion-Maker/Tia/index.json</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">      </span><span style="color:#a65e2b;--shiki-dark:#d4976c">]</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">      "</span><span style="color:#998418;--shiki-dark:#B8A965">message</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">来自 Potion Maker 的 Tia 酱 ~</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">    </span><span style="color:#1e754f;--shiki-dark:#4d9375">&#125;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">  </span><span style="color:#2993a3;--shiki-dark:#5eaab5">]</span></span></code></pre>
+<h3 id="引入博客"><a class="anchor" href="#引入博客">#</a> 引入博客</h3>
+<p>在<code>/themes/shokax/layout/_partials/layout.pug</code>中找到这一段：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-pug"><span class="line"><span style="color:#A65E2B;--shiki-dark:#C99076">        !=</span><span style="color:#59873A;--shiki-dark:#80A665"> _js</span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="color:#B56959;--shiki-dark:#C98A7D">siteInit.js</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A65E2B;--shiki-dark:#C99076">        !=</span><span style="color:#59873A;--shiki-dark:#80A665"> shokax_inject</span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="color:#B56959;--shiki-dark:#C98A7D">bodyEnd</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span></span></code></pre>
+<p>在这两行之间添加：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-pug"><span class="line"><span style="color:#A65E2B;--shiki-dark:#C99076">        !=</span><span style="color:#59873A;--shiki-dark:#80A665"> _js</span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="color:#B56959;--shiki-dark:#C98A7D">siteInit.js</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">        </span></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">        script</span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#B07D48;--shiki-dark:#BD976A">src</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">https://fastly.jsdelivr.net/gh/AquaOH/live2d-widget/dist/autoload.js</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">        </span></span>
+<span class="line"><span style="color:#A65E2B;--shiki-dark:#C99076">        !=</span><span style="color:#59873A;--shiki-dark:#80A665"> shokax_inject</span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="color:#B56959;--shiki-dark:#C98A7D">bodyEnd</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span></span></code></pre>
+<p>同时设置下样式，在文件<code>&lt;Hexo根目录&gt;\source\_data\custom.styl</code>中添加如下样式调节按钮颜色和live2d层级(没有请创建)</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>/* 修复 Live2D 的完整层级结构 */</span></span>
+<span class="line"><span>#waifu,</span></span>
+<span class="line"><span>#waifu-canvas,</span></span>
+<span class="line"><span>#live2d &#123;</span></span>
+<span class="line"><span>  z-index: 99999 !important;</span></span>
+<span class="line"><span>&#125;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#waifu-toggle &#123;</span></span>
+<span class="line"><span>  background-color: #ffc1cc !important; </span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>  &#x26;:hover &#123;</span></span>
+<span class="line"><span>    background-color: #ff8a95 !important; </span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span>&#125;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#waifu-tool svg &#123;</span></span>
+<span class="line"><span>  fill: #ffc1cc !important;</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>  &#x26;:hover &#123;</span></span>
+<span class="line"><span>    fill: #ff8a95 !important;</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span>&#125;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[data-theme="dark"] &#123;</span></span>
+<span class="line"><span>  #waifu-toggle &#123;</span></span>
+<span class="line"><span>    background-color: #cc9199 !important; </span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    &#x26;:hover &#123;</span></span>
+<span class="line"><span>      background-color: #cc5a66 !important; </span></span>
+<span class="line"><span>    &#125;</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>  #waifu-tool svg &#123;</span></span>
+<span class="line"><span>    fill: #cc9199 !important;</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    &#x26;:hover &#123;</span></span>
+<span class="line"><span>      fill: #cc5a66 !important;</span></span>
+<span class="line"><span>    &#125;</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span>&#125;</span></span></code></pre>
+<h2 id="工具按钮居右"><a class="anchor" href="#工具按钮居右">#</a> 工具按钮居右</h2>
+<p>在文件<code>&lt;Hexo根目录&gt;\source\_data\custom.styl</code>中添加如下样式调节按钮位置</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>#tool &#123;</span></span>
+<span class="line"><span>  left: auto !important;</span></span>
+<span class="line"><span>  right: 1rem !important;</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>  &#x26;.affix &#123;</span></span>
+<span class="line"><span>    right: 0px !important;</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span>&#125;</span></span></code></pre>
+<h2 id="背景图片小方格"><a class="anchor" href="#背景图片小方格">#</a> 背景图片小方格</h2>
+<p>在文件<code>&lt;Hexo根目录&gt;\source\_data\custom.styl</code>中添加如下样式</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>#header::before &#123;</span></span>
+<span class="line"><span>  background: url("https://cdn.jsdelivr.net/gh/lavender816/CDN@1.8/img/dot.jpg");</span></span>
+<span class="line"><span>  content:'';</span></span>
+<span class="line"><span>  position:absolute;</span></span>
+<span class="line"><span>  height:100vh;</span></span>
+<span class="line"><span>  top:0;</span></span>
+<span class="line"><span>  bottom:0;</span></span>
+<span class="line"><span>  left:0;</span></span>
+<span class="line"><span>  right:0;</span></span>
+<span class="line"><span>  z-index:-4;</span></span>
+<span class="line"><span>  background-attachment:fixed;</span></span>
+<span class="line"><span>&#125;</span></span></code></pre>
+<h2 id="更改加载动画"><a class="anchor" href="#更改加载动画">#</a> 更改加载动画</h2>
+<p>这两个文件替换成你想要的加载动画就行</p>
+<p><code>themes/shokax/layout/_partials/loading.pug</code></p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>    div(class="loader")</span></span>
+<span class="line"><span>        div(class="dot")</span></span>
+<span class="line"><span>        div(class="dot")</span></span>
+<span class="line"><span>        div(class="dot")</span></span>
+<span class="line"><span>        div(class="dot")</span></span>
+<span class="line"><span>        div(class="dot")</span></span></code></pre>
+<p><code>themes/shokax/source/css/_common/components/third-party/loading.styl</code></p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>body</span></span>
+<span class="line"><span>  margin 0</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>.loader</span></span>
+<span class="line"><span>  position absolute</span></span>
+<span class="line"><span>  top 50%</span></span>
+<span class="line"><span>  left 40%</span></span>
+<span class="line"><span>  margin-left 10%</span></span>
+<span class="line"><span>  transform translate3d(-50%,-50%,0)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>.dot</span></span>
+<span class="line"><span>  width 24px</span></span>
+<span class="line"><span>  height 24px</span></span>
+<span class="line"><span>  background #3ac</span></span>
+<span class="line"><span>  border-radius 100%</span></span>
+<span class="line"><span>  display inline-block</span></span>
+<span class="line"><span>  animation slide 1s infinite</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>for n in (1..5)</span></span>
+<span class="line"><span>  .dot:nth-child(&#123;n&#125;)</span></span>
+<span class="line"><span>    animation-delay (.1s * n)</span></span>
+<span class="line"><span>    background red(#3ac, (50 * n))</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@keyframes slide</span></span>
+<span class="line"><span>  0%</span></span>
+<span class="line"><span>    transform scale(1)</span></span>
+<span class="line"><span>  50%</span></span>
+<span class="line"><span>    opacity .3</span></span>
+<span class="line"><span>    transform scale(2)</span></span>
+<span class="line"><span>  100%</span></span>
+<span class="line"><span>    transform scale(1)</span></span></code></pre>
+<h2 id="漂浮物"><a class="anchor" href="#漂浮物">#</a> 漂浮物</h2>
+<p>放入图片<code>source/_data/assets/float.png</code></p>
+<p>添加新文件<code>themes/shokax/scripts/sakura.js</code></p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>themes/shokax/scripts/sakura.js</span></span></code></pre>
+<p>添加新文件<code>views/sakura.pug</code></p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>script.</span></span>
+<span class="line"><span>  // 漂浮物</span></span>
+<span class="line"><span>  // 新增函数 </span></span>
+<span class="line"><span>  // 首先获取 Url，然后把 Url 通过</span><span> // 截成两部分，再从后一部分中截取相对路径。如果截取到的相对路径中有参数，则把参数去掉。</span></span>
+<span class="line"><span>  // 获取相对路径</span></span>
+<span class="line"><span>  function GetUrlRelativePath()</span></span>
+<span class="line"><span>  &#123;</span></span>
+<span class="line"><span>      var url = document.location.toString();</span></span>
+<span class="line"><span>      var arrUrl = url.split("//");</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>      var start = arrUrl[1].indexOf("/");</span></span>
+<span class="line"><span>      var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>      if(relUrl.indexOf("?") != -1)&#123;</span></span>
+<span class="line"><span>          relUrl = relUrl.split("?")[0];</span></span>
+<span class="line"><span>      &#125;</span></span>
+<span class="line"><span>      return relUrl;</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span>  var allowAll = true; // true 则允许所有网页存在漂浮物</span></span>
+<span class="line"><span>  // 允许显示漂浮物的网址列表</span></span>
+<span class="line"><span>  var urlAllowList = [</span></span>
+<span class="line"><span>      "/about/",</span></span>
+<span class="line"><span>      "friends/",</span></span>
+<span class="line"><span>  ]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  var isAllowFloat = false;   // 全局变量，允许使用漂浮特效</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  // 判断</span></span>
+<span class="line"><span>  function decide()&#123;</span></span>
+<span class="line"><span>      isAllowFloat = true;</span></span>
+<span class="line"><span>      if(!allowAll)&#123;</span></span>
+<span class="line"><span>          // 判断当前页面是否为指定页面</span></span>
+<span class="line"><span>          var url = GetUrlRelativePath();</span></span>
+<span class="line"><span>          var i = 0;</span></span>
+<span class="line"><span>          for(;i&#x3C;urlAllowList.length;i++)&#123;</span></span>
+<span class="line"><span>              if(url===urlAllowList[i])&#123;</span></span>
+<span class="line"><span>                  // console.log(i);</span></span>
+<span class="line"><span>                  isAllowFloat = true;</span></span>
+<span class="line"><span>                  break;</span></span>
+<span class="line"><span>              &#125;</span></span>
+<span class="line"><span>          &#125;</span></span>
+<span class="line"><span>          if(i===urlAllowList.length)&#123;</span></span>
+<span class="line"><span>              isAllowFloat = false;</span></span>
+<span class="line"><span>          &#125;</span></span>
+<span class="line"><span>      &#125;</span></span>
+<span class="line"><span>      console.log(isAllowFloat)</span></span>
+<span class="line"><span>      if(isAllowFloat)startFloat();</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  var stop, staticx;</span></span>
+<span class="line"><span>  var img = new Image();</span></span>
+<span class="line"><span>  img.src = "/assets/float.png"; // 图片</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  function Float(x, y, s, r, fn) &#123;</span></span>
+<span class="line"><span>      this.x = x;</span></span>
+<span class="line"><span>      this.y = y;</span></span>
+<span class="line"><span>      this.s = s;</span></span>
+<span class="line"><span>      this.r = r;</span></span>
+<span class="line"><span>      this.fn = fn;</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Float.prototype.draw = function(cxt) &#123;</span></span>
+<span class="line"><span>      cxt.save();</span></span>
+<span class="line"><span>      var xc = 40 * this.s / 4;</span></span>
+<span class="line"><span>      cxt.translate(this.x, this.y);</span></span>
+<span class="line"><span>      cxt.rotate(this.r);</span></span>
+<span class="line"><span>      cxt.drawImage(img, 0, 0, 35 * this.s, 35 * this.s)</span></span>
+<span class="line"><span>      // 漂浮物大小</span></span>
+<span class="line"><span>      cxt.restore();</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Float.prototype.update = function() &#123;</span></span>
+<span class="line"><span>      this.x = this.fn.x(this.x, this.y);</span></span>
+<span class="line"><span>      this.y = this.fn.y(this.y, this.y);</span></span>
+<span class="line"><span>      this.r = this.fn.r(this.r);</span></span>
+<span class="line"><span>      if (this.x > window.innerWidth || this.x &#x3C; 0 || this.y > window.innerHeight || this.y &#x3C; 0) &#123;</span></span>
+<span class="line"><span>          this.r = getRandom('fnr');</span></span>
+<span class="line"><span>          if (Math.random() > 0.4) &#123;</span></span>
+<span class="line"><span>              this.x = getRandom('x');</span></span>
+<span class="line"><span>              this.y = 0;</span></span>
+<span class="line"><span>              this.s = getRandom('s');</span></span>
+<span class="line"><span>              this.r = getRandom('r');</span></span>
+<span class="line"><span>          &#125; else &#123;</span></span>
+<span class="line"><span>              this.x = window.innerWidth;</span></span>
+<span class="line"><span>              this.y = getRandom('y');</span></span>
+<span class="line"><span>              this.s = getRandom('s');</span></span>
+<span class="line"><span>              this.r = getRandom('r');</span></span>
+<span class="line"><span>          &#125;</span></span>
+<span class="line"><span>      &#125;</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  FloatList = function() &#123;</span></span>
+<span class="line"><span>      this.list = [];</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span>  FloatList.prototype.push = function(float) &#123;</span></span>
+<span class="line"><span>      this.list.push(float);</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span>  FloatList.prototype.update = function() &#123;</span></span>
+<span class="line"><span>      for (var i = 0, len = this.list.length; i &#x3C; len; i++) &#123;</span></span>
+<span class="line"><span>          this.list[i].update();</span></span>
+<span class="line"><span>      &#125;</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span>  FloatList.prototype.draw = function(cxt) &#123;</span></span>
+<span class="line"><span>      for (var i = 0, len = this.list.length; i &#x3C; len; i++) &#123;</span></span>
+<span class="line"><span>          this.list[i].draw(cxt);</span></span>
+<span class="line"><span>      &#125;</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span>  FloatList.prototype.get = function(i) &#123;</span></span>
+<span class="line"><span>      return this.list[i];</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span>  FloatList.prototype.size = function() &#123;</span></span>
+<span class="line"><span>      return this.list.length;</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  function getRandom(option) &#123;</span></span>
+<span class="line"><span>      var ret, random;</span></span>
+<span class="line"><span>      switch (option) &#123;</span></span>
+<span class="line"><span>      case 'x':</span></span>
+<span class="line"><span>          ret = Math.random() * window.innerWidth;</span></span>
+<span class="line"><span>          break;</span></span>
+<span class="line"><span>      case 'y':</span></span>
+<span class="line"><span>          ret = Math.random() * window.innerHeight;</span></span>
+<span class="line"><span>          break;</span></span>
+<span class="line"><span>      case 's':</span></span>
+<span class="line"><span>          ret = Math.random();</span></span>
+<span class="line"><span>          break;</span></span>
+<span class="line"><span>      case 'r':</span></span>
+<span class="line"><span>          ret = Math.random() * 6;</span></span>
+<span class="line"><span>          break;</span></span>
+<span class="line"><span>      case 'fnx':</span></span>
+<span class="line"><span>          random = -0.5 + Math.random() * 1;</span></span>
+<span class="line"><span>          ret = function(x, y) &#123;</span></span>
+<span class="line"><span>              return x + 0.5 * random - 0.6;</span></span>
+<span class="line"><span>              //x 轴速度</span></span>
+<span class="line"><span>          &#125;</span></span>
+<span class="line"><span>          ;</span></span>
+<span class="line"><span>          break;</span></span>
+<span class="line"><span>      case 'fny':</span></span>
+<span class="line"><span>          random = 0.8 + Math.random() * 0.7</span></span>
+<span class="line"><span>          //y 轴速度</span></span>
+<span class="line"><span>          ret = function(x, y) &#123;</span></span>
+<span class="line"><span>              return y + random;</span></span>
+<span class="line"><span>          &#125;</span></span>
+<span class="line"><span>          ;</span></span>
+<span class="line"><span>          break;</span></span>
+<span class="line"><span>      case 'fnr':</span></span>
+<span class="line"><span>          random = Math.random() * 0.03;</span></span>
+<span class="line"><span>          ret = function(r) &#123;</span></span>
+<span class="line"><span>              return r + random;</span></span>
+<span class="line"><span>          &#125;</span></span>
+<span class="line"><span>          ;</span></span>
+<span class="line"><span>          break;</span></span>
+<span class="line"><span>      &#125;</span></span>
+<span class="line"><span>      return ret;</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  function startFloat() &#123;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>      requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;</span></span>
+<span class="line"><span>      var canvas = document.createElement('canvas'), cxt;</span></span>
+<span class="line"><span>      staticx = true;</span></span>
+<span class="line"><span>      canvas.height = window.innerHeight;</span></span>
+<span class="line"><span>      canvas.width = window.innerWidth;</span></span>
+<span class="line"><span>      canvas.setAttribute('style', 'position: fixed;left: 0;top: 0;pointer-events: none;');</span></span>
+<span class="line"><span>      canvas.setAttribute('id', 'canvas_float');</span></span>
+<span class="line"><span>      document.getElementsByTagName('body')[0].appendChild(canvas);</span></span>
+<span class="line"><span>      cxt = canvas.getContext('2d');</span></span>
+<span class="line"><span>      var floatList = new FloatList();</span></span>
+<span class="line"><span>      for (var i = 0; i &#x3C; 10; i++) &#123;</span></span>
+<span class="line"><span>          // 漂浮物数量</span></span>
+<span class="line"><span>          var float, randomX, randomY, randomS, randomR, randomFnx, randomFny;</span></span>
+<span class="line"><span>          randomX = getRandom('x');</span></span>
+<span class="line"><span>          randomY = getRandom('y');</span></span>
+<span class="line"><span>          randomR = getRandom('r');</span></span>
+<span class="line"><span>          randomS = getRandom('s');</span></span>
+<span class="line"><span>          randomFnx = getRandom('fnx');</span></span>
+<span class="line"><span>          randomFny = getRandom('fny');</span></span>
+<span class="line"><span>          randomFnR = getRandom('fnr');</span></span>
+<span class="line"><span>          float = new Float(randomX,randomY,randomS,randomR,&#123;</span></span>
+<span class="line"><span>              x: randomFnx,</span></span>
+<span class="line"><span>              y: randomFny,</span></span>
+<span class="line"><span>              r: randomFnR</span></span>
+<span class="line"><span>          &#125;);</span></span>
+<span class="line"><span>          float.draw(cxt);</span></span>
+<span class="line"><span>          floatList.push(float);</span></span>
+<span class="line"><span>      &#125;</span></span>
+<span class="line"><span>      stop = requestAnimationFrame(function() &#123;</span></span>
+<span class="line"><span>          cxt.clearRect(0, 0, canvas.width, canvas.height);</span></span>
+<span class="line"><span>          floatList.update();</span></span>
+<span class="line"><span>          floatList.draw(cxt);</span></span>
+<span class="line"><span>          stop = requestAnimationFrame(arguments.callee);</span></span>
+<span class="line"><span>      &#125;)</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  window.onresize = function() &#123;</span></span>
+<span class="line"><span>      if(!isAllowFloat)return;</span></span>
+<span class="line"><span>      var canvasSnow = document.getElementById('canvas_float');</span></span>
+<span class="line"><span>      canvasSnow.width = window.innerWidth;</span></span>
+<span class="line"><span>      canvasSnow.height = window.innerHeight;</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  function stopp(e) &#123;</span></span>
+<span class="line"><span>      if (!e &#x26;&#x26; document.getElementById("canvas_float")) &#123;</span></span>
+<span class="line"><span>          var child = document.getElementById("canvas_float");</span></span>
+<span class="line"><span>          child.parentNode.removeChild(child);</span></span>
+<span class="line"><span>          window.cancelAnimationFrame(stop);</span></span>
+<span class="line"><span>      &#125; else if (e &#x26;&#x26; !document.getElementById("canvas_float")) &#123;</span></span>
+<span class="line"><span>          decide();</span></span>
+<span class="line"><span>      &#125;</span></span>
+<span class="line"><span>  &#125;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  window.addEventListener("DOMContentLoaded",decide);</span></span></code></pre>
+<div class="tags"><a href="/tags/shokax/" rel="tag"><i class="ic i-tag"></i>ShokaX</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i></span><span class="text">更新于 </span><time title="修改时间：2025-09-08 19:06:00" itemprop="dateModified" datetime="2025-09-08T19:06:00+08:00">2025-09-08</time></span></div><div id="copyright"><ul><li class="author"><strong>本文作者：</strong>AquaOH<i class="ic i-at"><em>@</em></i>HanaTsuki</li><li class="link"><strong>本文链接：</strong><a href="https://aquaoh.cc/2025/09/08/computer-science/hexo/ShokaX%200.3.6%20%E8%BF%81%E7%A7%BB%200.5.4/" title="ShokaX 0.3.6 迁移 0.5.4">https://aquaoh.cc/2025/09/08/computer-science/hexo/ShokaX 0.3.6 迁移 0.5.4/</a></li><li class="license"><strong>版权声明：</strong>本站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/2025/09/08/language/english/notes-on-reading-comprehension/%E5%9F%BA%E7%A1%80Text2/" rel="prev" itemprop="url" data-background-image="https:&#x2F;&#x2F;aquaoh.oss-cn-shanghai.aliyuncs.com&#x2F;cover&#x2F;109513073_p0_master1200.webp" title="基础题 Text2"><span class="type">上一篇</span><span class="category"><i class="ic i-flag"></i>阅读题笔记</span><h3>基础题 Text2</h3></a></div><div class="item right"></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#shokax-036-%E8%BF%81%E7%A7%BB-054"><span class="toc-number">1.</span> <span class="toc-text"> ShokaX 0.3.6 迁移 0.5.4</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85shokax"><span class="toc-number">1.1.</span> <span class="toc-text"> 安装ShokaX</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E7%94%A8%E4%B8%BB%E9%A2%98"><span class="toc-number">1.2.</span> <span class="toc-text"> 启用主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB%E6%9B%BF%E6%8D%A2"><span class="toc-number">1.3.</span> <span class="toc-text"> 加载动画替换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#live2d"><span class="toc-number">1.4.</span> <span class="toc-text"> Live2D</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E7%BC%96%E8%AF%91"><span class="toc-number">1.4.1.</span> <span class="toc-text"> 本地编译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E9%80%81%E4%BB%93%E5%BA%93"><span class="toc-number">1.4.2.</span> <span class="toc-text"> 推送仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">1.4.3.</span> <span class="toc-text"> 配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E5%85%A5%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.4.4.</span> <span class="toc-text"> 引入博客</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E6%8C%89%E9%92%AE%E5%B1%85%E5%8F%B3"><span class="toc-number">1.5.</span> <span class="toc-text"> 工具按钮居右</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E5%B0%8F%E6%96%B9%E6%A0%BC"><span class="toc-number">1.6.</span> <span class="toc-text"> 背景图片小方格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB"><span class="toc-number">1.7.</span> <span class="toc-text"> 更改加载动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%82%E6%B5%AE%E7%89%A9"><span class="toc-number">1.8.</span> <span class="toc-text"> 漂浮物</span></a></li></ol></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li  class="active"><a href="/2025/09/08/computer-science/hexo/ShokaX%200.3.6%20%E8%BF%81%E7%A7%BB%200.5.4/" rel="bookmark" title="ShokaX 0.3.6 迁移 0.5.4">ShokaX 0.3.6 迁移 0.5.4</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="image" loading="lazy" decoding="async" itemprop="image" alt="AquaOH" src="/assets/avatar.jpg"/><p class="name" itemprop="name">AquaOH</p><div class="description" itemprop="description">生年不满百
+常怀千岁忧</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">4</span><span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">6</span><span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">3</span><span class="name">标签</span></a></div></nav><div class="social"><a target="_blank" rel="noopener" href="https://github.com/AquaOH" class="item github" title="https:&#x2F;&#x2F;github.com&#x2F;AquaOH"><i class="ic i-github"></i></a><a href="mailto:AquaOH@outlook.com" class="item email" title="mailto:AquaOH@outlook.com"><i class="ic i-envelope"></i></a><a target="_blank" rel="noopener" href="https://music.163.com/#/user/home?id=326163346" class="item music" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;326163346"><i class="ic i-cloud-music"></i></a><a target="_blank" rel="noopener" href="https://space.bilibili.com/25062793/" class="item bilibili" title="https:&#x2F;&#x2F;space.bilibili.com&#x2F;25062793&#x2F;"><i class="ic i-bilibili"></i></a></div><div class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li></div></div></div></div><ul id="quick"><li class="prev pjax"></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/2025/09/08/language/english/notes-on-reading-comprehension/%E5%9F%BA%E7%A1%80Text2/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div><div id="player"></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/language/" title="分类于语言">语言</a><i class="ic i-angle-right"></i><a href="/categories/language/english/" title="分类于英语">英语</a><i class="ic i-angle-right"></i><a href="/categories/language/english/notes-on-reading-comprehension/" title="分类于阅读题笔记">阅读题笔记</a></div><span><a href="/2025/09/08/language/english/notes-on-reading-comprehension/%E5%9F%BA%E7%A1%80Text1/">基础题 Text1</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于计算机科学">计算机科学</a><i class="ic i-angle-right"></i><a href="/categories/computer-science/hexo/" title="分类于Hexo">Hexo</a></div><span><a href="/2025/09/08/computer-science/hexo/ShokaX%200.3.6%20%E8%BF%81%E7%A7%BB%200.5.4/">ShokaX 0.3.6 迁移 0.5.4</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/language/" title="分类于语言">语言</a><i class="ic i-angle-right"></i><a href="/categories/language/english/" title="分类于英语">英语</a><i class="ic i-angle-right"></i><a href="/categories/language/english/notes-on-reading-comprehension/" title="分类于阅读题笔记">阅读题笔记</a></div><span><a href="/2025/09/08/language/english/notes-on-reading-comprehension/%E5%9F%BA%E7%A1%80Text2/">基础题 Text2</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于计算机科学">计算机科学</a><i class="ic i-angle-right"></i><a href="/categories/computer-science/LaTeX/" title="分类于LaTeX">LaTeX</a></div><span><a href="/2025/09/08/computer-science/latex/Typora%20with%20LaTeX/">Typora With LaTeX</a></span></li></ul></div></div><div class="status"><div class="copyright">&copy; 2023 -<span itemprop="copyrightYear">2025</span><span class="with-love"><i class="ic i-sakura rotate"></i></span><span class="author" itemprop="copyrightHolder">AquaOH @ Aqua OH</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i></span><span title="站点总字数">48k 字</span><span class="post-meta-divider"> | </span><span class="post-meta-item-icon"><i class="ic i-coffee"></i></span><span title="站点阅读时长">43 分钟</span></div><div class="powered-by">基于 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & Theme.<a target="_blank" rel="noopener" href="https://github.com/theme-shoka-x/hexo-theme-shokaX/">ShokaX</a></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL = {
+    ispost: true,
+    path: `2025/09/08/computer-science/hexo/ShokaX 0.3.6 迁移 0.5.4/`,
+    favicon: {
+        show: `(⁎⁍̴̛ᴗ⁍̴̛⁎)‼ Lolicon!ざこざこ♡！`,
+        hide: `(´∀｀)♡ Siscon!大変だ！`
+    },
+    search: {
+        placeholder: "文章搜索",
+        empty: "关于 「 ${query} 」，什么也没搜到",
+        stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    nocopy: "false",
+    copyright: `复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。`,
+    copy_tex: false,
+    katex: false,
+    mermaid: false,
+    audio: undefined,
+    nocopy: false,
+    outime: true,
+    template: `<div class="note warning"><p><span class="label warning">文章时效性提示</span><br>这是一篇发布于 {{publish}} 天前，最后一次更新在 {{updated}} 天前的文章，部分信息可能已经发生改变，请注意甄别。</p></div>`,
+    quiz: {
+        choice: `单选题`,
+        multiple: `多选题`,
+        true_false: `判断题`,
+        essay: `问答题`,
+        gap_fill: `填空题`,
+        mistake: `错题备注`
+    }
+};
+</script><script>var _hmt = _hmt || [];
+(function () {
+    const hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?true"
+    hm.async = true;
+    const s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+ })();</script><script>(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=true;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "true");</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=true"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag() {
+    dataLayer.push(arguments);
+}
+gtag('js', new Date());
+gtag('config', 'true');</script><script src="/js/siteInit.js?v=0.5.4" type="module" fetchpriority="high" defer></script><script src="https://fastly.jsdelivr.net/gh/AquaOH/live2d-widget@0.3.0/dist/autoload.js"></script><script>// 漂浮物
+// 新增函数 
+// 首先获取 Url，然后把 Url 通过 // 截成两部分，再从后一部分中截取相对路径。如果截取到的相对路径中有参数，则把参数去掉。
+// 获取相对路径
+function GetUrlRelativePath()
+{
+    var url = document.location.toString();
+    var arrUrl = url.split("//");
+
+    var start = arrUrl[1].indexOf("/");
+    var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+
+    if(relUrl.indexOf("?") != -1){
+        relUrl = relUrl.split("?")[0];
+    }
+    return relUrl;
+}
+var allowAll = true; // true 则允许所有网页存在漂浮物
+// 允许显示漂浮物的网址列表
+var urlAllowList = [
+    "/about/",
+    "friends/",
+]
+
+var isAllowFloat = false;   // 全局变量，允许使用漂浮特效
+
+// 判断
+function decide(){
+    isAllowFloat = true;
+    if(!allowAll){
+        // 判断当前页面是否为指定页面
+        var url = GetUrlRelativePath();
+        var i = 0;
+        for(;i<urlAllowList.length;i++){
+            if(url===urlAllowList[i]){
+                // console.log(i);
+                isAllowFloat = true;
+                break;
+            }
+        }
+        if(i===urlAllowList.length){
+            isAllowFloat = false;
+        }
+    }
+    console.log(isAllowFloat)
+    if(isAllowFloat)startFloat();
+}
+
+var stop, staticx;
+var img = new Image();
+img.src = "/assets/float.png"; // 图片
+
+function Float(x, y, s, r, fn) {
+    this.x = x;
+    this.y = y;
+    this.s = s;
+    this.r = r;
+    this.fn = fn;
+}
+
+Float.prototype.draw = function(cxt) {
+    cxt.save();
+    var xc = 40 * this.s / 4;
+    cxt.translate(this.x, this.y);
+    cxt.rotate(this.r);
+    cxt.drawImage(img, 0, 0, 35 * this.s, 35 * this.s)
+    // 漂浮物大小
+    cxt.restore();
+}
+
+Float.prototype.update = function() {
+    this.x = this.fn.x(this.x, this.y);
+    this.y = this.fn.y(this.y, this.y);
+    this.r = this.fn.r(this.r);
+    if (this.x > window.innerWidth || this.x < 0 || this.y > window.innerHeight || this.y < 0) {
+        this.r = getRandom('fnr');
+        if (Math.random() > 0.4) {
+            this.x = getRandom('x');
+            this.y = 0;
+            this.s = getRandom('s');
+            this.r = getRandom('r');
+        } else {
+            this.x = window.innerWidth;
+            this.y = getRandom('y');
+            this.s = getRandom('s');
+            this.r = getRandom('r');
+        }
+    }
+}
+
+FloatList = function() {
+    this.list = [];
+}
+FloatList.prototype.push = function(float) {
+    this.list.push(float);
+}
+FloatList.prototype.update = function() {
+    for (var i = 0, len = this.list.length; i < len; i++) {
+        this.list[i].update();
+    }
+}
+FloatList.prototype.draw = function(cxt) {
+    for (var i = 0, len = this.list.length; i < len; i++) {
+        this.list[i].draw(cxt);
+    }
+}
+FloatList.prototype.get = function(i) {
+    return this.list[i];
+}
+FloatList.prototype.size = function() {
+    return this.list.length;
+}
+
+function getRandom(option) {
+    var ret, random;
+    switch (option) {
+    case 'x':
+        ret = Math.random() * window.innerWidth;
+        break;
+    case 'y':
+        ret = Math.random() * window.innerHeight;
+        break;
+    case 's':
+        ret = Math.random();
+        break;
+    case 'r':
+        ret = Math.random() * 6;
+        break;
+    case 'fnx':
+        random = -0.5 + Math.random() * 1;
+        ret = function(x, y) {
+            return x + 0.5 * random - 0.6;
+            //x 轴速度
+        }
+        ;
+        break;
+    case 'fny':
+        random = 0.8 + Math.random() * 0.7
+        //y 轴速度
+        ret = function(x, y) {
+            return y + random;
+        }
+        ;
+        break;
+    case 'fnr':
+        random = Math.random() * 0.03;
+        ret = function(r) {
+            return r + random;
+        }
+        ;
+        break;
+    }
+    return ret;
+}
+
+function startFloat() {
+
+    requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;
+    var canvas = document.createElement('canvas'), cxt;
+    staticx = true;
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    canvas.setAttribute('style', 'position: fixed;left: 0;top: 0;pointer-events: none;');
+    canvas.setAttribute('id', 'canvas_float');
+    document.getElementsByTagName('body')[0].appendChild(canvas);
+    cxt = canvas.getContext('2d');
+    var floatList = new FloatList();
+    for (var i = 0; i < 10; i++) {
+        // 漂浮物数量
+        var float, randomX, randomY, randomS, randomR, randomFnx, randomFny;
+        randomX = getRandom('x');
+        randomY = getRandom('y');
+        randomR = getRandom('r');
+        randomS = getRandom('s');
+        randomFnx = getRandom('fnx');
+        randomFny = getRandom('fny');
+        randomFnR = getRandom('fnr');
+        float = new Float(randomX,randomY,randomS,randomR,{
+            x: randomFnx,
+            y: randomFny,
+            r: randomFnR
+        });
+        float.draw(cxt);
+        floatList.push(float);
+    }
+    stop = requestAnimationFrame(function() {
+        cxt.clearRect(0, 0, canvas.width, canvas.height);
+        floatList.update();
+        floatList.draw(cxt);
+        stop = requestAnimationFrame(arguments.callee);
+    })
+}
+
+window.onresize = function() {
+    if(!isAllowFloat)return;
+    var canvasSnow = document.getElementById('canvas_float');
+    canvasSnow.width = window.innerWidth;
+    canvasSnow.height = window.innerHeight;
+}
+
+function stopp(e) {
+    if (!e && document.getElementById("canvas_float")) {
+        var child = document.getElementById("canvas_float");
+        child.parentNode.removeChild(child);
+        window.cancelAnimationFrame(stop);
+    } else if (e && !document.getElementById("canvas_float")) {
+        decide();
+    }
+}
+
+window.addEventListener("DOMContentLoaded",decide);</script></body></html>
