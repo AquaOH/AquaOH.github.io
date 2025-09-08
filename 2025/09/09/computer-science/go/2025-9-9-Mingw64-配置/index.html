@@ -1,0 +1,268 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"/><meta name="theme-color" content="#222"/><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"/><meta name="renderer" content="webkit"/><link rel="icon" type="image/ico" sizes="32x32" href="/assets/favicon.ico"/><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"/><meta name="msvalidate.01" content="AquaOH"/><meta name="google-site-verification" content="AquaOH"/><meta name="yandex-verification" content="AquaOH"/><meta name="baidu-site-verification" content="AquaOH"/><link rel="alternate" href="/rss.xml" title="HanaTsuki" type="application/rss+xml"><link rel="alternate" href="/atom.xml" title="HanaTsuki" type="application/atom+xml"><link rel="alternate" type="application/json" title="HanaTsuki" href="https://aquaoh.cc/feed.json"/><link rel="preconnect" href="https://s4.zstatic.net"/><link rel="preconnect" href="https://at.alicdn.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CFredericka%20the%20Great:400,400italic,700,700italic%7CNoto%20Serif%20JP:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CInconsolata:400,400italic,700,700italic&display=swap&subset=latin,latin-ext" media="none" onload="this.media&#x3D;&#39;all&#39;"><link rel="modulepreload" href="/js/siteInit.js"></link><link rel="modulepreload" href="/js/nyx-player-CZNLZHBQ.js"></link><link rel="modulepreload" href="/js/copy-tex-L7VFINHK.js"></link><link rel="modulepreload" href="/js/post-6YXOGHCC.js"></link><link rel="modulepreload" href="/js/chunk-BMH4CJ65.js"></link><link rel="modulepreload" href="/js/pagefind-3AFMYHU5.js"></link><link rel="modulepreload" href="/js/index.esm-3YKZZTLJ.js"></link><link rel="modulepreload" href="/js/chunk-HJSTZ4VX.js"></link><link rel="modulepreload" href="/js/chunk-IL5BPNQC.js"></link><link rel="stylesheet" href="/css/siteInit.css" media="none" onload="this.media&#x3D;&#39;all&#39;"></link><link rel="preload" href="https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/111046153_p0_master1200.webp" as="image" fetchpriority="high"><link rel="preload" href="https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/108152035_p0_master1200%20(realesrgan-x4plus-anime%20x4).webp" as="image" fetchpriority="high"><link rel="preload" href="https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/97857376_p0_master1200%20(realesrgan-x4plus-anime%20x4).webp" as="image" fetchpriority="high"><link rel="preload" href="https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/95632927_p0_master1200%20(realesrgan-x4plus-anime%20x4).webp" as="image" fetchpriority="high"><link rel="preload" href="https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/98359825_p0_master1200.webp" as="image" fetchpriority="high"><link rel="preload" href="https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/96218921_p0_master1200%20(realesrgan-x4plus-anime%20x4).webp" as="image" fetchpriority="high"><meta name="keywords" content="环境配置"/><meta name="description" content="生年不满百
+常怀千岁忧"/><link rel="canonical" href="https://aquaoh.cc/2025/09/09/computer-science/go/2025-9-9-Mingw64-%E9%85%8D%E7%BD%AE/"><link rel="stylesheet" href="/css/post.css?v=0.5.4"><link rel="stylesheet" href="/css/mermaid.css?v=0.5.4"><!-- 临时处理--><link rel="stylesheet" media="none" onload="this.media='all'" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css"><title>Mingw64 配置</title><meta name="generator" content="Hexo 7.3.0"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="loader"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div><div id="pagefind_mount"></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">Mingw64 配置</h1><div class="meta"><span class="item" title="创建时间：2025-09-09 07:00:00"><span class="icon"><i class="ic i-calendar"></i></span><span class="text">发表于</span><time itemprop="dateCreated datePublished" datetime="2025-09-09T07:00:00+08:00">2025-09-09</time></span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i></span><span class="text">本文字数</span><span>438</span><span class="text">字</span></span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i></span><span class="text">阅读时长</span><span>1 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span><span class="line"></span><span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">Aqua OH</a></li></ul><ul class="right" id="rightNav"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div class="pjax" id="imgs"><ul><li class="item" style="background-image: url(&quot;https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/111046153_p0_master1200.webp&quot;);"></li><li class="item" style="background-image: url(&quot;https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/108152035_p0_master1200%20(realesrgan-x4plus-anime%20x4).webp&quot;);"></li><li class="item" style="background-image: url(&quot;https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/97857376_p0_master1200%20(realesrgan-x4plus-anime%20x4).webp&quot;);"></li><li class="item" style="background-image: url(&quot;https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/95632927_p0_master1200%20(realesrgan-x4plus-anime%20x4).webp&quot;);"></li><li class="item" style="background-image: url(&quot;https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/98359825_p0_master1200.webp&quot;);"></li><li class="item" style="background-image: url(&quot;https://aquaoh.oss-cn-shanghai.aliyuncs.com/cover/96218921_p0_master1200%20(realesrgan-x4plus-anime%20x4).webp&quot;);"></li></ul></div><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div></header><main><div class="inner"><div class="pjax" id="main"><div class="article wrap"><div class="breadcrumb" itemListElement itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i><span><a href="/">首页</a></span><i class="ic i-angle-right"></i><span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/" itemprop="item" rel="index" title="分类于计算机科学"><span itemprop="name">计算机科学<meta itemprop="position" content="0"/></span></a></span><i class="ic i-angle-right"></i><span class="current" itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/go/" itemprop="item" rel="index" title="分类于Go"><span itemprop="name">Go<meta itemprop="position" content="1"/></span></a></span></div><article class="post block" itemscope="itemscope" itemtype="http://schema.org/Article" data-pagefind-body="data-pagefind-body" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://aquaoh.cc/2025/09/09/computer-science/go/2025-9-9-Mingw64-%E9%85%8D%E7%BD%AE/"/><span hidden="hidden" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><meta itemprop="image" content="/assets/avatar.jpg"/><meta itemprop="name" content="AquaOH"/><meta itemprop="description" content="🥕花鸟碱🥕, 生年不满百
+常怀千岁忧"/></span><span hidden="hidden" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content="HanaTsuki"/></span><div class="body md" itemprop="articleBody"><h1 id="mingw64-配置"><a class="anchor" href="#mingw64-配置">#</a> Mingw64 配置</h1>
+<p>问题与该贴相同<a target="_blank" rel="noopener" href="https://fuxiaochen.com/blog/fix-sqlite-requires-cgo">解决 Go 中使用 Sqlite 报错 go-sqlite3 requires cgo to work - 付小晨</a></p>
+<p>配置参考<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26143367916">最新！MinGW-w64的下载与安装（超详细！！！） - 知乎</a></p>
+<h2 id="下载"><a class="anchor" href="#下载">#</a> 下载</h2>
+<p><a target="_blank" rel="noopener" href="https://github.com/niXman/mingw-builds-binaries/releases">Releases · niXman/mingw-builds-binaries</a></p>
+<h2 id="配置"><a class="anchor" href="#配置">#</a> 配置</h2>
+<p>参考图片</p>
+<p><img loading="lazy" src="https://aquaoh.oss-cn-shanghai.aliyuncs.com/post/20250909071453356.png" alt="image-20250909071445849" /></p>
+<div class="tags"><a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="tag"><i class="ic i-tag"></i>环境配置</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i></span><span class="text">更新于 </span><time title="修改时间：2025-09-09 07:18:05" itemprop="dateModified" datetime="2025-09-09T07:18:05+08:00">2025-09-09</time></span></div><div id="copyright"><ul><li class="author"><strong>本文作者：</strong>AquaOH<i class="ic i-at"><em>@</em></i>HanaTsuki</li><li class="link"><strong>本文链接：</strong><a href="https://aquaoh.cc/2025/09/09/computer-science/go/2025-9-9-Mingw64-%E9%85%8D%E7%BD%AE/" title="Mingw64 配置">https://aquaoh.cc/2025/09/09/computer-science/go/2025-9-9-Mingw64-配置/</a></li><li class="license"><strong>版权声明：</strong>本站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/2025/09/08/computer-science/hexo/ShokaX%200.3.6%20%E8%BF%81%E7%A7%BB%200.5.4/" rel="prev" itemprop="url" data-background-image="https:&#x2F;&#x2F;aquaoh.oss-cn-shanghai.aliyuncs.com&#x2F;cover&#x2F;109513073_p0_master1200.webp" title="ShokaX 0.3.6 迁移 0.5.4"><span class="type">上一篇</span><span class="category"><i class="ic i-flag"></i>Hexo</span><h3>ShokaX 0.3.6 迁移 0.5.4</h3></a></div><div class="item right"></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#mingw64-%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text"> Mingw64 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-number">1.1.</span> <span class="toc-text"> 下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">1.2.</span> <span class="toc-text"> 配置</span></a></li></ol></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li  class="active"><a href="/2025/09/09/computer-science/go/2025-9-9-Mingw64-%E9%85%8D%E7%BD%AE/" rel="bookmark" title="Mingw64 配置">Mingw64 配置</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="image" loading="lazy" decoding="async" itemprop="image" alt="AquaOH" src="/assets/avatar.jpg"/><p class="name" itemprop="name">AquaOH</p><div class="description" itemprop="description">生年不满百
+常怀千岁忧</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">5</span><span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">7</span><span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">4</span><span class="name">标签</span></a></div></nav><div class="social"><a target="_blank" rel="noopener" href="https://github.com/AquaOH" class="item github" title="https:&#x2F;&#x2F;github.com&#x2F;AquaOH"><i class="ic i-github"></i></a><a href="mailto:AquaOH@outlook.com" class="item email" title="mailto:AquaOH@outlook.com"><i class="ic i-envelope"></i></a><a target="_blank" rel="noopener" href="https://music.163.com/#/user/home?id=326163346" class="item music" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;326163346"><i class="ic i-cloud-music"></i></a><a target="_blank" rel="noopener" href="https://space.bilibili.com/25062793/" class="item bilibili" title="https:&#x2F;&#x2F;space.bilibili.com&#x2F;25062793&#x2F;"><i class="ic i-bilibili"></i></a></div><div class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li></div></div></div></div><ul id="quick"><li class="prev pjax"></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/2025/09/08/computer-science/hexo/ShokaX%200.3.6%20%E8%BF%81%E7%A7%BB%200.5.4/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div><div id="player"></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/language/" title="分类于语言">语言</a><i class="ic i-angle-right"></i><a href="/categories/language/english/" title="分类于英语">英语</a><i class="ic i-angle-right"></i><a href="/categories/language/english/notes-on-reading-comprehension/" title="分类于阅读题笔记">阅读题笔记</a></div><span><a href="/2025/09/08/language/english/notes-on-reading-comprehension/%E5%9F%BA%E7%A1%80Text1/">基础题 Text1</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于计算机科学">计算机科学</a><i class="ic i-angle-right"></i><a href="/categories/computer-science/hexo/" title="分类于Hexo">Hexo</a></div><span><a href="/2025/09/08/computer-science/hexo/ShokaX%200.3.6%20%E8%BF%81%E7%A7%BB%200.5.4/">ShokaX 0.3.6 迁移 0.5.4</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于计算机科学">计算机科学</a><i class="ic i-angle-right"></i><a href="/categories/computer-science/go/" title="分类于Go">Go</a></div><span><a href="/2025/09/09/computer-science/go/2025-9-9-Mingw64-%E9%85%8D%E7%BD%AE/">Mingw64 配置</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/language/" title="分类于语言">语言</a><i class="ic i-angle-right"></i><a href="/categories/language/english/" title="分类于英语">英语</a><i class="ic i-angle-right"></i><a href="/categories/language/english/notes-on-reading-comprehension/" title="分类于阅读题笔记">阅读题笔记</a></div><span><a href="/2025/09/08/language/english/notes-on-reading-comprehension/%E5%9F%BA%E7%A1%80Text2/">基础题 Text2</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于计算机科学">计算机科学</a><i class="ic i-angle-right"></i><a href="/categories/computer-science/LaTeX/" title="分类于LaTeX">LaTeX</a></div><span><a href="/2025/09/08/computer-science/latex/Typora%20with%20LaTeX/">Typora With LaTeX</a></span></li></ul></div></div><div class="status"><div class="copyright">&copy; 2023 -<span itemprop="copyrightYear">2025</span><span class="with-love"><i class="ic i-sakura rotate"></i></span><span class="author" itemprop="copyrightHolder">AquaOH @ Aqua OH</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i></span><span title="站点总字数">48k 字</span><span class="post-meta-divider"> | </span><span class="post-meta-item-icon"><i class="ic i-coffee"></i></span><span title="站点阅读时长">44 分钟</span></div><div class="powered-by">基于 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & Theme.<a target="_blank" rel="noopener" href="https://github.com/theme-shoka-x/hexo-theme-shokaX/">ShokaX</a></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL = {
+    ispost: true,
+    path: `2025/09/09/computer-science/go/2025-9-9-Mingw64-配置/`,
+    favicon: {
+        show: `(⁎⁍̴̛ᴗ⁍̴̛⁎)‼ Lolicon!ざこざこ♡！`,
+        hide: `(´∀｀)♡ Siscon!大変だ！`
+    },
+    search: {
+        placeholder: "文章搜索",
+        empty: "关于 「 ${query} 」，什么也没搜到",
+        stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    nocopy: "false",
+    copyright: `复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。`,
+    copy_tex: false,
+    katex: false,
+    mermaid: false,
+    audio: undefined,
+    nocopy: false,
+    outime: true,
+    template: `<div class="note warning"><p><span class="label warning">文章时效性提示</span><br>这是一篇发布于 {{publish}} 天前，最后一次更新在 {{updated}} 天前的文章，部分信息可能已经发生改变，请注意甄别。</p></div>`,
+    quiz: {
+        choice: `单选题`,
+        multiple: `多选题`,
+        true_false: `判断题`,
+        essay: `问答题`,
+        gap_fill: `填空题`,
+        mistake: `错题备注`
+    }
+};
+</script><script>var _hmt = _hmt || [];
+(function () {
+    const hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?true"
+    hm.async = true;
+    const s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+ })();</script><script>(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=true;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "true");</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=true"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag() {
+    dataLayer.push(arguments);
+}
+gtag('js', new Date());
+gtag('config', 'true');</script><script src="/js/siteInit.js?v=0.5.4" type="module" fetchpriority="high" defer></script><script src="/dist/autoload.js"></script><script>// 漂浮物
+// 新增函数 
+// 首先获取 Url，然后把 Url 通过 // 截成两部分，再从后一部分中截取相对路径。如果截取到的相对路径中有参数，则把参数去掉。
+// 获取相对路径
+function GetUrlRelativePath()
+{
+    var url = document.location.toString();
+    var arrUrl = url.split("//");
+
+    var start = arrUrl[1].indexOf("/");
+    var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+
+    if(relUrl.indexOf("?") != -1){
+        relUrl = relUrl.split("?")[0];
+    }
+    return relUrl;
+}
+var allowAll = true; // true 则允许所有网页存在漂浮物
+// 允许显示漂浮物的网址列表
+var urlAllowList = [
+    "/about/",
+    "friends/",
+]
+
+var isAllowFloat = false;   // 全局变量，允许使用漂浮特效
+
+// 判断
+function decide(){
+    isAllowFloat = true;
+    if(!allowAll){
+        // 判断当前页面是否为指定页面
+        var url = GetUrlRelativePath();
+        var i = 0;
+        for(;i<urlAllowList.length;i++){
+            if(url===urlAllowList[i]){
+                // console.log(i);
+                isAllowFloat = true;
+                break;
+            }
+        }
+        if(i===urlAllowList.length){
+            isAllowFloat = false;
+        }
+    }
+    console.log(isAllowFloat)
+    if(isAllowFloat)startFloat();
+}
+
+var stop, staticx;
+var img = new Image();
+img.src = "/assets/float.png"; // 图片
+
+function Float(x, y, s, r, fn) {
+    this.x = x;
+    this.y = y;
+    this.s = s;
+    this.r = r;
+    this.fn = fn;
+}
+
+Float.prototype.draw = function(cxt) {
+    cxt.save();
+    var xc = 40 * this.s / 4;
+    cxt.translate(this.x, this.y);
+    cxt.rotate(this.r);
+    cxt.drawImage(img, 0, 0, 35 * this.s, 35 * this.s)
+    // 漂浮物大小
+    cxt.restore();
+}
+
+Float.prototype.update = function() {
+    this.x = this.fn.x(this.x, this.y);
+    this.y = this.fn.y(this.y, this.y);
+    this.r = this.fn.r(this.r);
+    if (this.x > window.innerWidth || this.x < 0 || this.y > window.innerHeight || this.y < 0) {
+        this.r = getRandom('fnr');
+        if (Math.random() > 0.4) {
+            this.x = getRandom('x');
+            this.y = 0;
+            this.s = getRandom('s');
+            this.r = getRandom('r');
+        } else {
+            this.x = window.innerWidth;
+            this.y = getRandom('y');
+            this.s = getRandom('s');
+            this.r = getRandom('r');
+        }
+    }
+}
+
+FloatList = function() {
+    this.list = [];
+}
+FloatList.prototype.push = function(float) {
+    this.list.push(float);
+}
+FloatList.prototype.update = function() {
+    for (var i = 0, len = this.list.length; i < len; i++) {
+        this.list[i].update();
+    }
+}
+FloatList.prototype.draw = function(cxt) {
+    for (var i = 0, len = this.list.length; i < len; i++) {
+        this.list[i].draw(cxt);
+    }
+}
+FloatList.prototype.get = function(i) {
+    return this.list[i];
+}
+FloatList.prototype.size = function() {
+    return this.list.length;
+}
+
+function getRandom(option) {
+    var ret, random;
+    switch (option) {
+    case 'x':
+        ret = Math.random() * window.innerWidth;
+        break;
+    case 'y':
+        ret = Math.random() * window.innerHeight;
+        break;
+    case 's':
+        ret = Math.random();
+        break;
+    case 'r':
+        ret = Math.random() * 6;
+        break;
+    case 'fnx':
+        random = -0.5 + Math.random() * 1;
+        ret = function(x, y) {
+            return x + 0.5 * random - 0.6;
+            //x 轴速度
+        }
+        ;
+        break;
+    case 'fny':
+        random = 0.8 + Math.random() * 0.7
+        //y 轴速度
+        ret = function(x, y) {
+            return y + random;
+        }
+        ;
+        break;
+    case 'fnr':
+        random = Math.random() * 0.03;
+        ret = function(r) {
+            return r + random;
+        }
+        ;
+        break;
+    }
+    return ret;
+}
+
+function startFloat() {
+
+    requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;
+    var canvas = document.createElement('canvas'), cxt;
+    staticx = true;
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    canvas.setAttribute('style', 'position: fixed;left: 0;top: 0;pointer-events: none;');
+    canvas.setAttribute('id', 'canvas_float');
+    document.getElementsByTagName('body')[0].appendChild(canvas);
+    cxt = canvas.getContext('2d');
+    var floatList = new FloatList();
+    for (var i = 0; i < 10; i++) {
+        // 漂浮物数量
+        var float, randomX, randomY, randomS, randomR, randomFnx, randomFny;
+        randomX = getRandom('x');
+        randomY = getRandom('y');
+        randomR = getRandom('r');
+        randomS = getRandom('s');
+        randomFnx = getRandom('fnx');
+        randomFny = getRandom('fny');
+        randomFnR = getRandom('fnr');
+        float = new Float(randomX,randomY,randomS,randomR,{
+            x: randomFnx,
+            y: randomFny,
+            r: randomFnR
+        });
+        float.draw(cxt);
+        floatList.push(float);
+    }
+    stop = requestAnimationFrame(function() {
+        cxt.clearRect(0, 0, canvas.width, canvas.height);
+        floatList.update();
+        floatList.draw(cxt);
+        stop = requestAnimationFrame(arguments.callee);
+    })
+}
+
+window.onresize = function() {
+    if(!isAllowFloat)return;
+    var canvasSnow = document.getElementById('canvas_float');
+    canvasSnow.width = window.innerWidth;
+    canvasSnow.height = window.innerHeight;
+}
+
+function stopp(e) {
+    if (!e && document.getElementById("canvas_float")) {
+        var child = document.getElementById("canvas_float");
+        child.parentNode.removeChild(child);
+        window.cancelAnimationFrame(stop);
+    } else if (e && !document.getElementById("canvas_float")) {
+        decide();
+    }
+}
+
+window.addEventListener("DOMContentLoaded",decide);</script></body></html>

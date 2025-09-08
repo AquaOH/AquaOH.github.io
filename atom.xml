@@ -8,7 +8,25 @@
     <author>
       <name>AquaOH</name>
     </author>
-    <updated>2025-09-08T11:00:00.000Z</updated>
+    <updated>2025-09-08T23:00:00.000Z</updated>
+    <entry>
+        <id>https://aquaoh.cc/2025/09/09/computer-science/go/2025-9-9-Mingw64-%E9%85%8D%E7%BD%AE/</id>
+        <title>Mingw64 配置</title>
+        <link rel="alternate" href="https://aquaoh.cc/2025/09/09/computer-science/go/2025-9-9-Mingw64-%E9%85%8D%E7%BD%AE/"/>
+        <content type="html">&lt;h1 id=&#34;mingw64-配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mingw64-配置&#34;&gt;#&lt;/a&gt; Mingw64 配置&lt;/h1&gt;
+&lt;p&gt;问题与该贴相同&lt;a href=&#34;https://fuxiaochen.com/blog/fix-sqlite-requires-cgo&#34;&gt;解决 Go 中使用 Sqlite 报错 go-sqlite3 requires cgo to work - 付小晨&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;配置参考&lt;a href=&#34;https://zhuanlan.zhihu.com/p/26143367916&#34;&gt;最新！MinGW-w64的下载与安装（超详细！！！） - 知乎&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;下载&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载&#34;&gt;#&lt;/a&gt; 下载&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/niXman/mingw-builds-binaries/releases&#34;&gt;Releases · niXman/mingw-builds-binaries&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h2&gt;
+&lt;p&gt;参考图片&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://aquaoh.oss-cn-shanghai.aliyuncs.com/post/20250909071453356.png&#34; alt=&#34;image-20250909071445849&#34; /&gt;&lt;/p&gt;
+</content>
+        <category term="计算机科学" scheme="https://aquaoh.cc/categories/computer-science/" />
+        <category term="Go" scheme="https://aquaoh.cc/categories/computer-science/go/" />
+        <category term="环境配置" scheme="https://aquaoh.cc/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" />
+        <updated>2025-09-08T23:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>https://aquaoh.cc/2025/09/08/computer-science/hexo/ShokaX%200.3.6%20%E8%BF%81%E7%A7%BB%200.5.4/</id>
         <title>ShokaX 0.3.6 迁移 0.5.4</title>

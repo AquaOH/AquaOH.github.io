@@ -7,6 +7,18 @@
     "home_page_url": "https://aquaoh.cc",
     "items": [
         {
+            "id": "https://aquaoh.cc/2025/09/09/computer-science/go/2025-9-9-Mingw64-%E9%85%8D%E7%BD%AE/",
+            "url": "https://aquaoh.cc/2025/09/09/computer-science/go/2025-9-9-Mingw64-%E9%85%8D%E7%BD%AE/",
+            "title": "Mingw64 配置",
+            "date_published": "2025-09-08T23:00:00.000Z",
+            "content_html": "<h1 id=\"mingw64-配置\"><a class=\"anchor\" href=\"#mingw64-配置\">#</a> Mingw64 配置</h1>\n<p>问题与该贴相同<a href=\"https://fuxiaochen.com/blog/fix-sqlite-requires-cgo\">解决 Go 中使用 Sqlite 报错 go-sqlite3 requires cgo to work - 付小晨</a></p>\n<p>配置参考<a href=\"https://zhuanlan.zhihu.com/p/26143367916\">最新！MinGW-w64的下载与安装（超详细！！！） - 知乎</a></p>\n<h2 id=\"下载\"><a class=\"anchor\" href=\"#下载\">#</a> 下载</h2>\n<p><a href=\"https://github.com/niXman/mingw-builds-binaries/releases\">Releases · niXman/mingw-builds-binaries</a></p>\n<h2 id=\"配置\"><a class=\"anchor\" href=\"#配置\">#</a> 配置</h2>\n<p>参考图片</p>\n<p><img loading=\"lazy\" src=\"https://aquaoh.oss-cn-shanghai.aliyuncs.com/post/20250909071453356.png\" alt=\"image-20250909071445849\" /></p>\n",
+            "tags": [
+                "计算机科学",
+                "Go",
+                "环境配置"
+            ]
+        },
+        {
             "id": "https://aquaoh.cc/2025/09/08/computer-science/hexo/ShokaX%200.3.6%20%E8%BF%81%E7%A7%BB%200.5.4/",
             "url": "https://aquaoh.cc/2025/09/08/computer-science/hexo/ShokaX%200.3.6%20%E8%BF%81%E7%A7%BB%200.5.4/",
             "title": "ShokaX 0.3.6 迁移 0.5.4",
