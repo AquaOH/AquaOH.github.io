@@ -14,12 +14,12 @@
         <pubDate>Tue, 09 Sep 2025 07:00:00 +0800</pubDate>
         <lastBuildDate>Tue, 09 Sep 2025 07:00:00 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://aquaoh.cc/2025/09/09/computer-science/go/2025-9-9-Mingw64-%E9%85%8D%E7%BD%AE/</guid>
+            <guid isPermalink="true">https://aquaoh.cc/2025/09/09/computer-science/go/Mingw64%E9%85%8D%E7%BD%AE/</guid>
             <title>Mingw64 配置</title>
-            <link>https://aquaoh.cc/2025/09/09/computer-science/go/2025-9-9-Mingw64-%E9%85%8D%E7%BD%AE/</link>
+            <link>https://aquaoh.cc/2025/09/09/computer-science/go/Mingw64%E9%85%8D%E7%BD%AE/</link>
             <category term="计算机科学" scheme="https://aquaoh.cc/categories/computer-science/" />
             <category term="Go" scheme="https://aquaoh.cc/categories/computer-science/go/" />
-            <category term="环境配置" scheme="https://aquaoh.cc/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" />
+            <category term="环境配置" scheme="https://aquaoh.cc/tags/environment-configuration/" />
             <pubDate>Tue, 09 Sep 2025 07:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;mingw64-配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mingw64-配置&#34;&gt;#&lt;/a&gt; Mingw64 配置&lt;/h1&gt;
 &lt;p&gt;问题与该贴相同&lt;a href=&#34;https://fuxiaochen.com/blog/fix-sqlite-requires-cgo&#34;&gt;解决 Go 中使用 Sqlite 报错 go-sqlite3 requires cgo to work - 付小晨&lt;/a&gt;&lt;/p&gt;
@@ -610,7 +610,8 @@
             <category term="语言" scheme="https://aquaoh.cc/categories/language/" />
             <category term="英语" scheme="https://aquaoh.cc/categories/language/english/" />
             <category term="阅读题笔记" scheme="https://aquaoh.cc/categories/language/english/notes-on-reading-comprehension/" />
-            <category term="考研英语,阅读理解" scheme="https://aquaoh.cc/tags/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD-%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3/" />
+            <category term="考研英语" scheme="https://aquaoh.cc/tags/PGEE-English/" />
+            <category term="阅读理解" scheme="https://aquaoh.cc/tags/reading-comprehension/" />
             <pubDate>Mon, 08 Sep 2025 12:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;基础text2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基础text2&#34;&gt;#&lt;/a&gt; 基础Text2&lt;/h1&gt;
 &lt;h2 id=&#34;句子一&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#句子一&#34;&gt;#&lt;/a&gt; 句子一&lt;/h2&gt;
@@ -828,7 +829,8 @@
             <category term="语言" scheme="https://aquaoh.cc/categories/language/" />
             <category term="英语" scheme="https://aquaoh.cc/categories/language/english/" />
             <category term="阅读题笔记" scheme="https://aquaoh.cc/categories/language/english/notes-on-reading-comprehension/" />
-            <category term="考研英语,阅读理解" scheme="https://aquaoh.cc/tags/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD-%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3/" />
+            <category term="考研英语" scheme="https://aquaoh.cc/tags/PGEE-English/" />
+            <category term="阅读理解" scheme="https://aquaoh.cc/tags/reading-comprehension/" />
             <pubDate>Mon, 08 Sep 2025 12:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;基础题-text1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基础题-text1&#34;&gt;#&lt;/a&gt; 基础题 Text1&lt;/h1&gt;
 &lt;h2 id=&#34;一-the-new-line-is-less-about-travelling-through-devon-than-about-travelling-through-time&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-the-new-line-is-less-about-travelling-through-devon-than-about-travelling-through-time&#34;&gt;#&lt;/a&gt; 一、The new line is less about travelling through Devon than about travelling through time.&lt;/h2&gt;
